@@ -30,6 +30,14 @@ npm install
 ./scripts/cleanup-scanner.sh
 ```
 
+`npm run dev` must be run from `projects/project-06/solution` after
+`npm install`. It builds the main process and renderer before opening Electron;
+if the build fails, fix the printed TypeScript/Vite error first. A blank or
+unavailable window without a build error is usually an Electron display
+environment issue (for example, running without a desktop session), not a
+product failure. Include the terminal output and OS/Node version when
+reporting a reproducible startup problem.
+
 ## Exact Task Contract
 
 Project 06 is a capstone comparison between a complete product with weak harness

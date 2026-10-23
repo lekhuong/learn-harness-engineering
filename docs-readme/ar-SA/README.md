@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/ar-SA/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/ar-SA/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ar-SA/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/ar-SA/harness-wordmark.svg" alt="تعلّم هندسة الحزام (Learn Harness Engineering)" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# تعلّم هندسة الحزام (Learn Harness Engineering)
-
 > **دورة تعليمية قائمة على المشاريع حول بناء البيئة وإدارة الحالة وآليات التحقق والتحكم التي تجعل وكلاء البرمجة بالذكاء الاصطناعي يعملون بشكل موثوق.**
 
 تعلّم هندسة الحزام (Learn Harness Engineering) هي دورة تعليمية مكرّسة لهندسة وكلاء البرمجة بالذكاء الاصطناعي. لقد قمنا بدراسة وتوليف أحدث نظريات وممارسات هندسة الحزام في الصناعة بعمق. تشمل مراجعنا الأساسية:
+
+> **🆕 تحديث أغسطس 2026: تفكيكات تصميم الأحزمة الرائدة** — قسم جديد يضم 4 تفكيكات:
+>
+> - **قسم جديد** [تفكيكات تصميم الأحزمة الرائدة](../../docs/ar/harness-designs/index.md) — طبّق إطار الدورة المكوّن من خمسة أنظمة فرعية (التعليمات، الأدوات، البيئة، الحالة، التغذية الراجعة) لإجراء هندسة عكسية لكيفية بناء أربعة منتجات رائدة لأحزمة حقيقية.
+> - **Pi** [كيف يبني Pi حزمه](../../docs/ar/harness-designs/pi/index.md) — نواة مصغّرة، وتوسّع قابل للبرمجة، وهندسة السياق وراء «اطلب من Pi أن يبني ما تريده».
+> - **Claude Code** [كيف يبني Claude Code حزمه](../../docs/ar/harness-designs/claude-code/index.md) — ذاكرة من أربع طبقات، وضغط من خمسة مستويات، وخطافات، وعزل الوكلاء الفرعيين.
+> - **Codex** [كيف يبني Codex حزمه](../../docs/ar/harness-designs/codex/index.md) — المستودع بوصفه مصدر الحقيقة، وAGENTS.md بوصفه صفحة دليل، وعزل أشجار العمل.
+> - **DeepSeek** [كيف يبني DeepSeek حزمه](../../docs/ar/harness-designs/deepseek/index.md) — «كل شيء عبارة عن إضافة»، وفواصل القدرات، وخط أنابيب للأحداث.
+> - **جميع اللغات الـ 15** — تغطية ترجمة كاملة عبر جميع اللغات المدعومة.
+>
+> **الفكرة الأساسية:** تمنحك الدورة إطارًا؛ وتوضح لك هذه التفكيكات كيف تتجسّد المبادئ نفسها فعليًا في أحزمة الإنتاج.
+
+> **🆕 تحديث أغسطس 2026: هندسة الرسوم البيانية (Graph Engineering)** — محاضرة جديدة + مشروع جديد:
+>
+> - **المحاضرة 14** [من الحلقة الواحدة إلى هندسة الرسوم البيانية](../../docs/ar/lectures/lecture-14-graph-engineering/index.md): لماذا تنمو شبكة الرسوم حتمًا بعد حلقة واحدة — الطبقات الأربع المتكدسة (prompt → context → loop → graph) ومكان الحزام فيها، أجزاء الرسم الأربعة (العقد، الحواف، الحالة المشتركة، التوجيه)، لماذا لا تنقذ نقاط التحقق داخل الحلقة من الفشل البنيوي الثلاثة عند التوسع (Goodhart، العمى التصاعدي، التعارض)، الخطوات الست المستقلة عن الإطار لبناء أول رسم بياني لك، الفرق بين Graph وWorkflow، المراسي، وضع المشاريع مفتوحة المصدر قبل/بعد الإطلاق، ضريبة التنسيق، ومتى يستحق الرسم فعلًا.
+> - **المشروع 08** [ارسم سير عملك كرسم بياني](../../docs/ar/projects/project-08-graph-engineering-first-graph/index.md): ثلاث تجارب متتالية — رسم حلقة maker-checker كرسم صريح، إضافة عقد fan-out/fan-in متوازية، إضافة حافة تراجع شرطية وعقدة موافقة بشرية.
+>
+> **الفكرة الأساسية:** الحلقة هي رسم بياني بعقدة واحدة. عندما تتطلب المهمة تقسيم العمل والتوازي والحالة المشتركة والتحقق والاستعادة — لم تعد حلقة، بل رسمًا بيانيًا.
+>
+> **🆕 تحديث يوليو 2026: هندسة الحلقات (Loop Engineering)** — محاضرة جديدة + مشروع جديد + قوالب كود:
+>
+> - **المحاضرة 13** [لماذا تحتاج إلى التوقف عن مطالبة وكيلك](../../docs/ar/lectures/lecture-13-loop-engineering/index.md): من `/goal` إلى البدائيات الست لهندسة الحلقات (أتمتة، worktrees، مهارات، موصلات، وكلاء فرعيون، حالة خارجية)، فصل المولد/المقيّم، التكاليف الصامتة الأربعة، وبناء أول حلقة لك خطوة بخطوة.
+> - **المشروع 07** [ابنِ أول حلقة آلية](../../docs/ar/projects/project-07-loop-engineering-first-loop/index.md): ثلاث تجارب متتالية — حلقة الهدف، حلقة المؤقت، حلقة الصانع-المدقق. قارن اليدوي مقابل الآلي، قس تقلص التدخلات، وتعلم الخروج من الحلقة.
+> - **قوالب الكود**: `goal-template.md`، `loop-state-template.md`، `maker-prompt.md`، `checker-prompt.md` — قوالب جاهزة للبناء الفوري.
+>
+> **الفكرة الأساسية:** هندسة الحزام تصنع السيارة. هندسة الحلقات تصمم الطريق الذي تسير عليه — وأنت تصمم هذا الطريق من خارج السيارة.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@
 
 **هذه الدورة تعلّمك كيف تبني تلك البيئة.**
 
+<p align="center">
+  <a href="../../assets/readme/ar-SA/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ar-SA/harness-pattern-dark.svg">
+      <img src="../../assets/readme/ar-SA/harness-pattern.png" alt="النموذج ذكي، الحزام يجعله موثوقاً" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>نسخة نصية</summary>
+
 ```text
                     نمط الحزام
                     ===========
@@ -105,6 +150,8 @@
                                            يجتاز التحقق
 ```
 
+</details>
+
 ---
 
 ## ما تعنيه هندسة الحزام فعلياً
@@ -112,6 +159,18 @@
 هندسة الحزام تدور حول بناء بيئة عمل كاملة حول النموذج حتى ينتج نتائج موثوقة. الأمر لا يتعلق بكتابة موجهات أفضل. بل يتعلق بتصميم النظام الذي يعمل النموذج داخله.
 
 يتكون الحزام من خمس أنظمة فرعية:
+
+<p align="center">
+  <a href="../../assets/readme/ar-SA/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ar-SA/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/ar-SA/harness-subsystems.png" alt="ما تعنيه هندسة الحزام فعلياً" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>نسخة نصية</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -142,6 +201,8 @@
     الحزام لا يجعل النموذج أذكى.
     بل يجعل مخرجات النموذج موثوقة.
 ```
+
+</details>
 
 لكل نظام فرعي وظيفة واحدة:
 
@@ -195,15 +256,15 @@
 
 ينقسم المنهج إلى ثلاثة أجزاء:
 
-1. **المحاضرات**: 12 وحدة مفاهيمية تشرح النظرية وراء هندسة الحزام.
-2. **المشاريع**: 6 مشاريع عملية حيث تبني مساحة عمل وكيلية من الصفر.
+1. **المحاضرات**: 14 وحدة مفاهيمية تشرح النظرية وراء هندسة الحزام.
+2. **المشاريع**: 8 مشاريع عملية حيث تبني مساحة عمل وكيلية من الصفر.
 3. **مكتبة الموارد**: قوالب جاهزة للنسخ (`AGENTS.md`، `feature_list.json`، `init.sh`، إلخ) لاستخدامها في مستودعاتك الخاصة اليوم.
 
 ---
 
 ## ابدأ بسرعة: حسّن وكيلك اليوم
 
-لا تحتاج إلى قراءة جميع المحاضرات الـ 12 قبل أن تبدأ في الحصول على قيمة. إذا كنت تستخدم بالفعل وكيل برمجة في مشروع حقيقي، إليك كيفية تحسينه الآن.
+لا تحتاج إلى قراءة جميع المحاضرات الـ 14 قبل أن تبدأ في الحصول على قيمة. إذا كنت تستخدم بالفعل وكيل برمجة في مشروع حقيقي، إليك كيفية تحسينه الآن.
 
 الفكرة بسيطة: بدلاً من مجرد كتابة الموجهات، أعطِ وكيلك مجموعة من الملفات المنظمة التي تحدد ما يجب فعله، ما تم إنجازه، وكيفية التحقق من العمل. هذه الملفات تعيش داخل مستودعك، لذا تبدأ كل جلسة من نفس الحالة.
 
@@ -223,7 +284,7 @@
 
 ## مشروع التخرج: تطبيق حقيقي
 
-جميع مشاريع الدورة الستة تدور حول نفس المنتج: **تطبيق سطح مكتب لقاعدة المعرفة الشخصية مبني على Electron**.
+جميع مشاريع الدورة الثمانية تدور حول نفس المنتج: **تطبيق سطح مكتب لقاعدة المعرفة الشخصية مبني على Electron**.
 
 ```text
     ┌─────────────────────────────────────────────────────┐
@@ -260,6 +321,18 @@
 ## مسار التعلم
 
 الدورة مصممة لتُنفذ بالترتيب. كل مرحلة تبني على سابقتها.
+
+<p align="center">
+  <a href="../../assets/readme/ar-SA/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ar-SA/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/ar-SA/harness-learning-path.png" alt="مسار التعلم" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>نسخة نصية</summary>
 
 ```text
     المرحلة 1: شاهد المشكلة                 المرحلة 2: هيكل المستودع
@@ -304,7 +377,28 @@
          v                                     v
     P05  الوكيل يتحقق من عمله بنفسه          P06  ابنِ حزاماً كاملاً
                                                (مشروع التخرج)
+
+    المرحلة 7: أتمتة الحلقة
+    ==========================
+    L13  توقف عن مطالبة وكيلك —
+         صمم حلقات بدلاً من ذلك
+         |
+         v
+    P07  ابنِ أول حلقة آلية
+         (حلقة هدف، حلقة مؤقت، صانع-مدقق)
+
+    المرحلة 8: هيكلة النظام
+    =============================
+    L14  ارسم النظام كرسم بياني —
+         عقد، حواف، حالة مشتركة، توجيه
+         |
+         v
+    P08  ارسم سير عملك كرسم بياني
+         (رسم صريح، fan-out/fan-in متوازي،
+          حواف تراجع، تعاون بشري)
 ```
+
+</details>
 
 كل مرحلة تستغرق حوالي أسبوع إذا كنت تعمل بدوام جزئي. إذا كنت تريد السرعة، يمكن إنجاز المراحل 1-3 في عطلة نهاية أسبوع طويلة.
 
@@ -312,35 +406,39 @@
 
 ## المنهج الدراسي
 
-### المحاضرات — 12 وحدة مفاهيمية، كل منها يجيب عن سؤال أساسي واحد
+### المحاضرات — 14 وحدة مفاهيمية، كل منها يجيب عن سؤال أساسي واحد
 
 *اقرأ النص الكامل لكل محاضرة على [موقع التوثيق](https://walkinglabs.github.io/learn-harness-engineering/).*
 
 | الجلسة | السؤال | الفكرة الأساسية |
 |---------|--------|-----------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | لماذا تفشل النماذج القوية في المهام الحقيقية؟ | الفجوة في القدرة بين المعايير القياسية والهندسة الحقيقية |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | ماذا يعني "الحزام" فعلياً؟ | خمسة أنظمة فرعية: التعليمات، الحالة، التحقق، النطاق، دورة الحياة |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | لماذا يجب أن يكون المستودع هو المصدر الوحيد للحقيقة؟ | إذا لم يستطع الوكيل رؤيته، فهو غير موجود |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | لماذا يفشل ملف التعليمات الضخم الواحد؟ | الإفصاح التدريجي: أعط خريطة، لا موسوعة |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | لماذا تفقد المهام طويلة التشغيل الاستمرارية؟ | احفظ التقدم على القرص؛ التقط من حيث توقفت |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | لماذا تحتاج التهيئة إلى مرحلة خاصة بها؟ | تحقق من صحة البيئة قبل أن يبدأ الوكيل العمل |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | لماذا يتجاوز الوكلاء الحدود وينهون أعمالاً بشكل ناقص؟ | ميزة واحدة في كل مرة؛ تعريف صريح للإتمام |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | لماذا تُعد قوائم الميزات عناصر أساسية للحزام؟ | حدود نطاق قابلة للقراءة آلياً لا يمكن للوكيل تجاهلها |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | لماذا يعلن الوكلاء النصر مبكراً جداً؟ | فجوات التحقق: الثقة ≠ الصحة |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | لماذا يغيّر الاختبار من طرف إلى طرف النتائج؟ | تشغيل خط أنابيب كامل فقط يُحسب كتحقق حقيقي |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | لماذا تنتمي قابلية الملاحظة داخل الحزام؟ | إذا لم تستطع رؤية ما فعله الوكيل، لا يمكنك إصلاح ما أفسده |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | لماذا يجب أن تترك كل جلسة حالة نظيفة؟ | نجاح الجلسة التالية يعتمد على تنظيف هذه الجلسة |
+| [L01](../../docs/ar/lectures/lecture-01-why-capable-agents-still-fail/index.md) | لماذا تفشل النماذج القوية في المهام الحقيقية؟ | الفجوة في القدرة بين المعايير القياسية والهندسة الحقيقية |
+| [L02](../../docs/ar/lectures/lecture-02-what-a-harness-actually-is/index.md) | ماذا يعني "الحزام" فعلياً؟ | خمسة أنظمة فرعية: التعليمات، الحالة، التحقق، النطاق، دورة الحياة |
+| [L03](../../docs/ar/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | لماذا يجب أن يكون المستودع هو المصدر الوحيد للحقيقة؟ | إذا لم يستطع الوكيل رؤيته، فهو غير موجود |
+| [L04](../../docs/ar/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | لماذا يفشل ملف التعليمات الضخم الواحد؟ | الإفصاح التدريجي: أعط خريطة، لا موسوعة |
+| [L05](../../docs/ar/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | لماذا تفقد المهام طويلة التشغيل الاستمرارية؟ | احفظ التقدم على القرص؛ التقط من حيث توقفت |
+| [L06](../../docs/ar/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | لماذا تحتاج التهيئة إلى مرحلة خاصة بها؟ | تحقق من صحة البيئة قبل أن يبدأ الوكيل العمل |
+| [L07](../../docs/ar/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | لماذا يتجاوز الوكلاء الحدود وينهون أعمالاً بشكل ناقص؟ | ميزة واحدة في كل مرة؛ تعريف صريح للإتمام |
+| [L08](../../docs/ar/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | لماذا تُعد قوائم الميزات عناصر أساسية للحزام؟ | حدود نطاق قابلة للقراءة آلياً لا يمكن للوكيل تجاهلها |
+| [L09](../../docs/ar/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | لماذا يعلن الوكلاء النصر مبكراً جداً؟ | فجوات التحقق: الثقة ≠ الصحة |
+| [L10](../../docs/ar/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | لماذا يغيّر الاختبار من طرف إلى طرف النتائج؟ | تشغيل خط أنابيب كامل فقط يُحسب كتحقق حقيقي |
+| [L11](../../docs/ar/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | لماذا تنتمي قابلية الملاحظة داخل الحزام؟ | إذا لم تستطع رؤية ما فعله الوكيل، لا يمكنك إصلاح ما أفسده |
+| [L12](../../docs/ar/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | لماذا يجب أن تترك كل جلسة حالة نظيفة؟ | نجاح الجلسة التالية يعتمد على تنظيف هذه الجلسة |
+| [L13](../../docs/ar/lectures/lecture-13-loop-engineering/index.md) | لماذا تحتاج إلى التوقف عن مطالبة وكيلك؟ | من القيادة اليدوية إلى الحلقات المستقلة — حلقة الهدف، حلقة المؤقت، فصل الصانع-المدقق |
+| [L14](../../docs/ar/lectures/lecture-14-graph-engineering/index.md) | لماذا تتطور الحلقة الواحدة إلى رسم بياني؟ | من الحلقة الواحدة إلى هندسة الرسوم البيانية — العقد، الحواف، الحالة المشتركة، التوجيه، ومتى يستحق الرسم فعلًا |
 
-### المشاريع — 6 مشاريع عملية تطبق طرق المحاضرات على نفس تطبيق Electron
+### المشاريع — 8 مشاريع عملية تطبق طرق المحاضرات على نفس تطبيق Electron
 
 | المشروع | ماذا تفعل | آلية الحزام |
 |---------|-----------|-------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | شغّل نفس المهمة مرتين: بالموجهات فقط مقابل القواعد أولاً | حزام أدنى: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | أعد هيكلة المستودع ليتمكن الوكيل من قراءته | مساحة عمل قابلة للقراءة بواسطة الوكيل + ملفات حالة مستمرة |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | اجعل الوكيل يلتقط من حيث توقف | سجل التقدم + تسليم الجلسة + استمرارية متعددة الجلسات |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | أوقف الوكيل عن القيام بالكثير جداً أو القليل جداً | ملاحظات وقت التشغيل + التحكم في النطاق + الفهرسة التدريجية |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | اجعل الوكيل يتحقق من عمله بنفسه | التحقق الذاتي + أسئلة وأجوبة مبنية على أدلة + إكمال قائم على الأدلة |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | ابنِ حزاماً كاملاً من الصفر (مشروع التخرج) | حزام كامل: جميع الآليات + قابلية الملاحظة + دراسة الاستئصال |
+| [P01](../../docs/ar/projects/project-01-baseline-vs-minimal-harness/index.md) | شغّل نفس المهمة مرتين: بالموجهات فقط مقابل القواعد أولاً | حزام أدنى: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/ar/projects/project-02-agent-readable-workspace/index.md) | أعد هيكلة المستودع ليتمكن الوكيل من قراءته | مساحة عمل قابلة للقراءة بواسطة الوكيل + ملفات حالة مستمرة |
+| [P03](../../docs/ar/projects/project-03-multi-session-continuity/index.md) | اجعل الوكيل يلتقط من حيث توقف | سجل التقدم + تسليم الجلسة + استمرارية متعددة الجلسات |
+| [P04](../../docs/ar/projects/project-04-incremental-indexing/index.md) | أوقف الوكيل عن القيام بالكثير جداً أو القليل جداً | ملاحظات وقت التشغيل + التحكم في النطاق + الفهرسة التدريجية |
+| [P05](../../docs/ar/projects/project-05-grounded-qa-verification/index.md) | اجعل الوكيل يتحقق من عمله بنفسه | التحقق الذاتي + أسئلة وأجوبة مبنية على أدلة + إكمال قائم على الأدلة |
+| [P06](../../docs/ar/projects/project-06-runtime-observability-and-debugging/index.md) | ابنِ حزاماً كاملاً من الصفر (مشروع التخرج) | حزام كامل: جميع الآليات + قابلية الملاحظة + دراسة الاستئصال |
+| [P07](../../docs/ar/projects/project-07-loop-engineering-first-loop/index.md) | ابنِ أول حلقة آلية | حلقة الهدف، حلقة المؤقت، فصل الصانع-المدقق، إدارة حالة الحلقة |
+| [P08](../../docs/ar/projects/project-08-graph-engineering-first-graph/index.md) | ارسم سير عملك كرسم بياني | عقد/حواف/حالة/توجيه صريحة، fan-out/fan-in متوازي، حواف تراجع، موافقة بشرية في الحلقة |
 
 ```text
     تطور المشاريع
@@ -362,6 +460,12 @@
      |
      v
     P06  حزام كامل (مشروع التخرج)                أنت تبني النظام الكامل
+     |
+     v
+    P07  أول حلقة آلية لك                        أنت تخرج من الحلقة
+     |
+     v
+    P08  ارسم سير عملك كرسم بياني                أنت ترسم النظام كرسم بياني
 
     حل كل مشروع يصبح بداية المشروع التالي.
     التطبيق يتطور. مهاراتك في الحزام تنمو معه.
@@ -389,6 +493,18 @@
 ## دورة حياة جلسة الوكيل
 
 إحدى الأفكار الأساسية في هذه الدورة: **يجب أن تتبع جلسة الوكيل دورة حياة منظمة، وليست عشوائية.** إليك كيف تبدو:
+
+<p align="center">
+  <a href="../../assets/readme/ar-SA/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ar-SA/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/ar-SA/harness-session-lifecycle.png" alt="دورة حياة جلسة الوكيل" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>نسخة نصية</summary>
 
 ```text
     دورة حياة جلسة الوكيل
@@ -430,6 +546,8 @@
     بدون الحزام، الخطوة 9 تصبح "الوكيل يقول يبدو جيداً."
     مع الحزام، الخطوة 9 هي "الاختبارات تجتاز، التنسيق نظيف، الأنواع صحيحة."
 ```
+
+</details>
 
 ---
 
@@ -515,7 +633,7 @@ npm run docs:preview    # Preview built site
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-راجع قائمة المراجع الطبقية الكاملة في [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md).
+راجع قائمة المراجع الطبقية الكاملة في [`docs/ar/resources/reference/`](../../docs/ar/resources/reference/index.md).
 
 ---
 
@@ -524,13 +642,13 @@ npm run docs:preview    # Preview built site
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress documentation site
-│   ├── lectures/                  # 12 lectures (index.md + code/ examples)
+│   ├── lectures/                  # 14 lectures (index.md + code/ examples)
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (12 total)
-│   ├── projects/                  # 6 project descriptions
+│   │   └── ... (14 total)
+│   ├── projects/                  # 8 project descriptions
 │   │   ├── project-01-*/
-│   │   └── ... (6 total)
+│   │   └── ... (8 total)
 │   └── resources/                 # Multilingual templates & references
 │       ├── en/                    # English templates, checklists, guides
 │       ├── zh/                    # Chinese templates, checklists, guides
@@ -550,7 +668,7 @@ learn-harness-engineering/
 ## كيف تم تنظيم الدورة
 
 - كل محاضرة تركز على سؤال واحد
-- الدورة تتضمن 6 مشاريع
+- الدورة تتضمن 8 مشاريع
 - كل مشروع يتطلب من الوكيل القيام بعمل حقيقي
 - كل مشروع يقارن نتائج الحزام الضعيف بالقوي
 - ما يهم هو الفرق المقاس، وليس عدد الوثائق المكتوبة
@@ -572,12 +690,6 @@ learn-harness-engineering/
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**: منهج عملي مفتوح المصدر يسد الفجوة من مفاهيم التعلم المعزز الأساسية إلى محاذاة نماذج اللغة الكبيرة (LLM) وRLVR والأنظمة الوكيلية المتقدمة.
-
----
-
-## تاريخ النجوم
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

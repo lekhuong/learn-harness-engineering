@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/ru-RU/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/ru-RU/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ru-RU/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/ru-RU/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# Learn Harness Engineering
-
 > **Проектный курс о построении окружений, управлении состоянием, верификации и механизмах контроля, которые делают KI-Coding-агентов надёжными.**
 
 Learn Harness Engineering — курс, посвящённый инженерии AI-агентов для кодинга. Мы глубоко изучили и обобщили самые передовые теории и практики Harness Engineering в индустрии. Наши основные источники:
+
+> **🆕 Обновление августа 2026: Разборы устройства передовых harness-систем** — новый раздел с 4 разборами:
+>
+> - **Новый раздел** [Разборы устройства передовых harness-систем](../../docs/ru/harness-designs/index.md) — примените предложенную в курсе модель из пяти подсистем (инструкции, инструменты, окружение, состояние, обратная связь), чтобы методом обратного проектирования понять, как четыре передовых продукта создают реальные harness-системы.
+> - **Pi** [Как Pi строит свой harness](../../docs/ru/harness-designs/pi/index.md) — минимальное ядро, программируемое расширение и инженерия контекста, лежащие в основе принципа «попросите Pi создать то, что вам нужно».
+> - **Claude Code** [Как Claude Code строит свой harness](../../docs/ru/harness-designs/claude-code/index.md) — четырёхуровневая память, пятиуровневое сжатие контекста, хуки и изоляция субагентов.
+> - **Codex** [Как Codex строит свой harness](../../docs/ru/harness-designs/codex/index.md) — репозиторий как источник истины, AGENTS.md как страница-оглавление и изоляция worktree.
+> - **DeepSeek** [Как DeepSeek строит свой harness](../../docs/ru/harness-designs/deepseek/index.md) — «всё — плагин», границы возможностей и конвейер событий.
+> - **Все 15 языков** — полный перевод на все поддерживаемые языки.
+>
+> **Ключевая идея:** Курс даёт вам систему координат, а эти разборы показывают, как те же принципы применяются на практике в продакшен-harness-системах.
+>
+> **🆕 Обновление августа 2026: Графовая инженерия (Graph Engineering)** — добавлено 1 лекция + 1 проект:
+>
+> - **Лекция 14** [От одиночных циклов к графовой инженерии](../../docs/ru/lectures/lecture-14-graph-engineering/index.md): почему одиночный цикл неизбежно превращается в граф — четырёхуровневое наслоение (prompt → context → loop → graph) и место harness в нём, четыре элемента графа (узлы, рёбра, общее состояние, маршрутизация), почему чек-поинты внутри loop не спасают от трёх структурных сбоев в масштабе (Гудхарт, слепота вверх, конфликт), независимые от фреймворка шесть шагов построения вашего первого графа, отличие Graph от Workflow, якоря, open-source-проекты до и после релиза, налог за оркестрацию, а также когда граф действительно стоит рисовать.
+> - **Проект 08** [Нарисуйте ваш workflow как граф](../../docs/ru/projects/project-08-graph-engineering-first-graph/index.md): три следующих эксперимента — нарисовать maker-checker loop как явный граф, добавить параллельный узел fan-out/fan-in, добавить условное ребро отката и узел ручного согласования.
+>
+> **Ключевая идея:** Loop — это граф из одного узла. Когда задаче требуются разделение труда, параллелизм, общее состояние, верификация и восстановление — это уже не loop, а граф.
+>
+> **🆕 Обновление июля 2026: Инженерия циклов (Loop Engineering)** — добавлено 1 лекция + 1 проект + шаблоны кода:
+>
+> - **Лекция 13** [Почему вам нужно перестать лично делать запросы к вашему агенту](../../docs/ru/lectures/lecture-13-loop-engineering/index.md): от `/goal` к шести примитивам цикловой инженерии (automations, worktrees, skills, connectors, sub-agents, external state), разделение генератора и оценщика, четыре тихих издержки, а также пошаговое построение вашего первого цикла.
+> - **Проект 07** [Постройте ваш первый автоматический цикл](../../docs/ru/projects/project-07-loop-engineering-first-loop/index.md): три следующих эксперимента — целевой цикл, цикл по расписанию, цикл maker-checker. Сравнение ручного vs автоматического, измерение снижения вмешательства, умение выйти из цикла.
+> - **Шаблоны кода**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — готовые к использованию шаблоны для построения циклов.
+>
+> **Ключевая идея:** Harness-инженерия строит машину. Цикловая инженерия проектирует дорогу, по которой она едет, — а вы проектируете эту дорогу извне машины.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@ OpenAI сообщает то же самое с Codex: в хорошо подг�
 
 **Этот курс научит вас, как построить такое окружение.**
 
+<p align="center">
+  <a href="../../assets/readme/ru-RU/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ru-RU/harness-pattern-dark.svg">
+      <img src="../../assets/readme/ru-RU/harness-pattern.png" alt="Модель умна, harness делает её надёжной" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстовая версия</summary>
+
 ```text
                     ПАТТЕРН HARNESS
                     ================
@@ -106,6 +151,8 @@ OpenAI сообщает то же самое с Codex: в хорошо подг�
                                          только когда верификация пройдена
 ```
 
+</details>
+
 ---
 
 ## Что на самом деле означает Harness Engineering
@@ -113,6 +160,18 @@ OpenAI сообщает то же самое с Codex: в хорошо подг�
 Harness Engineering — это построение полноценной рабочей среды вокруг модели, чтобы она давала надёжные результаты. Речь не о том, чтобы писать лучшие промпты. Речь о проектировании системы, в которой модель работает.
 
 Harness состоит из пяти подсистем:
+
+<p align="center">
+  <a href="../../assets/readme/ru-RU/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ru-RU/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/ru-RU/harness-subsystems.png" alt="Что на самом деле означает Harness Engineering" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстовая версия</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -145,6 +204,8 @@ Harness состоит из пяти подсистем:
     Harness не делает модель умнее.
     Он делает вывод модели надёжным.
 ```
+
+</details>
 
 Каждая подсистема выполняет свою задачу:
 
@@ -201,15 +262,15 @@ Harness состоит из пяти подсистем:
 
 Программа разделена на три части:
 
-1. **Лекции**: 12 концептуальных блоков, объясняющих теорию Harness Engineering.
-2. **Проекты**: 6 практических проектов, в которых вы строите агентскую рабочую среду с нуля.
+1. **Лекции**: 14 концептуальных блоков, объясняющих теорию Harness Engineering.
+2. **Проекты**: 8 практических проектов, в которых вы строите агентскую рабочую среду с нуля.
 3. **Библиотека шаблонов**: готовые к копированию шаблоны (`AGENTS.md`, `feature_list.json`, `init.sh` и др.), которые вы можете использовать в своих репозиториях уже сегодня.
 
 ---
 
 ## Быстрый старт: улучшите своего агента уже сегодня
 
-Вам не нужно читать все 12 лекций, чтобы получить пользу. Если вы уже используете coding-агента в реальном проекте, вы можете улучшить его прямо сейчас.
+Вам не нужно читать все 14 лекций, чтобы получить пользу. Если вы уже используете coding-агента в реальном проекте, вы можете улучшить его прямо сейчас.
 
 Идея проста: вместо того чтобы писать только промпты, дайте своему агенту набор структурированных файлов, определяющих, что нужно сделать, что уже сделано и как проверить результат. Эти файлы находятся в вашем репозитории, поэтому каждая сессия стартует из одного и того же состояния.
 
@@ -229,7 +290,7 @@ Harness состоит из пяти подсистем:
 
 ## Итоговый проект: настоящее приложение
 
-Все шесть проектов курса вращаются вокруг одного продукта: **десктопного приложения для персонального управления знаниями на базе Electron.**
+Все восемь проектов курса вращаются вокруг одного продукта: **десктопного приложения для персонального управления знаниями на базе Electron.**
 
 ```text
     ┌─────────────────────────────────────────────────────┐
@@ -268,6 +329,18 @@ Harness состоит из пяти подсистем:
 ## Путь обучения
 
 Курс рассчитан на последовательное прохождение. Каждая фаза строится на предыдущей.
+
+<p align="center">
+  <a href="../../assets/readme/ru-RU/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ru-RU/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/ru-RU/harness-learning-path.png" alt="Путь обучения" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстовая версия</summary>
 
 ```text
     Фаза 1: УВИДЕТЬ ПРОБЛЕМУ              Фаза 2: СТРУКТУРИРОВАТЬ РЕПОЗИТОРИЙ
@@ -313,7 +386,24 @@ Harness состоит из пяти подсистем:
          v                                     v
     P05  Агент верифицирует                P06  Построить полный harness
          собственную работу                      (итоговый проект)
+
+
+    Фаза 7: АВТОМАТИЗАЦИЯ ЦИКЛА            Фаза 8: СТРУКТУРИРОВАНИЕ СИСТЕМЫ
+    =========================             =================================
+
+    L13  Перестаньте делать запросы        L14  Изобразите систему как граф —
+         к агенту — проектируйте                узлы, рёбра, общее состояние,
+         циклы                                  маршрутизация
+         |                                      |
+         v                                      v
+    P07  Постройте ваш первый               P08  Нарисуйте ваш workflow как
+         автоматический цикл                    граф
+         (целевой цикл, цикл по                 (явный граф, параллельный
+          расписанию, maker-checker)             fan-out/fan-in,
+                                                ребро отката, человек+машина)
 ```
+
+</details>
 
 Каждая фаза занимает примерно неделю при обучении параллельно с основной работой. Если двигаться быстрее, фазы 1–3 можно пройти за длинные выходные.
 
@@ -321,35 +411,39 @@ Harness состоит из пяти подсистем:
 
 ## Учебная программа
 
-### Лекции — 12 концептуальных блоков, каждый отвечает на один ключевой вопрос
+### Лекции — 14 концептуальных блоков, каждый отвечает на один ключевой вопрос
 
 *Читайте полный текст каждой лекции на [сайте документации](https://walkinglabs.github.io/learn-harness-engineering/).*
 
 | Занятие | Вопрос | Ключевая идея |
 |---------|--------|---------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Почему сильные модели всё равно ошибаются на реальных задачах? | Разрыв между бенчмарками и реальным инжинирингом |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | Что на самом деле означает «harness"? | Пять подсистем: Instructions, State, Verification, Scope, Lifecycle |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Почему репозиторий должен быть единственным источником истины? | Если агент не может это увидеть — этого не существует |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Почему одна гигантская инструкция обречена на провал? | Прогрессивное раскрытие: дать карту, а не энциклопедию |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Почему длительные задачи теряют связность? | Сохранять прогресс на диске; продолжать с того места, где остановились |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Почему инициализация требует отдельной фазы? | Проверить работоспособность окружения до того, как агент начнёт работу |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Почему агенты выходят за рамки и не доделывают? | Одна фича за раз; явное определение «готово" |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Почему feature-списки — это примитивы harness? | Машинно-читаемые границы scope, которые агент не может проигнорировать |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Почему агенты объявляют успех слишком рано? | Пробелы в верификации: доверие ≠ корректность |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Почему end-to-end-тестирование меняет результаты? | Только полный прогон pipeline считается настоящей верификацией |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Почему observability должна быть внутри harness? | Если вы не видите, что сделал агент, вы не сможете починить то, что он сломал |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Почему каждая сессия должна оставлять чистое состояние? | Успех следующей сессии зависит от уборки в этой |
+| [L01](../../docs/ru/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Почему сильные модели всё равно ошибаются на реальных задачах? | Разрыв между бенчмарками и реальным инжинирингом |
+| [L02](../../docs/ru/lectures/lecture-02-what-a-harness-actually-is/index.md) | Что на самом деле означает «harness"? | Пять подсистем: Instructions, State, Verification, Scope, Lifecycle |
+| [L03](../../docs/ru/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Почему репозиторий должен быть единственным источником истины? | Если агент не может это увидеть — этого не существует |
+| [L04](../../docs/ru/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Почему одна гигантская инструкция обречена на провал? | Прогрессивное раскрытие: дать карту, а не энциклопедию |
+| [L05](../../docs/ru/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Почему длительные задачи теряют связность? | Сохранять прогресс на диске; продолжать с того места, где остановились |
+| [L06](../../docs/ru/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Почему инициализация требует отдельной фазы? | Проверить работоспособность окружения до того, как агент начнёт работу |
+| [L07](../../docs/ru/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Почему агенты выходят за рамки и не доделывают? | Одна фича за раз; явное определение «готово" |
+| [L08](../../docs/ru/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Почему feature-списки — это примитивы harness? | Машинно-читаемые границы scope, которые агент не может проигнорировать |
+| [L09](../../docs/ru/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Почему агенты объявляют успех слишком рано? | Пробелы в верификации: доверие ≠ корректность |
+| [L10](../../docs/ru/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Почему end-to-end-тестирование меняет результаты? | Только полный прогон pipeline считается настоящей верификацией |
+| [L11](../../docs/ru/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Почему observability должна быть внутри harness? | Если вы не видите, что сделал агент, вы не сможете починить то, что он сломал |
+| [L12](../../docs/ru/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Почему каждая сессия должна оставлять чистое состояние? | Успех следующей сессии зависит от уборки в этой |
+| [L13](../../docs/ru/lectures/lecture-13-loop-engineering/index.md) | Почему вам нужно перестать лично делать запросы к вашему агенту? | От ручного ввода к автономным циклам — целевой цикл, цикл по расписанию, разделение maker и checker |
+| [L14](../../docs/ru/lectures/lecture-14-graph-engineering/index.md) | Почему одиночный цикл превращается в граф? | От одиночных циклов к графовой инженерии — узлы, рёбра, общее состояние, маршрутизация и когда граф действительно стоит рисовать |
 
-### Проекты — 6 практических проектов, применяющих методы лекций к одному и тому же Electron-приложению
+### Проекты — 8 практических проектов, применяющих методы лекций к одному и тому же Electron-приложению
 
 | Проект | Что вы делаете | Механизм harness |
 |---------|----------------|-------------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | Выполнить одну задачу дважды: только промпт vs. на основе правил | Минимальный harness: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | Реструктурировать репозиторий для чтения агентом | Агентно-читаемое рабочее пространство + постоянные файлы состояния |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | Позволить агенту продолжить с того места, где он остановился | Протокол прогресса + передача сессии + мультисессионная связность |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | Не дать агенту сделать слишком много или слишком мало | Runtime-обратная связь + контроль scope + инкрементальное индексирование |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | Заставить агента верифицировать собственную работу | Самоверификация + обоснованный Q&A + завершение на основе свидетельств |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Построить полный harness с нуля (итоговый проект) | Полный harness: все механизмы + observability + абляционное исследование |
+| [P01](../../docs/ru/projects/project-01-baseline-vs-minimal-harness/index.md) | Выполнить одну задачу дважды: только промпт vs. на основе правил | Минимальный harness: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/ru/projects/project-02-agent-readable-workspace/index.md) | Реструктурировать репозиторий для чтения агентом | Агентно-читаемое рабочее пространство + постоянные файлы состояния |
+| [P03](../../docs/ru/projects/project-03-multi-session-continuity/index.md) | Позволить агенту продолжить с того места, где он остановился | Протокол прогресса + передача сессии + мультисессионная связность |
+| [P04](../../docs/ru/projects/project-04-incremental-indexing/index.md) | Не дать агенту сделать слишком много или слишком мало | Runtime-обратная связь + контроль scope + инкрементальное индексирование |
+| [P05](../../docs/ru/projects/project-05-grounded-qa-verification/index.md) | Заставить агента верифицировать собственную работу | Самоверификация + обоснованный Q&A + завершение на основе свидетельств |
+| [P06](../../docs/ru/projects/project-06-runtime-observability-and-debugging/index.md) | Построить полный harness с нуля (итоговый проект) | Полный harness: все механизмы + observability + абляционное исследование |
+| [P07](../../docs/ru/projects/project-07-loop-engineering-first-loop/index.md) | Построить ваш первый автоматический цикл | Целевой цикл, цикл по расписанию, разделение maker и checker, управление состоянием цикла |
+| [P08](../../docs/ru/projects/project-08-graph-engineering-first-graph/index.md) | Нарисовать ваш workflow как граф | Явные узлы/рёбра/состояние/маршрутизация, параллельный fan-out/fan-in, ребро отката, согласование человеком |
 
 ```text
     ЭВОЛЮЦИЯ ПРОЕКТОВ
@@ -375,6 +469,14 @@ Harness состоит из пяти подсистем:
      |
      v
     P06  Полный harness (итоговый)         Вы строите полную систему
+     |
+     v
+    P07  Ваш первый автоматический         Вы выходите из цикла
+         цикл
+     |
+     v
+    P08  Нарисуйте ваш workflow как         Вы рисуете систему как граф
+         граф
 
     Solution каждого проекта становится starter'ом следующего.
     Приложение эволюционирует. Ваши навыки harness растут вместе с ним.
@@ -402,6 +504,18 @@ Harness состоит из пяти подсистем:
 ## Жизненный цикл агентской сессии
 
 Одна из ключевых идей этого курса: **сессия агента должна следовать структурированному жизненному циклу, а не быть свободным плаванием.** Вот как это выглядит:
+
+<p align="center">
+  <a href="../../assets/readme/ru-RU/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ru-RU/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/ru-RU/harness-session-lifecycle.png" alt="Жизненный цикл агентской сессии" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстовая версия</summary>
 
 ```text
     ЖИЗНЕННЫЙ ЦИКЛ СЕССИИ АГЕНТА
@@ -443,6 +557,8 @@ Harness состоит из пяти подсистем:
     Без harness шаг 9 превращается в «агент говорит, что всё выглядит нормально».
     С harness шаг 9 — это «тесты пройдены, линт чист, типы в порядке».
 ```
+
+</details>
 
 ---
 
@@ -528,7 +644,7 @@ npm run docs:preview    # Предпросмотр собранного сайт
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-Полный многоуровневый список ссылок доступен в [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md).
+Полный многоуровневый список ссылок доступен в [`docs/ru/resources/reference/`](../../docs/ru/resources/reference/index.md).
 
 ---
 
@@ -537,13 +653,13 @@ npm run docs:preview    # Предпросмотр собранного сайт
 ```text
 learn-harness-engineering/
 ├── docs/                          # Сайт документации на VitePress
-│   ├── lectures/                  # 12 лекций (index.md + примеры в code/)
+│   ├── lectures/                  # 14 лекций (index.md + примеры в code/)
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (всего 12)
-│   ├── projects/                  # 6 описаний проектов
+│   │   └── ... (всего 14)
+│   ├── projects/                  # 8 описаний проектов
 │   │   ├── project-01-*/
-│   │   └── ... (всего 6)
+│   │   └── ... (всего 8)
 │   └── resources/                 # Многоязычные шаблоны и справочники
 │       ├── en/                    # Английские шаблоны, чек-листы, руководства
 │       ├── zh/                    # Китайские шаблоны, чек-листы, руководства
@@ -563,7 +679,7 @@ learn-harness-engineering/
 ## Организация курса
 
 - Каждая лекция сфокусирована на одном вопросе
-- Курс включает 6 проектов
+- Курс включает 8 проектов
 - Каждый проект требует, чтобы агент выполнял реальную работу
 - Каждый проект сравнивает результаты слабого и сильного harness
 - Важен измеримый результат, а не количество написанных документов
@@ -585,12 +701,6 @@ learn-harness-engineering/
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**: Открытое практическое учебное пособие, преодолевающее разрыв между базовыми концепциями обучения с подкреплением и LLM-выравниванием, RLVR и продвинутыми агентскими системами.
-
----
-
-## История звёзд
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

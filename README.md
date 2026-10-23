@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/readme/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="assets/readme/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/harness-wordmark-dark.svg">
+    <img src="assets/readme/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="docs-readme/zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,19 +25,45 @@
   <a href="docs-readme/uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-<h1 align="center">Learn Harness Engineering</h1>
-
 <p align="center"><strong>A project-based course on building the environment, state management, verification, and control mechanisms that make AI coding agents work reliably.</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Lectures-13-blue?style=flat-square" alt="13 Lectures">
-  <img src="https://img.shields.io/badge/Projects-7-green?style=flat-square" alt="7 Projects">
+  <img src="https://img.shields.io/badge/Lectures-14-blue?style=flat-square" alt="14 Lectures">
+  <img src="https://img.shields.io/badge/Projects-8-green?style=flat-square" alt="8 Projects">
   <img src="https://img.shields.io/badge/Languages-15-yellow?style=flat-square" alt="15 Languages">
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" alt="MIT License">
-  <a href="https://discord.gg/XU7DQmpqk"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Join the Discord community"></a>
+  <a href="https://github.com/walkinglabs"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Join the Discord community"></a>
 </p>
 
 > 🌍 This course is available in **15 languages**: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Русский, Deutsch, العربية, Tiếng Việt, Oʻzbekcha, Türkçe, Portuguese (BR), Українська. Choose your language from the badges above.
+
+## 🆕 What's New — August 2026
+
+**Frontier Harness Design Breakdowns — new section (4 breakdowns)**
+
+| What | Details |
+|------|---------|
+| **New section** | [Frontier Harness Design Breakdowns](docs/en/harness-designs/index.md) — Apply the course's five-subsystem framework (instructions, tools, environment, state, feedback) to reverse-engineer how four frontier products build real harnesses. |
+| **Pi** | [How Pi builds its harness](docs/en/harness-designs/pi/index.md) — a minimal kernel, programmable expansion, and context engineering behind "ask Pi to build what you want." |
+| **Claude Code** | [How Claude Code builds its harness](docs/en/harness-designs/claude-code/index.md) — four-layer memory, five-level compaction, hooks, and sub-agent isolation. |
+| **Codex** | [How Codex builds its harness](docs/en/harness-designs/codex/index.md) — the repository as source of truth, AGENTS.md as a directory page, and worktree isolation. |
+| **DeepSeek** | [How DeepSeek builds its harness](docs/en/harness-designs/deepseek/index.md) — "everything is a plugin," capability seams, and an event pipeline. |
+| **All 15 languages** | Full translation coverage across all supported languages. |
+
+**Key idea:** The course gives you a framework; these breakdowns show you how the same principles actually play out in production harnesses.
+
+---
+
+**Graph Engineering Update — 1 new lecture, 1 new project**
+
+| What | Details |
+|------|---------|
+| **Lecture 14** | [From Single Loops to Graph Engineering](docs/en/lectures/lecture-14-graph-engineering/index.md) — Why a single loop grows into a graph: the four stacked layers (prompt → context → loop → graph) and where harness sits in that stack, the four parts of a graph (nodes, edges, shared state, routing), why in-loop checkpoints can't fix the three structural failures at scale (Goodhart, blindness upward, conflict), a framework-agnostic six-step walkthrough for building your first graph, graph vs. workflow, anchors, which open-source "graph engineering" projects existed before the name vs. after it, the orchestration tax, and when a graph is actually worth drawing. |
+| **Project 08** | [Draw Your Workflow as a Graph](docs/en/projects/project-08-graph-engineering-first-graph/index.md) — Three progressive experiments: draw your maker-checker loop as an explicit graph, add a parallel fan-out/fan-in node, then add a conditional rollback edge and a human-approval node. |
+
+**Key idea:** A loop is a graph with one node. When your task needs specialization, parallelism, shared state, verification, and recovery — it has stopped being a loop. It's a graph.
+
+---
 
 ## 🆕 What's New — July 2026
 
@@ -58,7 +93,7 @@ Learn Harness Engineering is a course dedicated to the engineering of AI coding 
 
 ## Table of Contents
 
-- [🆕 What's New](#-whats-new--july-2026)
+- [🆕 What's New](#-whats-new--august-2026)
 - [✨ Visual Preview](#-visual-preview)
 - [What Harness Engineering Actually Means](#what-harness-engineering-actually-means)
 - [Quick Start: Improve Your Agent Today](#quick-start-improve-your-agent-today)
@@ -112,6 +147,18 @@ OpenAI reported the same thing with Codex: in a well-harnessed repository, the s
 
 **This course teaches you how to build that environment.**
 
+<p align="center">
+  <a href="assets/readme/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/harness-pattern-dark.svg">
+      <img src="assets/readme/harness-pattern.png" alt="Harness pattern: give a task, read harness files, execute, and stop after verification passes." width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Text version</summary>
+
 ```text
                     THE HARNESS PATTERN
                     ====================
@@ -131,6 +178,8 @@ OpenAI reported the same thing with Codex: in a well-harnessed repository, the s
                                          verification passes
 ```
 
+</details>
+
 ---
 
 ## What Harness Engineering Actually Means
@@ -138,6 +187,18 @@ OpenAI reported the same thing with Codex: in a well-harnessed repository, the s
 Harness engineering is about building a complete working environment around the model so it produces reliable results. It's not about writing better prompts. It's about designing the system the model operates inside.
 
 A harness has five subsystems:
+
+<p align="center">
+  <a href="assets/readme/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/harness-subsystems-dark.svg">
+      <img src="assets/readme/harness-subsystems.png" alt="Five harness subsystems: instructions, state, verification, scope, and session lifecycle." width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Text version</summary>
 
 ```text
     ┌────────────────────────────────────────────────────────────────┐
@@ -168,6 +229,8 @@ A harness has five subsystems:
     The harness doesn't make the model smarter.
     It makes the model's output reliable.
 ```
+
+</details>
 
 Each subsystem has one job:
 
@@ -229,7 +292,7 @@ The curriculum is divided into three parts:
 
 ## Quick Start: Improve Your Agent Today
 
-You don't need to read all 13 lectures before you start getting value. If you're already using a coding agent on a real project, here's how to improve it right now.
+You don't need to read all 14 lectures before you start getting value. If you're already using a coding agent on a real project, here's how to improve it right now.
 
 The idea is simple: instead of just writing prompts, give your agent a set of structured files that define what to do, what's been done, and how to verify the work. These files live inside your repo, so every session starts from the same state.
 
@@ -239,11 +302,17 @@ The idea is simple: instead of just writing prompts, give your agent a set of st
     ├── CLAUDE.md              <-- (alternative, if using Claude Code)
     ├── init.sh                <-- runs install + verify + start
     ├── feature_list.json      <-- what features exist, which are done
-    ├── claude-progress.md     <-- what happened each session
+    ├── claude-progress.md     <-- session progress (historical filename; agent-agnostic)
     └── src/                   <-- your actual code
 ```
 
 Grab the starter templates from the [Resource Library](https://walkinglabs.github.io/learn-harness-engineering/en/resources/) and drop them into your project. That's it. Four files, and your agent sessions will already be significantly more stable than running on prompts alone.
+
+`claude-progress.md` is a generic, repository-local session progress log; the
+name is retained for compatibility with the course examples. It is not tied to
+Claude Code and is not updated automatically by any agent. Codex, OpenHands,
+Antigravity, and other coding agents can use the same file when their root
+instructions tell them to read it at startup and update it before handoff.
 
 ---
 
@@ -286,6 +355,18 @@ Each course project's starter/solution is a complete copy of this Electron app a
 ## Learning Path
 
 The course is designed to be done in order. Each phase builds on the last.
+
+<p align="center">
+  <a href="assets/readme/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/harness-learning-path-dark.svg">
+      <img src="assets/readme/harness-learning-path.png" alt="Eight learning phases connecting lectures L01–L14 with projects P01–P08." width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Text version</summary>
 
 ```text
     Phase 1: SEE THE PROBLEM              Phase 2: STRUCTURE THE REPO
@@ -340,7 +421,21 @@ The course is designed to be done in order. Each phase builds on the last.
          v
     P07  Build your first automated loop
          (goal loop, timer loop, maker-checker)
+
+    Phase 8: STRUCTURE THE SYSTEM
+    =============================
+
+    L14  Draw the system as a graph —
+         nodes, edges, shared state, routing
+
+         |
+         v
+    P08  Draw your workflow as a graph
+         (explicit graph, parallel fan-out/fan-in,
+          rollback edges, human-in-the-loop)
 ```
+
+</details>
 
 Each phase takes about a week if you're going part-time. If you want to go faster, phases 1–3 can be done in a long weekend.
 
@@ -348,7 +443,7 @@ Each phase takes about a week if you're going part-time. If you want to go faste
 
 ## Syllabus
 
-### Lectures — 13 conceptual units, each answering one core question
+### Lectures — 14 conceptual units, each answering one core question
 
 *Read the full text for each lecture on the [Documentation Website](https://walkinglabs.github.io/learn-harness-engineering/).*
 
@@ -367,8 +462,9 @@ Each phase takes about a week if you're going part-time. If you want to go faste
 | [L11](./docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Why does observability belong inside the harness? | If you can't see what the agent did, you can't fix what it broke |
 | [L12](./docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Why must every session leave a clean state? | The next session's success depends on this session's cleanup |
 | [L13](./docs/en/lectures/lecture-13-loop-engineering/index.md) | Why do you need to stop prompting your agent? | From manual driving to automated loops — goal loops, timer loops, and maker-checker separation |
+| [L14](./docs/en/lectures/lecture-14-graph-engineering/index.md) | Why does a single loop grow into a graph? | From single loops to graph engineering — nodes, edges, shared state, routing, and when a graph is actually worth drawing |
 
-### Projects — 7 hands-on projects applying lecture methods to the same Electron app
+### Projects — 8 hands-on projects applying lecture methods to the same Electron app
 
 | Project | What You Do | Harness Mechanism |
 |---------|------------|-------------------|
@@ -379,6 +475,7 @@ Each phase takes about a week if you're going part-time. If you want to go faste
 | [P05](./docs/en/projects/project-05-grounded-qa-verification/index.md) | Make the agent verify its own work | Self-verification + grounded Q&A + evidence-based completion |
 | [P06](./docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Build a complete harness from scratch (capstone) | Full harness: all mechanisms + observability + ablation study |
 | [P07](./docs/en/projects/project-07-loop-engineering-first-loop/index.md) | Build your first automated loop | Goal loops, timer loops, maker-checker separation, loop state management |
+| [P08](./docs/en/projects/project-08-graph-engineering-first-graph/index.md) | Draw your workflow as a graph | Explicit nodes/edges/state/routing, parallel fan-out/fan-in, rollback edges, human-in-the-loop approval |
 
 ```text
     PROJECT EVOLUTION
@@ -403,6 +500,9 @@ Each phase takes about a week if you're going part-time. If you want to go faste
      |
      v
     P07  Your first automated loop        You step outside the loop
+     |
+     v
+    P08  Draw your workflow as a graph    You draw the system as a graph
 
     Each project's solution becomes the next project's starter.
     The app evolves. Your harness skills grow with it.
@@ -430,6 +530,18 @@ Each phase takes about a week if you're going part-time. If you want to go faste
 ## The Agent Session Lifecycle
 
 One of the core ideas in this course: **the agent's session should follow a structured lifecycle, not a free-for-all.** Here's what that looks like:
+
+<p align="center">
+  <a href="assets/readme/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/readme/harness-session-lifecycle-dark.svg">
+      <img src="assets/readme/harness-session-lifecycle.png" alt="Start, select one feature, execute and verify with a fix-and-rerun loop, then wrap up with persistent state." width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Text version</summary>
 
 ```text
     AGENT SESSION LIFECYCLE
@@ -471,6 +583,8 @@ One of the core ideas in this course: **the agent's session should follow a stru
     Without the harness, step 9 becomes "agent says it looks fine."
     With the harness, step 9 is "tests pass, lint is clean, types check."
 ```
+
+</details>
 
 ---
 
@@ -565,12 +679,12 @@ See the full layered reference list in [`docs/en/resources/reference/`](./docs/e
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress documentation site
-│   ├── lectures/                  # 13 lectures (index.md + code/ examples)
+│   ├── lectures/                  # 14 lectures (index.md + code/ examples)
 │   │   ├── lecture-01-*/
-│   │   └── ... (13 total)
-│   ├── projects/                  # 7 project descriptions
+│   │   └── ... (14 total)
+│   ├── projects/                  # 8 project descriptions
 │   │   ├── project-01-*/
-│   │   └── ... (7 total)
+│   │   └── ... (8 total)
 │   └── resources/                 # Multilingual templates & references (14 languages)
 │       ├── en/
 │       └── ... (14 total)
@@ -590,7 +704,7 @@ learn-harness-engineering/
 ## How the Course Is Organized
 
 - Each lecture focuses on one question
-- The course includes 7 projects
+- The course includes 8 projects
 - Every project requires the agent to do real work
 - Every project compares weak vs. strong harness results
 - What matters is the measured difference, not how many docs were written
@@ -630,12 +744,6 @@ Our team has also created other courses! Check them out:
 [![Modern LLM Notebook](https://img.shields.io/badge/MODERN_LLM_NOTEBOOK-0052cc?style=for-the-badge)](https://github.com/walkinglabs/modern-llm-notebook)
 
 **Modern LLM Notebook**: A hands-on course for building modern LLMs from scratch in PyTorch, with 23 runnable Jupyter Notebooks covering tokenizers, attention, MoE, RLHF, inference, evaluation, and distillation.
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

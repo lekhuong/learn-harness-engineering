@@ -33,6 +33,17 @@ npm install
 
 ## Exact Task Contract
 
+Project 01 is a comparison experiment. The primary success criterion is to
+run the same agent task against the weak-harness `starter/` and the
+explicit-harness `solution/`, then record what each run actually completes.
+The generated application does not need to be fully functional for the
+comparison to be valid. Use the feature table below to measure completed,
+missing, and verified behavior.
+
+The checked-in `solution/` is a reference baseline with the product slice and
+harness artifacts already present; it is not a promise that an agent will
+recreate every feature from the prompt alone.
+
 The starter prompt is intentionally vague (`starter/task-prompt.md` contains only
 "Build an Electron app that can show documents and answer questions."). Use the
 solution harness to make that vague request concrete:

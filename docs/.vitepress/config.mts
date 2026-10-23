@@ -1,15 +1,18 @@
 /// <reference types="node" />
 import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import anchorMap from "./anchor-map.json";
+import { defaultSlugify } from "../../scripts/anchor-map-utils.ts";
 
 const docsBase = process.env.DOCS_BASE_PATH || "/learn-harness-engineering/";
 const brandLogo = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23D95C41" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12.1" y1="11.9" x2="18.9" y2="8.2" /><line x1="12.1" y1="12.1" x2="20.3" y2="12.9" /><line x1="12.2" y1="12.4" x2="16.6" y2="19.1" /><line x1="11.8" y1="12.4" x2="7.3" y2="19.2" /><line x1="11.9" y1="12.1" x2="3.7" y2="13.3" /><line x1="11.8" y1="11.7" x2="7.8" y2="4.4" /></svg>';
 const githubRepoTreeLink = "https://github.com/walkinglabs/learn-harness-engineering/tree/main";
-const discordInviteLink = "https://discord.gg/XU7DQmpqk";
-const socialLinks = [
+// Discord 邀请链接会过期，社区入口默认指向组织主页
+const communityLink = "https://github.com/walkinglabs";
+const socialLinks: Array<{ icon: "github" | "discord"; link: string }> = [
   { icon: "github", link: githubRepoTreeLink },
-  { icon: "discord", link: discordInviteLink }
-] as const;
+  { icon: "discord", link: communityLink }
+];
 
 const zhLectureItems = [
   { text: "欢迎", link: "/zh/" },
@@ -25,7 +28,8 @@ const zhLectureItems = [
   { text: "跑通完整流程才算真正验证", link: "/zh/lectures/lecture-10-why-end-to-end-testing-changes-results/" },
   { text: "让 agent 的运行过程可观测", link: "/zh/lectures/lecture-11-why-observability-belongs-inside-the-harness/" },
   { text: "每次会话结束前都做好交接", link: "/zh/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
-  { text: "从手动驱动到自动循环", link: "/zh/lectures/lecture-13-loop-engineering/" }
+  { text: "从手动驱动到自动循环", link: "/zh/lectures/lecture-13-loop-engineering/" },
+  { text: "从单循环到图工程", link: "/zh/lectures/lecture-14-graph-engineering/" }
 ];
 
 const zhProjectItems = [
@@ -36,7 +40,8 @@ const zhProjectItems = [
   { text: "运行反馈与行为修正", link: "/zh/projects/project-04-incremental-indexing/" },
   { text: "工作评审与自我验证", link: "/zh/projects/project-05-grounded-qa-verification/" },
   { text: "综合 Agent 工作环境", link: "/zh/projects/project-06-runtime-observability-and-debugging/" },
-  { text: "第一个自动循环", link: "/zh/projects/project-07-loop-engineering-first-loop/" }
+  { text: "第一个自动循环", link: "/zh/projects/project-07-loop-engineering-first-loop/" },
+  { text: "把你的工作流画成一张图", link: "/zh/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const zhResourceItems = [
@@ -48,6 +53,22 @@ const zhResourceItems = [
 
 const zhSkillItems = [
   { text: "技能总览", link: "/zh/skills/" }
+];
+
+const zhHarnessDesignItems = [
+  { text: "栏目总览", link: "/zh/harness-designs/" },
+  { text: "拆解 Pi 的 harness 设计", link: "/zh/harness-designs/pi/" },
+  { text: "拆解 Claude Code 的 harness 设计", link: "/zh/harness-designs/claude-code/" },
+  { text: "拆解 Codex 的 harness 设计", link: "/zh/harness-designs/codex/" },
+  { text: "拆解 DeepSeek Harness 的设计", link: "/zh/harness-designs/deepseek/" }
+];
+
+const enHarnessDesignItems = [
+  { text: "Frontier Harness Design Breakdowns", link: "/en/harness-designs/" },
+  { text: "Breaking Down Pi's Harness Design", link: "/en/harness-designs/pi/" },
+  { text: "Breaking Down Claude Code's Harness Design", link: "/en/harness-designs/claude-code/" },
+  { text: "Breaking Down Codex's Harness Design", link: "/en/harness-designs/codex/" },
+  { text: "Breaking Down DeepSeek Harness's Design", link: "/en/harness-designs/deepseek/" }
 ];
 
 const enLectureItems = [
@@ -64,7 +85,8 @@ const enLectureItems = [
   { text: "Why End-to-End Testing Changes Results", link: "/en/lectures/lecture-10-why-end-to-end-testing-changes-results/" },
   { text: "Why Observability Belongs Inside the Harness", link: "/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/" },
   { text: "Why Every Session Must Leave a Clean State", link: "/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
-  { text: "From Manual Prompting to Autonomous Loops", link: "/en/lectures/lecture-13-loop-engineering/" }
+  { text: "From Manual Prompting to Autonomous Loops", link: "/en/lectures/lecture-13-loop-engineering/" },
+  { text: "From Single Loops to Graph Engineering", link: "/en/lectures/lecture-14-graph-engineering/" }
 ];
 
 const enProjectItems = [
@@ -75,7 +97,8 @@ const enProjectItems = [
   { text: "Runtime Feedback and Scope Control", link: "/en/projects/project-04-incremental-indexing/" },
   { text: "Self-Verification and Role Separation", link: "/en/projects/project-05-grounded-qa-verification/" },
   { text: "Complete Harness (Capstone)", link: "/en/projects/project-06-runtime-observability-and-debugging/" },
-  { text: "Your First Automated Loop", link: "/en/projects/project-07-loop-engineering-first-loop/" }
+  { text: "Your First Automated Loop", link: "/en/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Draw Your Workflow as a Graph", link: "/en/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const enResourceItems = [
@@ -105,6 +128,7 @@ const viLectureItems = [
   { text: "Tại sao mỗi phiên làm việc phải để lại trạng thái sạch", link: "/vi/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Từ Nhắc lệnh Thủ công đến Vòng lặp Tự chủ", link: "/vi/lectures/lecture-13-loop-engineering/" },
+  { text: "Từ Vòng lặp Đơn lẻ đến Kỹ thuật Đồ thị", link: "/vi/lectures/lecture-14-graph-engineering/" }
 ];
 
 const viProjectItems = [
@@ -117,6 +141,7 @@ const viProjectItems = [
   { text: "Harness Hoàn chỉnh", link: "/vi/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Xây dựng Vòng lặp Tự động Đầu tiên", link: "/vi/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Vẽ Quy trình Làm việc của bạn thành một Đồ thị", link: "/vi/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const viResourceItems = [
@@ -128,6 +153,22 @@ const viResourceItems = [
 
 const viSkillItems = [
   { text: "Tổng quan về Kỹ năng", link: "/vi/skills/" },
+];
+
+const viHarnessDesignItems = [
+  { text: "Phân tích các harness tiên tiến", link: "/vi/harness-designs/" },
+  { text: "Phân tích thiết kế harness của Pi", link: "/vi/harness-designs/pi/" },
+  { text: "Phân tích thiết kế harness của Claude Code", link: "/vi/harness-designs/claude-code/" },
+  { text: "Phân tích thiết kế harness của Codex", link: "/vi/harness-designs/codex/" },
+  { text: "Phân tích thiết kế DeepSeek Harness", link: "/vi/harness-designs/deepseek/" }
+];
+
+const ruHarnessDesignItems = [
+  { text: "Разбор передовых harness", link: "/ru/harness-designs/" },
+  { text: "Разбор дизайна harness в Pi", link: "/ru/harness-designs/pi/" },
+  { text: "Разбор дизайна harness в Claude Code", link: "/ru/harness-designs/claude-code/" },
+  { text: "Разбор дизайна harness в Codex", link: "/ru/harness-designs/codex/" },
+  { text: "Разбор дизайна DeepSeek Harness", link: "/ru/harness-designs/deepseek/" }
 ];
 
 const ruLectureItems = [
@@ -146,6 +187,7 @@ const ruLectureItems = [
   { text: "Каждая сессия должна оставлять чистое состояние", link: "/ru/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "От ручных запросов к автономным циклам", link: "/ru/lectures/lecture-13-loop-engineering/" },
+  { text: "От одиночных циклов к графовой инженерии", link: "/ru/lectures/lecture-14-graph-engineering/" }
 ];
 
 const ruProjectItems = [
@@ -158,6 +200,7 @@ const ruProjectItems = [
   { text: "Полный harness (капстоун)", link: "/ru/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Постройте свой первый автоматизированный цикл", link: "/ru/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Нарисуйте ваш workflow как граф", link: "/ru/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const ruResourceItems = [
@@ -187,6 +230,7 @@ const uzLectureItems = [
   { text: "Har bir sessiya nega toza holat qoldirishi kerak", link: "/uz/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Qoʻlda prompt yozishdan avtonom loop'largacha", link: "/uz/lectures/lecture-13-loop-engineering/" },
+  { text: "Yakka loopʼdan grafik muhandisligigacha", link: "/uz/lectures/lecture-14-graph-engineering/" }
 ];
 
 const uzProjectItems = [
@@ -199,6 +243,7 @@ const uzProjectItems = [
   { text: "Toʻliq harness (yakuniy loyiha)", link: "/uz/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Birinchi avtomatlashtirilgan loop'ingizni qurish", link: "/uz/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Ish oqimingizni grafik qilib chizing", link: "/uz/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const uzResourceItems = [
@@ -210,6 +255,22 @@ const uzResourceItems = [
 
 const uzSkillItems = [
   { text: "Malakalar umumiy koʻrinishi", link: "/uz/skills/" },
+];
+
+const uzHarnessDesignItems = [
+  { text: "Ilgʻor harness dizaynlari tahlili", link: "/uz/harness-designs/" },
+  { text: "Pi harness dizayni tahlili", link: "/uz/harness-designs/pi/" },
+  { text: "Claude Code harness dizayni tahlili", link: "/uz/harness-designs/claude-code/" },
+  { text: "Codex harness dizayni tahlili", link: "/uz/harness-designs/codex/" },
+  { text: "DeepSeek Harness dizayni tahlili", link: "/uz/harness-designs/deepseek/" }
+];
+
+const koHarnessDesignItems = [
+  { text: "최전선 Harness 분석", link: "/ko/harness-designs/" },
+  { text: "Pi의 harness 설계 분석", link: "/ko/harness-designs/pi/" },
+  { text: "Claude Code의 harness 설계 분석", link: "/ko/harness-designs/claude-code/" },
+  { text: "Codex의 harness 설계 분석", link: "/ko/harness-designs/codex/" },
+  { text: "DeepSeek Harness 설계 분석", link: "/ko/harness-designs/deepseek/" }
 ];
 
 const koLectureItems = [
@@ -228,6 +289,8 @@ const koLectureItems = [
   { text: "모든 세션이 클린 상태로 끝나야 하는 이유", link: "/ko/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "수동 프롬프팅에서 자율 루프로", link: "/ko/lectures/lecture-13-loop-engineering/" },
+
+  { text: "단일 루프에서 그래프 엔지니어링으로", link: "/ko/lectures/lecture-14-graph-engineering/" },
 ];
 
 const koProjectItems = [
@@ -240,6 +303,8 @@ const koProjectItems = [
   { text: "완성형 하네스(캡스톤)", link: "/ko/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "첫 번째 자동 루프 구축하기", link: "/ko/projects/project-07-loop-engineering-first-loop/" },
+
+  { text: "내 워크플로우를 그래프로 그리기", link: "/ko/projects/project-08-graph-engineering-first-graph/" },
 ];
 
 const koResourceItems = [
@@ -251,6 +316,14 @@ const koResourceItems = [
 
 const koSkillItems = [
   { text: "스킬 개요", link: "/ko/skills/" },
+];
+
+const jaHarnessDesignItems = [
+  { text: "最前線の Harness 設計を読み解く", link: "/ja/harness-designs/" },
+  { text: "Pi の harness 設計を読み解く", link: "/ja/harness-designs/pi/" },
+  { text: "Claude Code の harness 設計を読み解く", link: "/ja/harness-designs/claude-code/" },
+  { text: "Codex の harness 設計を読み解く", link: "/ja/harness-designs/codex/" },
+  { text: "DeepSeek Harness の設計を読み解く", link: "/ja/harness-designs/deepseek/" }
 ];
 
 const jaLectureItems = [
@@ -269,6 +342,7 @@ const jaLectureItems = [
   { text: "すべてのセッションをきれいな引き継ぎで終える", link: "/ja/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "手動プロンプトから自律ループへ", link: "/ja/lectures/lecture-13-loop-engineering/" },
+  { text: "単一ループからグラフエンジニアリングへ", link: "/ja/lectures/lecture-14-graph-engineering/" }
 ];
 
 const jaProjectItems = [
@@ -281,6 +355,7 @@ const jaProjectItems = [
   { text: "完全なエージェント harness を構築する（総合課題）", link: "/ja/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "初めての自動ループを構築する", link: "/ja/projects/project-07-loop-engineering-first-loop/" },
+  { text: "ワークフローをグラフとして描く", link: "/ja/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const jaResourceItems = [
@@ -292,6 +367,14 @@ const jaResourceItems = [
 
 const jaSkillItems = [
   { text: "スキル概要", link: "/ja/skills/" },
+];
+
+const esHarnessDesignItems = [
+  { text: "Análisis de los harness más avanzados", link: "/es/harness-designs/" },
+  { text: "Análisis del diseño del harness de Pi", link: "/es/harness-designs/pi/" },
+  { text: "Análisis del diseño del harness de Claude Code", link: "/es/harness-designs/claude-code/" },
+  { text: "Análisis del diseño del harness de Codex", link: "/es/harness-designs/codex/" },
+  { text: "Análisis del diseño de DeepSeek Harness", link: "/es/harness-designs/deepseek/" }
 ];
 
 const esLectureItems = [
@@ -310,6 +393,7 @@ const esLectureItems = [
   { text: "Deja un handoff limpio al final de cada sesión", link: "/es/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Del Prompting Manual a los Loops Autónomos", link: "/es/lectures/lecture-13-loop-engineering/" },
+  { text: "De los Loops Únicos a la Ingeniería de Grafos", link: "/es/lectures/lecture-14-graph-engineering/" }
 ];
 
 const esProjectItems = [
@@ -322,6 +406,7 @@ const esProjectItems = [
   { text: "Construye un harness completo (capstone)", link: "/es/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Construye Tu Primer Loop Automatizado", link: "/es/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Dibuja Tu Flujo de Trabajo como un Grafo", link: "/es/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const esResourceItems = [
@@ -333,6 +418,14 @@ const esResourceItems = [
 
 const esSkillItems = [
   { text: "Resumen de Skills", link: "/es/skills/" },
+];
+
+const frHarnessDesignItems = [
+  { text: "Décryptage des harnesses de pointe", link: "/fr/harness-designs/" },
+  { text: "Décryptage de la conception du harness de Pi", link: "/fr/harness-designs/pi/" },
+  { text: "Décryptage de la conception du harness de Claude Code", link: "/fr/harness-designs/claude-code/" },
+  { text: "Décryptage de la conception du harness de Codex", link: "/fr/harness-designs/codex/" },
+  { text: "Décryptage de la conception de DeepSeek Harness", link: "/fr/harness-designs/deepseek/" }
 ];
 
 const frLectureItems = [
@@ -351,6 +444,7 @@ const frLectureItems = [
   { text: "Laisser un handoff propre à la fin de chaque session", link: "/fr/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Du prompting manuel aux boucles autonomes", link: "/fr/lectures/lecture-13-loop-engineering/" },
+  { text: "Des boucles simples à l'ingénierie des graphes", link: "/fr/lectures/lecture-14-graph-engineering/" }
 ];
 
 const frProjectItems = [
@@ -363,6 +457,7 @@ const frProjectItems = [
   { text: "Construire un harness complet (capstone)", link: "/fr/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Construisez votre première boucle automatisée", link: "/fr/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Dessinez votre workflow sous forme de graphe", link: "/fr/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const frResourceItems = [
@@ -374,6 +469,14 @@ const frResourceItems = [
 
 const frSkillItems = [
   { text: "Aperçu des Skills", link: "/fr/skills/" },
+];
+
+const deHarnessDesignItems = [
+  { text: "Analyse führender Harness-Designs", link: "/de/harness-designs/" },
+  { text: "Analyse des harness-Designs von Pi", link: "/de/harness-designs/pi/" },
+  { text: "Analyse des harness-Designs von Claude Code", link: "/de/harness-designs/claude-code/" },
+  { text: "Analyse des harness-Designs von Codex", link: "/de/harness-designs/codex/" },
+  { text: "Analyse des Designs von DeepSeek Harness", link: "/de/harness-designs/deepseek/" }
 ];
 
 const deLectureItems = [
@@ -392,6 +495,7 @@ const deLectureItems = [
   { text: "Sauberes Handoff am Ende jeder Session", link: "/de/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Von manuellen Prompts zu autonomen Loops", link: "/de/lectures/lecture-13-loop-engineering/" },
+  { text: "Von Einzel-Loops zu Graph Engineering", link: "/de/lectures/lecture-14-graph-engineering/" }
 ];
 
 const deProjectItems = [
@@ -404,6 +508,7 @@ const deProjectItems = [
   { text: "Einen vollständigen Agenten-harness bauen (Capstone)", link: "/de/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Baue deinen ersten automatisierten Loop", link: "/de/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Zeichne deinen Workflow als Graph", link: "/de/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const deResourceItems = [
@@ -433,6 +538,7 @@ const arLectureItems = [
   { text: "اترك handoff نظيفًا في نهاية كل جلسة", link: "/ar/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "من المطالبة اليدوية إلى الحلقات المستقلة", link: "/ar/lectures/lecture-13-loop-engineering/" },
+  { text: "من الحلقة الواحدة إلى هندسة الرسوم البيانية", link: "/ar/lectures/lecture-14-graph-engineering/" }
 ];
 
 const arProjectItems = [
@@ -445,6 +551,7 @@ const arProjectItems = [
   { text: "ابنِ harness كاملًا للوكيل (Capstone)", link: "/ar/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "ابني أول حلقة آلية", link: "/ar/projects/project-07-loop-engineering-first-loop/" },
+  { text: "ارسم سير عملك كرسم بياني", link: "/ar/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const arResourceItems = [
@@ -456,6 +563,14 @@ const arResourceItems = [
 
 const arSkillItems = [
   { text: "نظرة عامة على المهارات", link: "/ar/skills/" },
+];
+
+const arHarnessDesignItems = [
+  { text: "تحليل تصميمات Harness المتقدمة", link: "/ar/harness-designs/" },
+  { text: "تفكيك تصميم harness في Pi", link: "/ar/harness-designs/pi/" },
+  { text: "تفكيك تصميم harness في Claude Code", link: "/ar/harness-designs/claude-code/" },
+  { text: "تفكيك تصميم harness في Codex", link: "/ar/harness-designs/codex/" },
+  { text: "تحليل تصميم DeepSeek Harness", link: "/ar/harness-designs/deepseek/" }
 ];
 
 const trLectureItems = [
@@ -474,6 +589,7 @@ const trLectureItems = [
   { text: "Her Oturum Neden Temiz Bir Durumla Bitmeli", link: "/tr/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Manuel Prompting'den Otonom Loop'lara", link: "/tr/lectures/lecture-13-loop-engineering/" },
+  { text: "Tek Döngülerden Graf Mühendisliğine", link: "/tr/lectures/lecture-14-graph-engineering/" }
 ];
 
 const trProjectItems = [
@@ -486,6 +602,7 @@ const trProjectItems = [
   { text: "Eksiksiz Harness (Bitirme Projesi)", link: "/tr/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "İlk Otomatik Loop'unuzu Oluşturun", link: "/tr/projects/project-07-loop-engineering-first-loop/" },
+  { text: "İş Akışınızı Bir Graf Olarak Çizin", link: "/tr/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const trResourceItems = [
@@ -497,6 +614,22 @@ const trResourceItems = [
 
 const trSkillItems = [
   { text: "Yetenekler Genel Bakış", link: "/tr/skills/" },
+];
+
+const trHarnessDesignItems = [
+  { text: "Öncü Harness Tasarımlarının İncelenmesi", link: "/tr/harness-designs/" },
+  { text: "Pi Harness Tasarımının İncelenmesi", link: "/tr/harness-designs/pi/" },
+  { text: "Claude Code'un harness tasarımının incelenmesi", link: "/tr/harness-designs/claude-code/" },
+  { text: "Codex'in harness tasarımının incelenmesi", link: "/tr/harness-designs/codex/" },
+  { text: "DeepSeek Harness tasarımının incelenmesi", link: "/tr/harness-designs/deepseek/" }
+];
+
+const zhTWHarnessDesignItems = [
+  { text: "前沿 Harness 拆解", link: "/zh-TW/harness-designs/" },
+  { text: "拆解 Pi 的 harness 設計", link: "/zh-TW/harness-designs/pi/" },
+  { text: "拆解 Claude Code 的 harness 設計", link: "/zh-TW/harness-designs/claude-code/" },
+  { text: "拆解 Codex 的 harness 設計", link: "/zh-TW/harness-designs/codex/" },
+  { text: "拆解 DeepSeek Harness 的設計", link: "/zh-TW/harness-designs/deepseek/" }
 ];
 
 const zhTWLectureItems = [
@@ -515,6 +648,7 @@ const zhTWLectureItems = [
   { text: "每次會話結束前都做好交接", link: "/zh-TW/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "從手動驅動到自動循環", link: "/zh-TW/lectures/lecture-13-loop-engineering/" },
+  { text: "從單循環到圖工程", link: "/zh-TW/lectures/lecture-14-graph-engineering/" }
 ];
 
 const zhTWProjectItems = [
@@ -527,6 +661,7 @@ const zhTWProjectItems = [
   { text: "搭建一套完整的 agent 工作環境", link: "/zh-TW/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "搭建你的第一個自動循環", link: "/zh-TW/projects/project-07-loop-engineering-first-loop/" },
+  { text: "把你的工作流畫成一張圖", link: "/zh-TW/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const zhTWResourceItems = [
@@ -555,6 +690,7 @@ const ptBRLectureItems = [
   { text: "Por que observabilidade pertence ao Harness", link: "/pt-BR/lectures/lecture-11-why-observability-belongs-inside-the-harness/" },
   { text: "Por que toda sessão deve deixar um estado limpo", link: "/pt-BR/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
   { text: "Do Prompting Manual aos Loops Autônomos", link: "/pt-BR/lectures/lecture-13-loop-engineering/" },
+  { text: "Do Loop Único à Engenharia de Grafos", link: "/pt-BR/lectures/lecture-14-graph-engineering/" }
 ];
 
 const ptBRProjectItems = [
@@ -566,6 +702,7 @@ const ptBRProjectItems = [
   { text: "Autoverificação e Separação de Papéis", link: "/pt-BR/projects/project-05-grounded-qa-verification/" },
   { text: "Harness Completo (Projeto Final)", link: "/pt-BR/projects/project-06-runtime-observability-and-debugging/" },
   { text: "Construa Seu Primeiro Loop Automatizado", link: "/pt-BR/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Desenhe Seu Fluxo de Trabalho como um Grafo", link: "/pt-BR/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const ptBRResourceItems = [
@@ -577,6 +714,14 @@ const ptBRResourceItems = [
 
 const ptBRSkillItems = [
   { text: "Visão Geral das Skills", link: "/pt-BR/skills/" },
+];
+
+const ptBRHarnessDesignItems = [
+  { text: "Análise dos harnesses de ponta", link: "/pt-BR/harness-designs/" },
+  { text: "Análise do Design de Harness do Pi", link: "/pt-BR/harness-designs/pi/" },
+  { text: "Análise do design de harness do Claude Code", link: "/pt-BR/harness-designs/claude-code/" },
+  { text: "Análise do design de harness do Codex", link: "/pt-BR/harness-designs/codex/" },
+  { text: "Análise do Design do DeepSeek Harness", link: "/pt-BR/harness-designs/deepseek/" }
 ];
 
 const ukLectureItems = [
@@ -595,6 +740,7 @@ const ukLectureItems = [
   { text: "Чому кожна сесія має залишати чистий стан", link: "/uk/lectures/lecture-12-why-every-session-must-leave-a-clean-state/" },
 
   { text: "Від ручного введення промптів до автономних циклів", link: "/uk/lectures/lecture-13-loop-engineering/" },
+  { text: "Від одиночних циклів до графової інженерії", link: "/uk/lectures/lecture-14-graph-engineering/" }
 ];
 
 const ukProjectItems = [
@@ -607,6 +753,7 @@ const ukProjectItems = [
   { text: "Повний harness (підсумковий проєкт)", link: "/uk/projects/project-06-runtime-observability-and-debugging/" },
 
   { text: "Побудова вашого першого автоматизованого циклу", link: "/uk/projects/project-07-loop-engineering-first-loop/" },
+  { text: "Намалюйте ваш робочий процес як граф", link: "/uk/projects/project-08-graph-engineering-first-graph/" }
 ];
 
 const ukResourceItems = [
@@ -620,14 +767,22 @@ const ukSkillItems = [
   { text: "Огляд Skills", link: "/uk/skills/" },
 ];
 
-const jaSourceItems = { lectures: jaLectureItems, projects: jaProjectItems, resources: jaResourceItems, skills: jaSkillItems };
-const esSourceItems = { lectures: esLectureItems, projects: esProjectItems, resources: esResourceItems, skills: esSkillItems };
-const frSourceItems = { lectures: frLectureItems, projects: frProjectItems, resources: frResourceItems, skills: frSkillItems };
-const deSourceItems = { lectures: deLectureItems, projects: deProjectItems, resources: deResourceItems, skills: deSkillItems };
-const arSourceItems = { lectures: arLectureItems, projects: arProjectItems, resources: arResourceItems, skills: arSkillItems };
-const zhTWSourceItems = { lectures: zhTWLectureItems, projects: zhTWProjectItems, resources: zhTWResourceItems, skills: zhTWSkillItems };
-const trSourceItems = { lectures: trLectureItems, projects: trProjectItems, resources: trResourceItems, skills: trSkillItems };
-const ukSourceItems = { lectures: ukLectureItems, projects: ukProjectItems, resources: ukResourceItems, skills: ukSkillItems };
+const ukHarnessDesignItems = [
+  { text: "Розбір передових harness", link: "/uk/harness-designs/" },
+  { text: "Розбір дизайну harness у Pi", link: "/uk/harness-designs/pi/" },
+  { text: "Розбір дизайну harness у Claude Code", link: "/uk/harness-designs/claude-code/" },
+  { text: "Розбір дизайну harness у Codex", link: "/uk/harness-designs/codex/" },
+  { text: "Розбір дизайну DeepSeek Harness", link: "/uk/harness-designs/deepseek/" }
+];
+
+const jaSourceItems = { lectures: jaLectureItems, projects: jaProjectItems, resources: jaResourceItems, skills: jaSkillItems, harnessDesigns: jaHarnessDesignItems };
+const esSourceItems = { lectures: esLectureItems, projects: esProjectItems, resources: esResourceItems, skills: esSkillItems, harnessDesigns: esHarnessDesignItems };
+const frSourceItems = { lectures: frLectureItems, projects: frProjectItems, resources: frResourceItems, skills: frSkillItems, harnessDesigns: frHarnessDesignItems };
+const deSourceItems = { lectures: deLectureItems, projects: deProjectItems, resources: deResourceItems, skills: deSkillItems, harnessDesigns: deHarnessDesignItems };
+const arSourceItems = { lectures: arLectureItems, projects: arProjectItems, resources: arResourceItems, skills: arSkillItems, harnessDesigns: arHarnessDesignItems };
+const zhTWSourceItems = { lectures: zhTWLectureItems, projects: zhTWProjectItems, resources: zhTWResourceItems, skills: zhTWSkillItems, harnessDesigns: zhTWHarnessDesignItems };
+const trSourceItems = { lectures: trLectureItems, projects: trProjectItems, resources: trResourceItems, skills: trSkillItems, harnessDesigns: trHarnessDesignItems };
+const ukSourceItems = { lectures: ukLectureItems, projects: ukProjectItems, resources: ukResourceItems, skills: ukSkillItems, harnessDesigns: ukHarnessDesignItems };
 
 const relinkItems = (items: Array<{ text: string; link: string }>, locale: string) =>
   items.map((item) => ({
@@ -645,6 +800,7 @@ const createLocaleTheme = (
     projects: Array<{ text: string; link: string }>;
     resources: Array<{ text: string; link: string }>;
     skills: Array<{ text: string; link: string }>;
+    harnessDesigns?: Array<{ text: string; link: string }>;
   },
   labels: {
     lectures: string;
@@ -653,6 +809,7 @@ const createLocaleTheme = (
     skills: string;
     resourceLibrary: string;
     tryHarness: string;
+    harnessDesign?: string;
     outline?: string;
     prev?: string;
     next?: string;
@@ -668,6 +825,9 @@ const createLocaleTheme = (
   const projects = relinkItems(sourceItems.projects, locale);
   const resources = relinkItems(sourceItems.resources, locale);
   const skills = relinkItems(sourceItems.skills, locale);
+  const harnessDesigns = sourceItems.harnessDesigns
+    ? relinkItems(sourceItems.harnessDesigns, locale)
+    : undefined;
 
   return {
     nav: [
@@ -675,16 +835,22 @@ const createLocaleTheme = (
       { text: labels.projects, link: projects[0].link, activeMatch: `^/${locale}/projects/` },
       { text: labels.resources, link: `/${locale}/resources/`, activeMatch: `^/${locale}/resources/` },
       { text: labels.skills, link: `/${locale}/skills/`, activeMatch: `^/${locale}/skills/` },
+      ...(harnessDesigns
+        ? [{ text: labels.harnessDesign as string, link: harnessDesigns[0].link, activeMatch: `^/${locale}/harness-designs/` }]
+        : []),
       { text: labels.tryHarness, link: `https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/${locale}/resources/templates/index.md`, target: "_blank", rel: "noopener noreferrer" },
     ],
     sidebar: {
       [`/${locale}/projects/`]: [{ text: labels.projects, items: projects }],
       [`/${locale}/resources/`]: [{ text: labels.resourceLibrary, items: resources }],
       [`/${locale}/skills/`]: [{ text: labels.skills, items: skills }],
+      ...(harnessDesigns
+        ? { [`/${locale}/harness-designs/`]: [{ text: labels.harnessDesign, items: harnessDesigns }] }
+        : {}),
       [`/${locale}/`]: [{ text: labels.lectures, items: lectures }]
     },
     outline: {
-      level: [2, 3],
+      level: [2, 3] as [number, number],
       ...(labels.outline ? { label: labels.outline } : {})
     },
     docFooter: {
@@ -707,7 +873,8 @@ const enSourceItems = {
   lectures: enLectureItems,
   projects: enProjectItems,
   resources: enResourceItems,
-  skills: enSkillItems
+  skills: enSkillItems,
+  harnessDesigns: enHarnessDesignItems
 };
 
 const zhSourceItems = {
@@ -735,6 +902,28 @@ export default withMermaid(
       socialLinks
     },
     markdown: {
+      anchor: {
+        // Heading ids are auto-slugged from heading text, so each locale would
+        // otherwise get ids in its own language. The language switcher carries
+        // the URL hash across locales, so a shared "#實際案例" link dead-ends
+        // after switching to English. Apply the English ids everywhere, keeping
+        // heading text translated: the same convention vitepress.dev uses.
+        //
+        // Only applied where the locale's heading count matches English; a page
+        // whose structure has drifted keeps its localized ids rather than
+        // getting ids that point at the wrong section.
+        slugifyWithState(source: string, state: any) {
+          const [locale, ...rest] = String(state.env.relativePath ?? '').split('/')
+          const page = (anchorMap as Record<string, { ids: string[]; locales: Record<string, number> }>)[
+            rest.join('/')
+          ]
+          if (page && page.locales[locale] === page.ids.length) {
+            const index = (state.env.__anchorIndex = (state.env.__anchorIndex ?? -1) + 1)
+            if (page.ids[index]) return page.ids[index]
+          }
+          return defaultSlugify(source)
+        },
+      },
       theme: {
         light: 'github-light',
         dark: 'github-dark'
@@ -767,12 +956,14 @@ export default withMermaid(
             { text: "Projects", link: enProjectItems[0].link, activeMatch: '^/en/projects/' },
             { text: "Library", link: "/en/resources/", activeMatch: '^/en/resources/' },
             { text: "Skills", link: "/en/skills/", activeMatch: '^/en/skills/' },
+            { text: "Frontier Harness Design Breakdowns", link: "/en/harness-designs/", activeMatch: '^/en/harness-designs/' },
             { text: "Try Harness ↗", link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/en/resources/templates/index.md", target: "_blank", rel: "noopener noreferrer" }
           ],
           sidebar: {
             '/en/projects/': [{ text: "Projects", items: enProjectItems }],
             '/en/resources/': [{ text: "Resource Library", items: enResourceItems }],
             '/en/skills/': [{ text: "Skills", items: enSkillItems }],
+            '/en/harness-designs/': [{ text: "Frontier Harness Design Breakdowns", items: enHarnessDesignItems }],
             '/en/': [{ text: "Lectures", items: enLectureItems }]
           },
           socialLinks
@@ -801,6 +992,11 @@ export default withMermaid(
             },
             { text: "技能", link: "/zh/skills/", activeMatch: "^/zh/skills/" },
             {
+              text: "前沿 Harness 拆解",
+              link: "/zh/harness-designs/",
+              activeMatch: "^/zh/harness-designs/",
+            },
+            {
               text: "Try Harness ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/zh/resources/templates/index.md",
               target: "_blank",
@@ -811,6 +1007,9 @@ export default withMermaid(
             "/zh/projects/": [{ text: "项目", items: zhProjectItems }],
             "/zh/resources/": [{ text: "资料库", items: zhResourceItems }],
             "/zh/skills/": [{ text: "技能", items: zhSkillItems }],
+            "/zh/harness-designs/": [
+              { text: "前沿 Harness 拆解", items: zhHarnessDesignItems },
+            ],
             "/zh/": [{ text: "讲义", items: zhLectureItems }],
           },
           outline: {
@@ -841,6 +1040,7 @@ export default withMermaid(
           resources: "資源庫",
           skills: "技能",
           resourceLibrary: "資源庫",
+          harnessDesign: "前沿 Harness 拆解",
           tryHarness: "Try Harness ↗",
           prev: "上一篇",
           next: "下一篇",
@@ -862,6 +1062,7 @@ export default withMermaid(
           resources: "リソース",
           skills: "スキル",
           resourceLibrary: "リソースライブラリ",
+          harnessDesign: "最前線の Harness 設計を読み解く",
           tryHarness: "Try Harness ↗",
           outline: "このページ",
           prev: "前へ",
@@ -884,6 +1085,7 @@ export default withMermaid(
           resources: "Biblioteca",
           skills: "Skills",
           resourceLibrary: "Biblioteca de recursos",
+          harnessDesign: "Análisis de los harness más avanzados",
           tryHarness: "Try Harness ↗",
           outline: "En esta página",
           prev: "Anterior",
@@ -906,6 +1108,7 @@ export default withMermaid(
           resources: "Bibliothèque",
           skills: "Skills",
           resourceLibrary: "Bibliothèque de ressources",
+          harnessDesign: "Décryptage des harnesses de pointe",
           tryHarness: "Try Harness ↗",
           outline: "Sur cette page",
           prev: "Précédent",
@@ -972,6 +1175,7 @@ export default withMermaid(
           resources: "المكتبة",
           skills: "المهارات",
           resourceLibrary: "مكتبة الموارد",
+          harnessDesign: "تحليل تصميمات Harness المتقدمة",
           tryHarness: "Try Harness ↗",
           outline: "في هذه الصفحة",
           prev: "السابق",
@@ -1011,6 +1215,11 @@ export default withMermaid(
               activeMatch: "^/vi/skills/",
             },
             {
+              text: "Phân tích các harness tiên tiến",
+              link: "/vi/harness-designs/",
+              activeMatch: "^/vi/harness-designs/",
+            },
+            {
               text: "Try Harness ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/vi/resources/templates/index.md",
               target: "_blank",
@@ -1023,6 +1232,7 @@ export default withMermaid(
               { text: "Thư viện Tài nguyên", items: viResourceItems },
             ],
             "/vi/skills/": [{ text: "Kỹ năng", items: viSkillItems }],
+            "/vi/harness-designs/": [{ text: "Phân tích các harness tiên tiến", items: viHarnessDesignItems }],
             "/vi/": [{ text: "Bài giảng", items: viLectureItems }],
           },
           outline: {
@@ -1065,6 +1275,7 @@ export default withMermaid(
               activeMatch: "^/ko/resources/",
             },
             { text: "스킬", link: "/ko/skills/", activeMatch: "^/ko/skills/" },
+            { text: "최전선 Harness 분석", link: "/ko/harness-designs/", activeMatch: "^/ko/harness-designs/" },
             {
               text: "Try Harness ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/ko/resources/templates/index.md",
@@ -1076,6 +1287,7 @@ export default withMermaid(
             "/ko/projects/": [{ text: "프로젝트", items: koProjectItems }],
             "/ko/resources/": [{ text: "리소스 모음", items: koResourceItems }],
             "/ko/skills/": [{ text: "스킬", items: koSkillItems }],
+            "/ko/harness-designs/": [{ text: "최전선 Harness 분석", items: koHarnessDesignItems }],
             "/ko/": [{ text: "강의", items: koLectureItems }],
           },
           outline: {
@@ -1124,6 +1336,11 @@ export default withMermaid(
               activeMatch: "^/uz/skills/",
             },
             {
+              text: "Ilgʻor harness dizaynlari tahlili",
+              link: "/uz/harness-designs/",
+              activeMatch: "^/uz/harness-designs/",
+            },
+            {
               text: "Harness'ni sinash ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/uz/resources/templates/index.md",
               target: "_blank",
@@ -1136,6 +1353,7 @@ export default withMermaid(
               { text: "Resurslar kutubxonasi", items: uzResourceItems },
             ],
             "/uz/skills/": [{ text: "Malakalar", items: uzSkillItems }],
+            "/uz/harness-designs/": [{ text: "Ilgʻor harness dizaynlari tahlili", items: uzHarnessDesignItems }],
             "/uz/": [{ text: "Maʼruzalar", items: uzLectureItems }],
           },
           outline: {
@@ -1183,6 +1401,7 @@ export default withMermaid(
               link: "/ru/skills/",
               activeMatch: "^/ru/skills/",
             },
+            { text: "Разбор передовых harness", link: "/ru/harness-designs/", activeMatch: "^/ru/harness-designs/" },
             {
               text: "Try Harness ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/ru/resources/templates/index.md",
@@ -1194,6 +1413,7 @@ export default withMermaid(
             "/ru/projects/": [{ text: "Проекты", items: ruProjectItems }],
             "/ru/resources/": [{ text: "Материалы", items: ruResourceItems }],
             "/ru/skills/": [{ text: "Скиллы", items: ruSkillItems }],
+            "/ru/harness-designs/": [{ text: "Разбор передовых harness", items: ruHarnessDesignItems }],
             "/ru/": [{ text: "Лекции", items: ruLectureItems }],
           },
           outline: {
@@ -1242,6 +1462,11 @@ export default withMermaid(
               activeMatch: "^/pt-BR/skills/",
             },
             {
+              text: "Análise dos harnesses de ponta",
+              link: "/pt-BR/harness-designs/",
+              activeMatch: "^/pt-BR/harness-designs/",
+            },
+            {
               text: "Experimente Harness ↗",
               link: "https://github.com/walkinglabs/learn-harness-engineering/blob/main/docs/pt-BR/resources/templates/index.md",
               target: "_blank",
@@ -1254,6 +1479,7 @@ export default withMermaid(
               { text: "Biblioteca de recursos", items: ptBRResourceItems },
             ],
             "/pt-BR/skills/": [{ text: "Skills", items: ptBRSkillItems }],
+            "/pt-BR/harness-designs/": [{ text: "Análise dos harnesses de ponta", items: ptBRHarnessDesignItems }],
             "/pt-BR/": [{ text: "Aulas", items: ptBRLectureItems }],
           },
           outline: {
@@ -1285,6 +1511,7 @@ export default withMermaid(
           resources: "Бібліотека",
           skills: "Skills",
           resourceLibrary: "Бібліотека ресурсів",
+          harnessDesign: "Розбір передових harness",
           tryHarness: "Try Harness ↗",
           outline: "На цій сторінці",
           prev: "Назад",

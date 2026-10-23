@@ -21,6 +21,11 @@
 - 根指令文件：[`templates/AGENTS.md`](./templates/AGENTS.md) 或 [`templates/CLAUDE.md`](./templates/CLAUDE.md)
 - 功能状态文件：[`templates/feature_list.json`](./templates/feature_list.json)
 - 进度日志：[`templates/claude-progress.md`](./templates/claude-progress.md)
+
+这个文件名是课程早期留下的约定，实际是通用的、放在仓库里的会话进度日志，
+并不绑定 Claude Code。Codex、OpenHands、Antigravity 等 agent 都可以使用，
+但必须在 `AGENTS.md` 或其他等价指令里明确要求它在开工时读取、收尾时更新；
+agent 不会自动维护这个文件。
 - 启动脚本参考：`docs/resources/templates/init.sh`
 
 然后按需要补上：
@@ -43,7 +48,7 @@
 
 - `AGENTS.md` 或 `CLAUDE.md`
 - `feature_list.json`
-- `claude-progress.md`
+- `claude-progress.md`（通用会话进度日志，文件名沿用历史约定）
 - `init.sh`
 
 先把这四样放进项目里，再开始让 agent 持续工作，通常就已经能明显降低返工和瞎猜。

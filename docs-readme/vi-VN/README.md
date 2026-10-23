@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/vi-VN/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/vi-VN/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/vi-VN/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/vi-VN/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# Learn Harness Engineering
-
 > **Khóa học dựa trên dự án về xây dựng môi trường, quản lý trạng thái, cơ chế kiểm chứng và điều khiển giúp các agent viết code AI hoạt động đáng tin cậy.**
 
 Learn Harness Engineering là một khóa học dành riêng cho kỹ thuật liên quan đến các agent viết code AI. Chúng tôi đã nghiên cứu sâu và tổng hợp các lý thuyết và thực tiễn Harness Engineering tiên tiến nhất trong ngành. Các tài liệu tham khảo cốt lõi của chúng tôi bao gồm:
+
+> **🆕 Cập nhật tháng 8/2026: Phân tích Thiết kế Harness Tiên phong** — chuyên mục mới với 4 bài phân tích:
+>
+> - **Chuyên mục mới** [Phân tích Thiết kế Harness Tiên phong](../../docs/vi/harness-designs/index.md) — áp dụng framework năm hệ thống con của khóa học (chỉ dẫn, công cụ, môi trường, trạng thái, phản hồi) để phân tích ngược cách bốn sản phẩm tiên phong xây dựng harness thực tế.
+> - **Pi** [Cách Pi xây dựng harness](../../docs/vi/harness-designs/pi/index.md) — kernel tối giản, khả năng mở rộng có thể lập trình và kỹ thuật ngữ cảnh đằng sau triết lý “yêu cầu Pi xây dựng điều bạn muốn”.
+> - **Claude Code** [Cách Claude Code xây dựng harness](../../docs/vi/harness-designs/claude-code/index.md) — bộ nhớ bốn lớp, cơ chế compaction năm cấp, hooks và sự cô lập sub-agent.
+> - **Codex** [Cách Codex xây dựng harness](../../docs/vi/harness-designs/codex/index.md) — repository là nguồn chân lý, AGENTS.md là trang thư mục và sự cô lập bằng worktree.
+> - **DeepSeek** [Cách DeepSeek xây dựng harness](../../docs/vi/harness-designs/deepseek/index.md) — “mọi thứ đều là plugin”, các đường ranh giới năng lực và pipeline sự kiện.
+> - **Đầy đủ cả 15 ngôn ngữ** — được dịch đầy đủ sang tất cả các ngôn ngữ được hỗ trợ.
+>
+> **Ý tưởng cốt lõi:** Khóa học cung cấp cho bạn một framework; các bài phân tích này cho thấy những nguyên tắc tương tự thực sự được áp dụng như thế nào trong các harness production.
+>
+> **🆕 Cập nhật tháng 8/2026: Graph Engineering (Kỹ thuật Đồ thị)** — thêm mới 1 bài giảng + 1 dự án:
+>
+> - **Bài giảng 14** [Từ Vòng lặp Đơn lẻ đến Kỹ thuật Đồ thị](../../docs/vi/lectures/lecture-14-graph-engineering/index.md): vì sao vòng lặp đơn lẻ chắc chắn phát triển thành đồ thị — bốn lớp xếp chồng (prompt → context → loop → graph) và vị trí của harness trong đó, bốn bộ phận của đồ thị (nút, cạnh, trạng thái dùng chung, định tuyến), vì sao checkpoint trong loop không cứu được ba kiểu thất bại mang tính cấu trúc ở quy mô lớn (Goodhart, mù hướng lên, xung đột), sáu bước xây dựng đồ thị đầu tiên của bạn không phụ thuộc framework, sự khác biệt giữa Graph và Workflow, mỏ neo, hiện trạng dự án mã nguồn mở trước-phát hành vs sau-phát hành, thuế điều phối, và khi nào thực sự đáng để vẽ đồ thị.
+> - **Dự án 08** [Vẽ Quy trình Làm việc của bạn thành một Đồ thị](../../docs/vi/projects/project-08-graph-engineering-first-graph/index.md): ba thí nghiệm tiến dần — vẽ maker-checker loop thành đồ thị tường minh, thêm nút fan-out/fan-in song song, thêm cạnh quay lại có điều kiện và nút phê duyệt thủ công.
+>
+> **Ý tưởng cốt lõi:** Loop là một đồ thị chỉ có một nút. Khi nhiệm vụ cần phân công, song song, trạng thái dùng chung, xác minh và phục hồi — nó không còn là loop, mà là đồ thị.
+>
+> **🆕 Cập nhật tháng 7/2026: Loop Engineering (Kỹ thuật Vòng lặp)** — thêm mới 1 bài giảng + 1 dự án + mẫu code:
+>
+> - **Bài giảng 13** [Từ Nhắc lệnh Thủ công đến Vòng lặp Tự chủ](../../docs/vi/lectures/lecture-13-loop-engineering/index.md): từ `/goal` đến sáu nguyên thủy của loop engineering (automations, worktrees, skills, connectors, sub-agents, external state), phân tách generator/evaluator, bốn chi phí thầm lặng, và xây dựng từng bước vòng lặp đầu tiên của bạn.
+> - **Dự án 07** [Xây dựng Vòng lặp Tự động Đầu tiên](../../docs/vi/projects/project-07-loop-engineering-first-loop/index.md): ba thí nghiệm tiến dần — vòng lặp theo mục tiêu, vòng lặp theo lịch, vòng lặp maker-checker. So sánh thủ công vs. tự động hóa, đo lường việc giảm can thiệp, học cách bước ra khỏi vòng lặp.
+> - **Mẫu code**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — các mẫu xây dựng vòng lặp dùng ngay được.
+>
+> **Ý tưởng cốt lõi:** Harness engineering tạo ra chiếc xe. Loop engineering thiết kế con đường nó chạy — và bạn phải thiết kế con đường đó từ bên ngoài chiếc xe.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@ OpenAI cũng báo cáo điều tương tự với Codex: trong một kho mã đ�
 
 **Khóa học này dạy bạn cách xây dựng môi trường đó.**
 
+<p align="center">
+  <a href="../../assets/readme/vi-VN/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/vi-VN/harness-pattern-dark.svg">
+      <img src="../../assets/readme/vi-VN/harness-pattern.png" alt="Mô hình thì thông minh, Harness giúp nó đáng tin cậy" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Phiên bản văn bản</summary>
+
 ```text
                     MÔ HÌNH HARNESS
                     ===============
@@ -105,6 +150,8 @@ OpenAI cũng báo cáo điều tương tự với Codex: trong một kho mã đ�
                                          kiểm chứng đạt yêu cầu
 ```
 
+</details>
+
 ---
 
 ## Harness Engineering thực sự có nghĩa là gì
@@ -112,6 +159,18 @@ OpenAI cũng báo cáo điều tương tự với Codex: trong một kho mã đ�
 Harness engineering là về việc xây dựng một môi trường làm việc hoàn chỉnh xung quanh mô hình để nó tạo ra kết quả đáng tin cậy. Nó không phải là về việc viết prompt tốt hơn. Nó là về việc thiết kế hệ thống mà mô hình hoạt động bên trong.
 
 Một harness có năm hệ thống con:
+
+<p align="center">
+  <a href="../../assets/readme/vi-VN/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/vi-VN/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/vi-VN/harness-subsystems.png" alt="Harness Engineering thực sự có nghĩa là gì" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Phiên bản văn bản</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -142,6 +201,8 @@ Một harness có năm hệ thống con:
     Harness không làm mô hình thông minh hơn.
     Nó làm đầu ra của mô hình đáng tin cậy hơn.
 ```
+
+</details>
 
 Mỗi hệ thống con có một nhiệm vụ duy nhất:
 
@@ -195,15 +256,15 @@ Những câu hỏi mà khóa học này thực sự quan tâm:
 
 Giáo trình được chia thành ba phần:
 
-1. **Bài giảng**: 12 đơn vị khái niệm giải thích lý thuyết đằng sau harness engineering.
-2. **Dự án**: 6 dự án thực hành nơi bạn xây dựng một không gian làm việc agentic từ đầu.
+1. **Bài giảng**: 14 đơn vị khái niệm giải thích lý thuyết đằng sau harness engineering.
+2. **Dự án**: 8 dự án thực hành nơi bạn xây dựng một không gian làm việc agentic từ đầu.
 3. **Thư viện tài nguyên**: Các mẫu sẵn sàng sử dụng (`AGENTS.md`, `feature_list.json`, `init.sh`, v.v.) để sử dụng trong kho mã của riêng bạn ngay hôm nay.
 
 ---
 
 ## Bắt đầu nhanh: Cải thiện Agent của bạn ngay hôm nay
 
-Bạn không cần phải đọc cả 12 bài giảng trước khi bắt đầu nhận được giá trị. Nếu bạn đang sử dụng một agent viết code trên một dự án thực tế, đây là cách cải thiện nó ngay bây giờ.
+Bạn không cần phải đọc cả 14 bài giảng trước khi bắt đầu nhận được giá trị. Nếu bạn đang sử dụng một agent viết code trên một dự án thực tế, đây là cách cải thiện nó ngay bây giờ.
 
 Ý tưởng rất đơn giản: thay vì chỉ viết prompt, hãy cho agent của bạn một bộ tệp có cấu trúc xác định phải làm gì, những gì đã làm, và cách kiểm chứng công việc. Các tệp này nằm trong kho mã của bạn, vì vậy mỗi phiên bắt đầu từ cùng một trạng thái.
 
@@ -262,6 +323,18 @@ Mỗi starter/solution của dự án khóa học là một bản sao hoàn ch�
 
 Khóa học được thiết kế để hoàn thành theo thứ tự. Mỗi giai đoạn xây dựng dựa trên giai đoạn trước.
 
+<p align="center">
+  <a href="../../assets/readme/vi-VN/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/vi-VN/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/vi-VN/harness-learning-path.png" alt="Lộ trình học tập" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Phiên bản văn bản</summary>
+
 ```text
     Giai đoạn 1: NHÌN VẤN ĐỀ              Giai đoạn 2: TỔ CHỨC KHO MÃ
     =========================              ===========================
@@ -304,7 +377,30 @@ Khóa học được thiết kế để hoàn thành theo thứ tự. Mỗi giai
          v                                     v
     P05  Agent tự kiểm chứng              P06  Xây dựng harness hoàn chỉnh
                                                (dự án tổng kết)
+
+
+    Giai đoạn 7: TỰ ĐỘNG HÓA VÒNG LẶP
+    ==============================
+    L13  Ngừng nhắc lệnh cho agent —
+         chuyển sang thiết kế vòng lặp
+         |
+         v
+    P07  Xây dựng vòng lặp tự động đầu tiên
+         (vòng lặp theo mục tiêu, theo lịch,
+          maker-checker)
+
+    Giai đoạn 8: CẤU TRÚC HÓA HỆ THỐNG
+    ==============================
+    L14  Vẽ hệ thống thành một đồ thị —
+         nút, cạnh, trạng thái dùng chung, định tuyến
+         |
+         v
+    P08  Vẽ quy trình làm việc của bạn thành một đồ thị
+         (đồ thị tường minh, fan-out/fan-in song song,
+          cạnh quay lại, người-máy cộng tác)
 ```
+
+</details>
 
 Mỗi giai đoạn mất khoảng một tuần nếu bạn học bán thời gian. Nếu bạn muốn đi nhanh hơn, các giai đoạn 1-3 có thể hoàn thành trong một cuối tuần dài.
 
@@ -312,35 +408,39 @@ Mỗi giai đoạn mất khoảng một tuần nếu bạn học bán thời gia
 
 ## Giáo trình
 
-### Bài giảng — 12 đơn vị khái niệm, mỗi đơn vị trả lời một câu hỏi cốt lõi
+### Bài giảng — 14 đơn vị khái niệm, mỗi đơn vị trả lời một câu hỏi cốt lõi
 
 *Đọc toàn bộ văn bản cho mỗi bài giảng trên [Trang web Tài liệu](https://walkinglabs.github.io/learn-harness-engineering/).*
 
 | Phiên | Câu hỏi | Ý tưởng cốt lõi |
 |-------|---------|------------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Tại sao các mô hình mạnh vẫn thất bại trên tác vụ thực tế? | Khoảng cách năng lực giữa benchmark và kỹ thuật thực tế |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" thực sự có nghĩa là gì? | Năm hệ thống con: instructions, state, verification, scope, lifecycle |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Tại sao kho mã phải là nguồn chân lý duy nhất? | Nếu agent không thể thấy nó, nó không tồn tại |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Tại sao một tệp hướng dẫn khổng lồ lại thất bại? | Tiết lộ dần: cho một bản đồ, không phải một bộ bách khoa toàn thư |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Tại sao các tác vụ chạy dài mất tính liên tục? | Lưu trữ tiến trình vào đĩa; tiếp tục từ nơi bạn đã dừng |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Tại sao khởi tạo cần một giai đoạn riêng? | Xác minh môi trường khỏe mạnh trước khi agent bắt đầu làm việc |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Tại sao agent lại vượt quá phạm vi và không hoàn thành? | Một tính năng tại một thời điểm; định nghĩa rõ ràng về "hoàn thành" |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Tại sao danh sách tính năng là nguyên thủy của harness? | Ranh giới phạm vi có thể đọc bởi máy mà agent không thể bỏ qua |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Tại sao agent tuyên bố hoàn thành quá sớm? | Khoảng trống kiểm chứng: sự tự tin ≠ sự chính xác |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Tại sao kiểm thử đầu-cuối lại thay đổi kết quả? | Chỉ một lần chạy toàn bộ pipeline mới được tính là kiểm chứng thực sự |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Tại sao khả năng quan sát thuộc về bên trong harness? | Nếu bạn không thể thấy agent đã làm gì, bạn không thể sửa những gì nó đã làm hỏng |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Tại sao mỗi phiên phải để lại trạng thái sạch? | Sự thành công của phiên tiếp theo phụ thuộc vào việc dọn dẹp của phiên này |
+| [L01](../../docs/vi/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Tại sao các mô hình mạnh vẫn thất bại trên tác vụ thực tế? | Khoảng cách năng lực giữa benchmark và kỹ thuật thực tế |
+| [L02](../../docs/vi/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" thực sự có nghĩa là gì? | Năm hệ thống con: instructions, state, verification, scope, lifecycle |
+| [L03](../../docs/vi/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Tại sao kho mã phải là nguồn chân lý duy nhất? | Nếu agent không thể thấy nó, nó không tồn tại |
+| [L04](../../docs/vi/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Tại sao một tệp hướng dẫn khổng lồ lại thất bại? | Tiết lộ dần: cho một bản đồ, không phải một bộ bách khoa toàn thư |
+| [L05](../../docs/vi/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Tại sao các tác vụ chạy dài mất tính liên tục? | Lưu trữ tiến trình vào đĩa; tiếp tục từ nơi bạn đã dừng |
+| [L06](../../docs/vi/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Tại sao khởi tạo cần một giai đoạn riêng? | Xác minh môi trường khỏe mạnh trước khi agent bắt đầu làm việc |
+| [L07](../../docs/vi/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Tại sao agent lại vượt quá phạm vi và không hoàn thành? | Một tính năng tại một thời điểm; định nghĩa rõ ràng về "hoàn thành" |
+| [L08](../../docs/vi/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Tại sao danh sách tính năng là nguyên thủy của harness? | Ranh giới phạm vi có thể đọc bởi máy mà agent không thể bỏ qua |
+| [L09](../../docs/vi/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Tại sao agent tuyên bố hoàn thành quá sớm? | Khoảng trống kiểm chứng: sự tự tin ≠ sự chính xác |
+| [L10](../../docs/vi/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Tại sao kiểm thử đầu-cuối lại thay đổi kết quả? | Chỉ một lần chạy toàn bộ pipeline mới được tính là kiểm chứng thực sự |
+| [L11](../../docs/vi/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Tại sao khả năng quan sát thuộc về bên trong harness? | Nếu bạn không thể thấy agent đã làm gì, bạn không thể sửa những gì nó đã làm hỏng |
+| [L12](../../docs/vi/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Tại sao mỗi phiên phải để lại trạng thái sạch? | Sự thành công của phiên tiếp theo phụ thuộc vào việc dọn dẹp của phiên này |
+| [L13](../../docs/vi/lectures/lecture-13-loop-engineering/index.md) | Tại sao bạn cần ngừng tự nhắc lệnh cho agent của mình? | Từ điều khiển thủ công đến vòng lặp tự chủ — vòng lặp theo mục tiêu, vòng lặp theo lịch, tách maker-checker |
+| [L14](../../docs/vi/lectures/lecture-14-graph-engineering/index.md) | Tại sao một vòng lặp đơn lẻ phát triển thành đồ thị? | Từ vòng lặp đơn lẻ đến kỹ thuật đồ thị — nút, cạnh, trạng thái dùng chung, định tuyến, và khi nào thực sự đáng để vẽ đồ thị |
 
-### Dự án — 6 dự án thực hành áp dụng phương pháp bài giảng vào cùng ứng dụng Electron
+### Dự án — 8 dự án thực hành áp dụng phương pháp bài giảng vào cùng ứng dụng Electron
 
 | Dự án | Những gì bạn làm | Cơ chế Harness |
 |-------|-------------------|----------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | Chạy cùng tác vụ hai lần: chỉ dùng prompt vs. ưu tiên quy tắc | Harness tối thiểu: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | Tái cấu trúc kho mã để agent có thể đọc được | Không gian làm việc agent có thể đọc + các tệp trạng thái liên tục |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | Khiến agent tiếp tục từ nơi nó đã dừng | Nhật ký tiến trình + bàn giao phiên + tính liên tục đa phiên |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | Ngăn agent làm quá nhiều hoặc quá ít | Phản hồi thời gian chạy + kiểm soát phạm vi + lập chỉ mục gia tăng |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | Khiến agent tự kiểm chứng công việc của mình | Tự kiểm chứng + Q&A có căn cứ + hoàn thành dựa trên bằng chứng |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Xây dựng một harness hoàn chỉnh từ đầu (tổng kết) | Harness đầy đủ: tất cả cơ chế + khả năng quan sát + nghiên cứu ablation |
+| [P01](../../docs/vi/projects/project-01-baseline-vs-minimal-harness/index.md) | Chạy cùng tác vụ hai lần: chỉ dùng prompt vs. ưu tiên quy tắc | Harness tối thiểu: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/vi/projects/project-02-agent-readable-workspace/index.md) | Tái cấu trúc kho mã để agent có thể đọc được | Không gian làm việc agent có thể đọc + các tệp trạng thái liên tục |
+| [P03](../../docs/vi/projects/project-03-multi-session-continuity/index.md) | Khiến agent tiếp tục từ nơi nó đã dừng | Nhật ký tiến trình + bàn giao phiên + tính liên tục đa phiên |
+| [P04](../../docs/vi/projects/project-04-incremental-indexing/index.md) | Ngăn agent làm quá nhiều hoặc quá ít | Phản hồi thời gian chạy + kiểm soát phạm vi + lập chỉ mục gia tăng |
+| [P05](../../docs/vi/projects/project-05-grounded-qa-verification/index.md) | Khiến agent tự kiểm chứng công việc của mình | Tự kiểm chứng + Q&A có căn cứ + hoàn thành dựa trên bằng chứng |
+| [P06](../../docs/vi/projects/project-06-runtime-observability-and-debugging/index.md) | Xây dựng một harness hoàn chỉnh từ đầu (tổng kết) | Harness đầy đủ: tất cả cơ chế + khả năng quan sát + nghiên cứu ablation |
+| [P07](../../docs/vi/projects/project-07-loop-engineering-first-loop/index.md) | Xây dựng vòng lặp tự động đầu tiên của bạn | Vòng lặp theo mục tiêu, vòng lặp theo lịch, tách maker-checker, quản lý trạng thái vòng lặp |
+| [P08](../../docs/vi/projects/project-08-graph-engineering-first-graph/index.md) | Vẽ quy trình làm việc của bạn thành một đồ thị | Nút/cạnh/trạng thái/định tuyến tường minh, fan-out/fan-in song song, cạnh quay lại, phê duyệt người-máy |
 
 ```text
     SỰ PHÁT TRIỂN DỰ ÁN
@@ -365,6 +465,12 @@ Mỗi giai đoạn mất khoảng một tuần nếu bạn học bán thời gia
      |
      v
     P06  Harness hoàn chỉnh (tổng kết)     Bạn xây dựng hệ thống đầy đủ
+     |
+     v
+    P07  Vòng lặp tự động đầu tiên           Bạn bước ra khỏi vòng lặp
+     |
+     v
+    P08  Vẽ quy trình làm việc thành đồ thị  Bạn vẽ hệ thống thành hình
 
     Solution của mỗi dự án trở thành starter của dự án tiếp theo.
     Ứng dụng phát triển. Kỹ năng harness của bạn lớn lên cùng nó.
@@ -392,6 +498,18 @@ Mỗi giai đoạn mất khoảng một tuần nếu bạn học bán thời gia
 ## Vòng đời phiên Agent
 
 Một trong những ý tưởng cốt lõi trong khóa học này: **phiên của agent nên tuân theo một vòng đời có cấu trúc, không phải tự do không kiểm soát.** Đây là cách nó trông như thế này:
+
+<p align="center">
+  <a href="../../assets/readme/vi-VN/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/vi-VN/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/vi-VN/harness-session-lifecycle.png" alt="Vòng đời phiên Agent" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Phiên bản văn bản</summary>
 
 ```text
     VÒNG ĐỜI PHIÊN AGENT
@@ -433,6 +551,8 @@ Một trong những ý tưởng cốt lõi trong khóa học này: **phiên củ
     Không có harness, bước 9 trở thành "agent nói trông ổn rồi."
     Có harness, bước 9 là "bài kiểm tra đạt, lint sạch, kiểu đúng."
 ```
+
+</details>
 
 ---
 
@@ -518,7 +638,7 @@ Chính:
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-Xem danh sách tài liệu tham khảo phân tầng đầy đủ tại [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md).
+Xem danh sách tài liệu tham khảo phân tầng đầy đủ tại [`docs/vi/resources/reference/`](../../docs/vi/resources/reference/index.md).
 
 ---
 
@@ -527,13 +647,13 @@ Xem danh sách tài liệu tham khảo phân tầng đầy đủ tại [`docs/en
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress documentation site
-│   ├── lectures/                  # 12 lectures (index.md + code/ examples)
+│   ├── lectures/                  # 14 bài giảng (index.md + code/ ví dụ)
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (12 total)
-│   ├── projects/                  # 6 project descriptions
+│   │   └── ... (tổng 14)
+│   ├── projects/                  # 8 mô tả dự án
 │   │   ├── project-01-*/
-│   │   └── ... (6 total)
+│   │   └── ... (tổng 8)
 │   └── resources/                 # Multilingual templates & references
 │       ├── en/                    # English templates, checklists, guides
 │       ├── zh/                    # Chinese templates, checklists, guides
@@ -553,7 +673,7 @@ learn-harness-engineering/
 ## Khóa học được tổ chức như thế nào
 
 - Mỗi bài giảng tập trung vào một câu hỏi
-- Khóa học bao gồm 6 dự án
+- Khóa học bao gồm 8 dự án
 - Mọi dự án đều yêu cầu agent thực hiện công việc thực tế
 - Mọi dự án đều so sánh kết quả harness yếu vs. mạnh
 - Điều quan trọng là sự khác biệt được đo lường, không phải số lượng tài liệu đã viết
@@ -575,12 +695,6 @@ Kho lưu trữ này cũng bao gồm các skill agent AI có thể tái sử dụ
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**: Một giáo trình thực hành mã nguồn mở kết nối khoảng cách từ các khái niệm RL cơ bản đến LLM alignment, RLVR và các hệ thống Agentic nâng cao.
-
----
-
-## Lịch sử Star
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

@@ -31,12 +31,12 @@ npm run test:watch       # Vitest watch mode
 
 - `docs/` — VitePress documentation site (lectures, projects, resources)
 - `docs/.vitepress/config.mts` — Nav/sidebar config for all 15 locales (en, zh, zh-TW, ja, ko, es, fr, ru, de, ar, vi, uz, tr, uk, pt-BR)
-- `docs/<lang>/lectures/` — 13 lectures, each with `index.md` + `code/` examples
-- `docs/<lang>/projects/` — 7 project descriptions
+- `docs/<lang>/lectures/` — 14 lectures, each with `index.md` + `code/` examples
+- `docs/<lang>/projects/` — 8 project descriptions
 - `docs/<lang>/resources/` — localized templates, references, OpenAI advanced pack
 - `docs-readme/` — localized README translations (one directory per locale)
 - `projects/shared/` — Shared Electron + TypeScript + React foundation
-- `projects/project-NN/` — Per-project `starter/` and `solution/` directories (project-01 through project-06; project-07 is docs-only so far)
+- `projects/project-NN/` — Per-project `starter/` and `solution/` directories (project-01 through project-06; project-07 and project-08 are docs-only so far)
 
 ## Architecture
 

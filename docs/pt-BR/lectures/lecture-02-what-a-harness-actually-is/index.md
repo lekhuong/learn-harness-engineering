@@ -95,7 +95,7 @@ Foram quatro iterações, o modelo não mudou em nenhum momento, e a taxa de suc
 
 - [OpenAI: Harness Engineering](https://openai.com/index/harness-engineering/)
 - [Anthropic: Harnesses Eficazes para Agentes de Longa Duração](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- [HumanLayer: Harness Engineering para Agentes de Programação](https://humanlayer.dev/articles/harness-engineering-for-coding-agents/)
+- [HumanLayer: Harness Engineering para Agentes de Programação](https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents)
 - [SWE-agent: Interfaces entre Agentes e Computadores](https://github.com/princeton-nlp/SWE-agent)
 - [Thoughtworks: Harness Engineering no Technology Radar](https://www.thoughtworks.com/radar)
 
