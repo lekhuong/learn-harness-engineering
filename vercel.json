@@ -2,11 +2,29 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci",
-  "buildCommand": "npm run docs:build",
-  "outputDirectory": "docs/.vitepress/dist",
+  "buildCommand": "npm run docs:build && rm -rf out && mkdir -p out && mv docs/.vitepress/dist out/harness-engineering",
+  "outputDirectory": "out",
+  "cleanUrls": true,
   "build": {
     "env": {
-      "DOCS_BASE_PATH": "/"
+      "DOCS_BASE_PATH": "/harness-engineering/"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/harness-engineering/vi/",
+      "permanent": false
+    },
+    {
+      "source": "/harness-engineering",
+      "destination": "/harness-engineering/vi/",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!harness-engineering).+)",
+      "destination": "/harness-engineering/:path",
+      "permanent": false
+    }
+  ]
 }
