@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/ja-JP/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/ja-JP/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ja-JP/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/ja-JP/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# Learn Harness Engineering
-
 > **AIコーディングエージェントを確実に動作させるための環境、状態管理、検証、制御メカニズムを構築するプロジェクトベースのコース。**
 
 Learn Harness Engineering は、AIコーディングエージェントのエンジニアリングに特化したコースです。業界最先端の Harness Engineering の理論と実践を深く研究し、統合しました。主な参考文献は以下の通りです：
+
+> **🆕 2026年8月更新：最先端Harness設計の分解解説**——4つの分解解説を含む新セクション：
+>
+> - **新セクション** [最先端Harness設計の分解解説](../../docs/ja/harness-designs/index.md)：本コースの5つのサブシステムからなるフレームワーク（指示、ツール、環境、状態、フィードバック）を適用し、4つの最先端プロダクトが実際のharnessをどのように構築しているかをリバースエンジニアリングする。
+> - **Pi** [Piがharnessを構築する方法](../../docs/ja/harness-designs/pi/index.md)：最小限のカーネル、プログラム可能な拡張、そして「Piに作りたいものを頼む」を支えるコンテキストエンジニアリング。
+> - **Claude Code** [Claude Codeがharnessを構築する方法](../../docs/ja/harness-designs/claude-code/index.md)：4層のメモリ、5段階のコンパクション、フック、そしてsub-agentの分離。
+> - **Codex** [Codexがharnessを構築する方法](../../docs/ja/harness-designs/codex/index.md)：信頼できる唯一の情報源としてのリポジトリ、ディレクトリページとしてのAGENTS.md、そしてworktreeの分離。
+> - **DeepSeek** [DeepSeekがharnessを構築する方法](../../docs/ja/harness-designs/deepseek/index.md)：「すべてはプラグイン」、能力の継ぎ目、そしてイベントパイプライン。
+> - **全15言語**：サポートされているすべての言語で完全な翻訳を提供。
+>
+> **コアとなる見解：** 本コースはフレームワークを提供する。これらの分解解説は、同じ原則が実際の本番環境のharnessでどのように機能するかを示す。
+>
+> **🆕 2026年8月更新：グラフエンジニアリング（Graph Engineering）**——講義1回 + プロジェクト1つを追加：
+>
+> - **第14回** [単一ループからグラフエンジニアリングへ](../../docs/ja/lectures/lecture-14-graph-engineering/index.md)：なぜ単一ループの先に必ずグラフが生まれるのか——4層の重ね合わせ（prompt → context → loop → graph）とharnessの位置、グラフの4つの部品（ノード、エッジ、共有状態、ルーティング）、loop内のチェックポイントが規模上の3つの構造的失敗（Goodhart、上方向の失明、衝突）を救えない理由、フレームワーク非依存の6ステップで最初のグラフを構築する手順、GraphとWorkflowの違い、アンカー、公開前 vs 公開後のオープンソースプロジェクトの現状、オーケストレーション税、そして本当に図を描く価値があるとき。
+> - **プロジェクト 08** [ワークフローをグラフとして描く](../../docs/ja/projects/project-08-graph-engineering-first-graph/index.md)：3つの発展的な実験——maker-checker loopを明示的なグラフに描く、並列のfan-out/fan-inノードを追加する、条件付きフォールバックエッジと人間による承認ノードを追加する。
+>
+> **コアとなる見解：** Loopはノードが1つだけのグラフである。タスクが分業、並列、共有状態、検証、リカバリを必要とするとき——それはもはやloopではなく、グラフになる。
+>
+> **🆕 2026年7月更新：ループエンジニアリング（Loop Engineering）**——講義1回 + プロジェクト1つ + コードテンプレートを追加：
+>
+> - **第13回** [なぜあなたはエージェントにプロンプトを与えるのをやめるべきか](../../docs/ja/lectures/lecture-13-loop-engineering/index.md)：`/goal` からループエンジニアリングの6つのプリミティブ（automations、worktrees、skills、connectors、sub-agents、external state）、生成者/評価者の分離、4つの静かなコスト、そして最初のループを段階的に構築する手順。
+> - **プロジェクト 07** [初めての自動ループを構築する](../../docs/ja/projects/project-07-loop-engineering-first-loop/index.md)：3つの発展的な実験——目標ループ、タイマーループ、maker-checkerループ。手動 vs 自動化の比較、介入の減少の測定、ループから抜け出すことを学ぶ。
+> - **コードテンプレート**：`goal-template.md`、`loop-state-template.md`、`maker-prompt.md`、`checker-prompt.md`——プラグアンドプレイのループ構築テンプレート。
+>
+> **コアとなる見解：** Harnessエンジニアリングは車を作る。ループエンジニアリングはその走る道路を設計する——そしてあなたは車の外から道路を設計する。
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@ OpenAI も Codex で同じことを報告しています：適切にハーネス
 
 **このコースは、その環境の構築方法を教えます。**
 
+<p align="center">
+  <a href="../../assets/readme/ja-JP/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ja-JP/harness-pattern-dark.svg">
+      <img src="../../assets/readme/ja-JP/harness-pattern.png" alt="モデルは賢い、ハーネスがそれを確実にする" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>テキスト版</summary>
+
 ```text
                     ハーネスパターン
                     ================
@@ -105,6 +150,8 @@ OpenAI も Codex で同じことを報告しています：適切にハーネス
                                                        通過した時のみ停止
 ```
 
+</details>
+
 ---
 
 ## Harness Engineering が本当に意味すること
@@ -112,6 +159,18 @@ OpenAI も Codex で同じことを報告しています：適切にハーネス
 Harness Engineering は、モデルの周囲に完全な作業環境を構築し、信頼性の高い結果を生成させることです。より良いプロンプトを書くことではありません。モデルが内部で動作するシステムを設計することです。
 
 ハーネスには5つのサブシステムがあります：
+
+<p align="center">
+  <a href="../../assets/readme/ja-JP/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ja-JP/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/ja-JP/harness-subsystems.png" alt="Harness Engineering が本当に意味すること" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>テキスト版</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -142,6 +201,8 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
     ハーネスはモデルを賢くするわけではない。
     モデルの出力を信頼性のあるものにする。
 ```
+
+</details>
 
 各サブシステムには一つの役割があります：
 
@@ -194,15 +255,15 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
 
 カリキュラムは3つの部分に分かれています：
 
-1. **レクチャー**：Harness Engineering の背景理論を説明する12の概念ユニット。
-2. **プロジェクト**：ゼロからエージェントワークスペースを構築する6つのハンズオンプロジェクト。
+1. **レクチャー**：Harness Engineering の背景理論を説明する14の概念ユニット。
+2. **プロジェクト**：ゼロからエージェントワークスペースを構築する8つのハンズオンプロジェクト。
 3. **リソースライブラリ**：自分のリポジトリで今日すぐ使えるコピー用テンプレート（`AGENTS.md`、`feature_list.json`、`init.sh` など）。
 
 ---
 
 ## クイックスタート：今日からエージェントを改善する
 
-価値を得るために12のレクチャーをすべて読む必要はありません。すでに実際のプロジェクトでコーディングエージェントを使用している場合、今すぐ改善する方法は以下の通りです。
+価値を得るために14のレクチャーをすべて読む必要はありません。すでに実際のプロジェクトでコーディングエージェントを使用している場合、今すぐ改善する方法は以下の通りです。
 
 アイデアはシンプルです：プロンプトを書く代わりに、何をすべきか、何が完了しているか、作業をどう検証するかを定義する構造化ファイルのセットをエージェントに与えます。これらのファイルはリポジトリ内に存在するため、すべてのセッションが同じ状態から始まります。
 
@@ -222,7 +283,7 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
 
 ## カプロジェクト：実際のアプリケーション
 
-6つのコースプロジェクトはすべて同じ製品を中心に展開しています：**Electron ベースの個人ナレッジベースデスクトップアプリ**です。
+8つのコースプロジェクトはすべて同じ製品を中心に展開しています：**Electron ベースの個人ナレッジベースデスクトップアプリ**です。
 
 ```text
     ┌─────────────────────────────────────────────────────┐
@@ -260,6 +321,18 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
 ## 学習パス
 
 このコースは順番に進めるように設計されています。各フェーズは前のフェーズの上に構築されます。
+
+<p align="center">
+  <a href="../../assets/readme/ja-JP/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ja-JP/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/ja-JP/harness-learning-path.png" alt="学習パス" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>テキスト版</summary>
 
 ```text
     フェーズ1: 問題を見る                      フェーズ2: リポジトリを構造化
@@ -303,7 +376,28 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
          v                                         v
     P05  エージェントが自分の作業を検証          P06  完全なハーネスを構築
                                                    （カプロジェクト）
+
+    フェーズ7: 自動化ループ
+    ==========================
+    L13  エージェントにプロンプトを
+         与えるのをやめる——ループを設計する
+         |
+         v
+    P07  初めての自動ループを構築する
+         （目標ループ、タイマーループ、maker-checker）
+
+    フェーズ8: システムを構造化
+    ============================
+    L14  システムをグラフとして描く——
+         ノード、エッジ、共有状態、ルーティング
+         |
+         v
+    P08  ワークフローをグラフとして描く
+         （明示グラフ、並列 fan-out/fan-in、
+          フォールバックエッジ、人間と機械の協働）
 ```
+
+</details>
 
 パートタイムで進める場合、各フェーズは約1週間です。より速く進めたい場合、フェーズ1〜3は長い週末で完了できます。
 
@@ -311,35 +405,39 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
 
 ## シラバス
 
-### レクチャー — 12の概念ユニット、それぞれが一つのコアな問いに答える
+### レクチャー — 14の概念ユニット、それぞれが一つのコアな問いに答える
 
 *各レクチャーの全文は[ドキュメントウェブサイト](https://walkinglabs.github.io/learn-harness-engineering/)で読めます。*
 
 | セッション | 問い | コアアイデア |
 |---------|----------|-----------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | なぜ強力なモデルでも実際のタスクで失敗するのか？ | ベンチマークと実際のエンジニアリングの能力格差 |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | 「ハーネス」とは実際何を意味するのか？ | 5つのサブシステム：インストラクション、状態、検証、スコープ、ライフサイクル |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | なぜリポジトリが唯一の信頼できる情報源でなければならないのか？ | エージェントが見られないものは存在しない |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | なぜ一つの巨大な指示ファイルは失敗するのか？ | 段階的開示：百科事典ではなく地図を与える |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | なぜ長時間実行タスクは連続性を失うのか？ | 進捗をディスクに永続化し、前回の続きから再開する |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | なぜ初期化に独自のフェーズが必要なのか？ | エージェントが作業を開始する前に環境が健全であることを確認する |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | なぜエージェントは過剰に手を出し、不足して終わるのか？ | 一度に一つの機能、明確な完了の定義 |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | なぜ機能リストはハーネスのプリミティブなのか？ | エージェントが無視できない機械可読なスコープ境界 |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | なぜエージェントは早すぎる完了を宣言するのか？ | 検証のギャップ：確信 ≠ 正確性 |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | なぜエンドツーエンドテストが結果を変えるのか？ | 完全なパイプライン実行のみが本当の検証として認められる |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | なぜオブザーバビリティはハーネス内にあるべきなのか？ | エージェントが何をしたか見えなければ、何を壊したか修正できない |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | なぜすべてのセッションがクリーンな状態を残さなければならないのか？ | 次のセッションの成功は、このセッションのクリーンアップに依存する |
+| [L01](../../docs/ja/lectures/lecture-01-why-capable-agents-still-fail/index.md) | なぜ強力なモデルでも実際のタスクで失敗するのか？ | ベンチマークと実際のエンジニアリングの能力格差 |
+| [L02](../../docs/ja/lectures/lecture-02-what-a-harness-actually-is/index.md) | 「ハーネス」とは実際何を意味するのか？ | 5つのサブシステム：インストラクション、状態、検証、スコープ、ライフサイクル |
+| [L03](../../docs/ja/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | なぜリポジトリが唯一の信頼できる情報源でなければならないのか？ | エージェントが見られないものは存在しない |
+| [L04](../../docs/ja/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | なぜ一つの巨大な指示ファイルは失敗するのか？ | 段階的開示：百科事典ではなく地図を与える |
+| [L05](../../docs/ja/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | なぜ長時間実行タスクは連続性を失うのか？ | 進捗をディスクに永続化し、前回の続きから再開する |
+| [L06](../../docs/ja/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | なぜ初期化に独自のフェーズが必要なのか？ | エージェントが作業を開始する前に環境が健全であることを確認する |
+| [L07](../../docs/ja/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | なぜエージェントは過剰に手を出し、不足して終わるのか？ | 一度に一つの機能、明確な完了の定義 |
+| [L08](../../docs/ja/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | なぜ機能リストはハーネスのプリミティブなのか？ | エージェントが無視できない機械可読なスコープ境界 |
+| [L09](../../docs/ja/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | なぜエージェントは早すぎる完了を宣言するのか？ | 検証のギャップ：確信 ≠ 正確性 |
+| [L10](../../docs/ja/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | なぜエンドツーエンドテストが結果を変えるのか？ | 完全なパイプライン実行のみが本当の検証として認められる |
+| [L11](../../docs/ja/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | なぜオブザーバビリティはハーネス内にあるべきなのか？ | エージェントが何をしたか見えなければ、何を壊したか修正できない |
+| [L12](../../docs/ja/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | なぜすべてのセッションがクリーンな状態を残さなければならないのか？ | 次のセッションの成功は、このセッションのクリーンアップに依存する |
+| [L13](../../docs/ja/lectures/lecture-13-loop-engineering/index.md) | エージェントにプロンプトを与えるのをやめるべきなのはなぜか？ | 手動駆動から自動ループへ——目標ループ、タイマーループ、生成者/評価者の分離 |
+| [L14](../../docs/ja/lectures/lecture-14-graph-engineering/index.md) | なぜ単一ループがグラフへと進化するのか？ | 単一ループからグラフエンジニアリングへ——ノード、エッジ、共有状態、ルーティング、そして本当に図を描く価値があるとき |
 
-### プロジェクト — レクチャーの手法を同じ Electron アプリに適用する6つのハンズオンプロジェクト
+### プロジェクト — レクチャーの手法を同じ Electron アプリに適用する8つのハンズオンプロジェクト
 
 | プロジェクト | やること | ハーネスメカニズム |
 |---------|------------|-------------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | 同じタスクを2回実行：プロンプトのみ vs. ルール優先 | 最小ハーネス：AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | エージェントが読めるようにリポジトリを再構築する | エージェント可読ワークスペース + 永続状態ファイル |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | エージェントが前回の続きから再開できるようにする | 進捗ログ + セションハンドオフ + マルチセッション連続性 |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | エージェントがやりすぎたり、やらなすぎたりするのを防ぐ | ランタイムフィードバック + スコープ制御 + インクリメンタルインデキシング |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | エージェントが自分の作業を検証するようにする | 自己検証 + グラウンデッドQ&A + 証拠ベースの完了 |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | ゼロから完全なハーネスを構築する（カプロジェクト） | フルハーネス：全メカニズム + オブザーバビリティ + アブレーションスタディ |
+| [P01](../../docs/ja/projects/project-01-baseline-vs-minimal-harness/index.md) | 同じタスクを2回実行：プロンプトのみ vs. ルール優先 | 最小ハーネス：AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/ja/projects/project-02-agent-readable-workspace/index.md) | エージェントが読めるようにリポジトリを再構築する | エージェント可読ワークスペース + 永続状態ファイル |
+| [P03](../../docs/ja/projects/project-03-multi-session-continuity/index.md) | エージェントが前回の続きから再開できるようにする | 進捗ログ + セションハンドオフ + マルチセッション連続性 |
+| [P04](../../docs/ja/projects/project-04-incremental-indexing/index.md) | エージェントがやりすぎたり、やらなすぎたりするのを防ぐ | ランタイムフィードバック + スコープ制御 + インクリメンタルインデキシング |
+| [P05](../../docs/ja/projects/project-05-grounded-qa-verification/index.md) | エージェントが自分の作業を検証するようにする | 自己検証 + グラウンデッドQ&A + 証拠ベースの完了 |
+| [P06](../../docs/ja/projects/project-06-runtime-observability-and-debugging/index.md) | ゼロから完全なハーネスを構築する（カプロジェクト） | フルハーネス：全メカニズム + オブザーバビリティ + アブレーションスタディ |
+| [P07](../../docs/ja/projects/project-07-loop-engineering-first-loop/index.md) | 初めての自動ループを構築する | 目標ループ、タイマーループ、生成者/評価者の分離、ループ状態管理 |
+| [P08](../../docs/ja/projects/project-08-graph-engineering-first-graph/index.md) | ワークフローをグラフとして描く | 明示的なノード/エッジ/状態/ルーティング、並列 fan-out/fan-in、フォールバックエッジ、人間と機械の協働による承認 |
 
 ```text
     プロジェクトの進化
@@ -361,6 +459,12 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
      |
      v
     P06  完全なハーネス（カプロジェクト）    完全なシステムを構築する
+     |
+     v
+    P07  初めての自動ループ                   あなたはループから抜け出す
+     |
+     v
+    P08  ワークフローをグラフとして描く       あなたはシステムをグラフにする
 
     各プロジェクトのソリューションが次のプロジェクトのスターターになる。
     アプリは進化する。あなたのハーネスキルも共に成長する。
@@ -388,6 +492,18 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
 ## エージェントセッションライフサイクル
 
 このコースのコアアイデアの一つ：**エージェントのセッションは自由放任ではなく、構造化されたライフサイクルに従うべきです。** どのようなものか：
+
+<p align="center">
+  <a href="../../assets/readme/ja-JP/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/ja-JP/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/ja-JP/harness-session-lifecycle.png" alt="エージェントセッションライフサイクル" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>テキスト版</summary>
 
 ```text
     エージェントセッションライフサイクル
@@ -429,6 +545,8 @@ Harness Engineering は、モデルの周囲に完全な作業環境を構築し
     ハーネスなしでは、ステップ9は「エージェントが大丈夫そうだと言う」になる。
     ハーネスありでは、ステップ9は「テスト通過、lintクリーン、型チェックOK」になる。
 ```
+
+</details>
 
 ---
 
@@ -514,7 +632,7 @@ npm run docs:preview    # ビルド済みサイトのプレビュー
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-完全な階層別参考文献リストは [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md) をご覧ください。
+完全な階層別参考文献リストは [`docs/ja/resources/reference/`](../../docs/ja/resources/reference/index.md) をご覧ください。
 
 ---
 
@@ -523,13 +641,13 @@ npm run docs:preview    # ビルド済みサイトのプレビュー
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress ドキュメントサイト
-│   ├── lectures/                  # 12のレクチャー（index.md + code/ 例）
+│   ├── lectures/                  # 14のレクチャー（index.md + code/ 例）
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (全12)
-│   ├── projects/                  # 6つのプロジェクト説明
+│   │   └── ... (全14)
+│   ├── projects/                  # 8つのプロジェクト説明
 │   │   ├── project-01-*/
-│   │   └── ... (全6)
+│   │   └── ... (全8)
 │   └── resources/                 # 多言語テンプレートとリファレンス
 │       ├── en/                    # 英語テンプレート、チェックリスト、ガイド
 │       ├── zh/                    # 中国語テンプレート、チェックリスト、ガイド
@@ -549,7 +667,7 @@ learn-harness-engineering/
 ## コースの構成
 
 - 各レクチャーは一つの問いに焦点を当てる
-- コースには6つのプロジェクトが含まれる
+- コースには8つのプロジェクトが含まれる
 - すべてのプロジェクトでエージェントが実際の作業を行う
 - すべてのプロジェクトで弱いハーネスと強いハーネスの結果を比較する
 - 重要なのは測定された差であり、書かれたドキュメントの数ではない
@@ -571,12 +689,6 @@ learn-harness-engineering/
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**：基本的な強化学習の概念から LLM アライメント、RLVR、高度なエージェントシステムまでをつなぐ、オープンソースのハンズオンカリキュラム。
-
----
-
-## スター履歴
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

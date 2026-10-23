@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/tr-TR/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/tr-TR/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/tr-TR/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/tr-TR/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# Learn Harness Engineering
-
 > **Yapay zeka kod yazma ajanlarının güvenilir biçimde çalışmasını sağlayan ortamı, durum yönetimini, doğrulamayı ve kontrol mekanizmalarını kurmaya odaklanan, proje tabanlı bir kurs.**
 
 Learn Harness Engineering, yapay zeka kod yazma ajanlarının mühendisliğine adanmış bir kurstur. Sektördeki en gelişmiş Harness Engineering teorilerini ve uygulamalarını derinlemesine inceleyip sentezledik. Temel referanslarımız:
+
+> **🆕 2026 Ağustos Güncellemesi: Öncü Harness Tasarımı İncelemeleri** — 4 inceleme içeren yeni bölüm:
+>
+> - **Yeni bölüm** [Öncü Harness Tasarımı İncelemeleri](../../docs/tr/harness-designs/index.md) — Dört öncü ürünün gerçek harness'ları nasıl oluşturduğunu tersine mühendislikle çözümlemek için kursun beş alt sistemli çerçevesini (talimatlar, araçlar, ortam, durum, geri bildirim) uygulayın.
+> - **Pi** [Pi harness'ını nasıl oluşturuyor](../../docs/tr/harness-designs/pi/index.md) — minimal bir çekirdek, programlanabilir genişleme ve “Pi'den istediğinizi oluşturmasını isteyin” yaklaşımının arkasındaki bağlam mühendisliği.
+> - **Claude Code** [Claude Code harness'ını nasıl oluşturuyor](../../docs/tr/harness-designs/claude-code/index.md) — dört katmanlı bellek, beş seviyeli sıkıştırma, hook'lar ve alt ajan izolasyonu.
+> - **Codex** [Codex harness'ını nasıl oluşturuyor](../../docs/tr/harness-designs/codex/index.md) — tek doğruluk kaynağı olarak kod deposu, bir dizin sayfası olarak AGENTS.md ve worktree izolasyonu.
+> - **DeepSeek** [DeepSeek harness'ını nasıl oluşturuyor](../../docs/tr/harness-designs/deepseek/index.md) — “her şey bir eklentidir”, yetenek sınırları ve bir olay işlem hattı.
+> - **15 dilin tamamı** — desteklenen tüm dillerde eksiksiz çeviri kapsamı.
+>
+> **Ana fikir:** Kurs size bir çerçeve sunar; bu incelemeler, aynı ilkelerin üretimdeki harness'larda gerçekte nasıl uygulandığını gösterir.
+>
+> **🆕 2026 Ağustos Güncellemesi: Graph Engineering (Graf Mühendisliği)** — 1 ders + 1 proje eklendi:
+>
+> - **Ders 14** [Tek Döngülerden Graf Mühendisliğine](../../docs/tr/lectures/lecture-14-graph-engineering/index.md): tek bir loop'un neden kaçınılmaz olarak bir grafa dönüştüğü — dört katmanlı yığın (prompt → context → loop → graph) ve harness'ın buradaki yeri, graf'ın dört parçası (düğümler, kenarlar, paylaşılan durum, yönlendirme), ayrıca loop içindeki kontrol noktalarının ölçekteki üç yapısal başarısızlığı (Goodhart, yukarıya körlük, çatışma) neden kurtaramadığı, framework'ten bağımsız ilk graf'ınızı kurmanın altı adımı, Graph ile Workflow arasındaki fark, çapalar, isimden önce ve sonra açık kaynak proje durumu, orkestrasyon vergisi ve ne zaman gerçekten graf çizmeye değer olduğu.
+> - **Proje 08** [İş Akışınızı Bir Graf Olarak Çizin](../../docs/tr/projects/project-08-graph-engineering-first-graph/index.md): üç aşamalı deney — maker-checker loop'unu açık bir graf olarak çizmek, paralel fan-out/fan-in düğümü eklemek, koşullu geri alma kenarı ve insan onayı düğümü eklemek.
+>
+> **Ana fikir:** Loop, tek düğümlü bir graftır. Bir görev iş bölümü, paralellik, paylaşılan durum, doğrulama ve kurtarma gerektirdiğinde — artık bir loop değil, bir graftır.
+>
+> **🆕 2026 Temmuz Güncellemesi: Loop Engineering (Loop Mühendisliği)** — 1 ders + 1 proje + kod şablonları eklendi:
+>
+> - **Ders 13** [Ajanınızı prompt etmeyi neden bırakmanız gerekir](../../docs/tr/lectures/lecture-13-loop-engineering/index.md): `/goal`'dan loop mühendisliğinin altı ilkesine (automations, worktrees, skills, connectors, sub-agents, external state), üretici/değerlendirici ayrımı, dört sessiz maliyet ve ilk loop'unuzu adım adım kurma.
+> - **Proje 07** [İlk Otomatik Loop'unuzu Oluşturun](../../docs/tr/projects/project-07-loop-engineering-first-loop/index.md): üç aşamalı deney — hedef loop'u, zamanlanmış loop, maker-checker loop. Manuel vs. otomatik karşılaştırması, müdahale azalmasını ölçme, loop'un dışına çıkmayı öğrenme.
+> - **Kod şablonları**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — tak-çalıştır loop oluşturma şablonları.
+>
+> **Ana fikir:** Harness mühendisliği arabayı inşa eder. Loop mühendisliği, o arabaya gideceği yolu tasarlar — ve siz o yolu aracın dışından tasarlarsınız.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@ OpenAI Codex ile aynı şeyi bildirdi: iyi harness'lanmış bir depoda aynı mod
 
 **Bu kurs size o ortamı nasıl kuracağınızı öğretir.**
 
+<p align="center">
+  <a href="../../assets/readme/tr-TR/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/tr-TR/harness-pattern-dark.svg">
+      <img src="../../assets/readme/tr-TR/harness-pattern.png" alt="Model akıllıdır, harness onu güvenilir kılar" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Metin sürümü</summary>
+
 ```text
                     HARNESS DESENİ
                     ==============
@@ -105,6 +150,8 @@ OpenAI Codex ile aynı şeyi bildirdi: iyi harness'lanmış bir depoda aynı mod
                                                      başarılı olduğunda durur
 ```
 
+</details>
+
 ---
 
 ## Harness engineering aslında ne demek
@@ -112,6 +159,18 @@ OpenAI Codex ile aynı şeyi bildirdi: iyi harness'lanmış bir depoda aynı mod
 Harness engineering, modelin güvenilir sonuçlar üretmesi için etrafına eksiksiz bir çalışma ortamı kurmakla ilgilidir. Daha iyi prompt yazmakla ilgili değildir. Modelin içinde çalıştığı sistemi tasarlamakla ilgilidir.
 
 Bir harness'ın beş alt sistemi vardır:
+
+<p align="center">
+  <a href="../../assets/readme/tr-TR/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/tr-TR/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/tr-TR/harness-subsystems.png" alt="Harness engineering aslında ne demek" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Metin sürümü</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -142,6 +201,8 @@ Bir harness'ın beş alt sistemi vardır:
     Harness modeli daha akıllı yapmaz.
     Modelin çıktısını güvenilir yapar.
 ```
+
+</details>
 
 Her alt sistemin bir görevi vardır:
 
@@ -195,15 +256,15 @@ Tüm kurs materyalleri için lütfen **[Dokümantasyon Sitesi](https://walkingla
 
 Müfredat üç bölüme ayrılmıştır:
 
-1. **Dersler**: Harness engineering'in arkasındaki teoriyi açıklayan 12 kavramsal birim.
-2. **Projeler**: Ajansal bir çalışma alanını sıfırdan inşa ettiğiniz 6 uygulamalı proje.
+1. **Dersler**: Harness engineering'in arkasındaki teoriyi açıklayan 14 kavramsal birim.
+2. **Projeler**: Ajansal bir çalışma alanını sıfırdan inşa ettiğiniz 8 uygulamalı proje.
 3. **Kaynak Kütüphanesi**: Kendi depolarınızda bugün kullanabileceğiniz kopya-yapıştır şablonlar (`AGENTS.md`, `feature_list.json`, `init.sh` vb.).
 
 ---
 
 ## Hızlı başlangıç: Ajanınızı bugün geliştirin
 
-Değer elde etmeye başlamadan önce 12 dersin tamamını okumanıza gerek yok. Gerçek bir projede zaten bir kod yazma ajanı kullanıyorsanız, onu şu anda nasıl iyileştirebileceğiniz aşağıda.
+Değer elde etmeye başlamadan önce 14 dersin tamamını okumanıza gerek yok. Gerçek bir projede zaten bir kod yazma ajanı kullanıyorsanız, onu şu anda nasıl iyileştirebileceğiniz aşağıda.
 
 Fikir basit: yalnızca prompt yazmak yerine, ajanınıza ne yapacağını, ne yapıldığını ve işin nasıl doğrulanacağını tanımlayan bir dizi yapılandırılmış dosya verin. Bu dosyalar deponuzun içinde yaşar, böylece her oturum aynı durumdan başlar.
 
@@ -261,6 +322,18 @@ Her kurs projesinin starter/solution'ı, bu Electron uygulamasının o evrimsel 
 
 Kurs sırayla yapılacak şekilde tasarlanmıştır. Her aşama bir öncekinin üzerine inşa edilir.
 
+<p align="center">
+  <a href="../../assets/readme/tr-TR/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/tr-TR/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/tr-TR/harness-learning-path.png" alt="Öğrenme yolu" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Metin sürümü</summary>
+
 ```text
     Aşama 1: PROBLEMİ GÖR                  Aşama 2: DEPOYU YAPILANDIR
     =====================                  ===========================
@@ -303,7 +376,28 @@ Kurs sırayla yapılacak şekilde tasarlanmıştır. Her aşama bir öncekinin �
          v                                     v
     P05  Ajan kendi işini doğrular         P06  Eksiksiz bir harness kur
                                                (bitirme projesi)
+
+    Aşama 7: LOOP'U OTOMATİKLEŞTİR
+    =================================
+    L13  Ajanınızı prompt etmeyi bırakın —
+         loop tasarlayın
+         |
+         v
+    P07  İlk otomatik loop'unuzu oluşturun
+         (hedef loop'u, zamanlanmış loop, maker-checker)
+
+    Aşama 8: SİSTEMİ YAPILANDIR
+    =============================
+    L14  Sistemi bir graf olarak çizin —
+         düğümler, kenarlar, paylaşılan durum, yönlendirme
+         |
+         v
+    P08  İş akışınızı bir graf olarak çizin
+         (açık graf, paralel fan-out/fan-in,
+          geri alma kenarı, insan-ortada)
 ```
+
+</details>
 
 Yarı zamanlı ilerliyorsanız her aşama yaklaşık bir hafta sürer. Daha hızlı gitmek istiyorsanız 1-3. aşamalar uzun bir hafta sonunda tamamlanabilir.
 
@@ -311,35 +405,39 @@ Yarı zamanlı ilerliyorsanız her aşama yaklaşık bir hafta sürer. Daha hız
 
 ## Müfredat
 
-### Dersler — her biri tek bir temel soruya yanıt veren 12 kavramsal birim
+### Dersler — her biri tek bir temel soruya yanıt veren 14 kavramsal birim
 
 *Her dersin tam metnini [Dokümantasyon Sitesi](https://walkinglabs.github.io/learn-harness-engineering/)'nde okuyun.*
 
 | Oturum | Soru | Temel Fikir |
 |---------|------|-------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Güçlü modeller gerçek görevlerde neden hâlâ başarısız olur? | Benchmark'lar ile gerçek mühendislik arasındaki yetenek boşluğu |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" aslında ne demek? | Beş alt sistem: talimatlar, durum, doğrulama, kapsam, yaşam döngüsü |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Depo neden tek kayıt sistemi olmalı? | Ajan göremiyorsa, o şey yok demektir |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Tek bir dev talimat dosyası neden yetmez? | Aşamalı açılım: bir harita verin, ansiklopedi değil |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Uzun süren görevler neden sürekliliği kaybeder? | İlerlemeyi diske yaz; kaldığın yerden devam et |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Başlatma neden kendine ait bir aşama olmalı? | Ajan işe başlamadan önce ortamın sağlıklı olduğunu doğrula |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Ajanlar neden sınırı aşar ve yarım bırakır? | Bir seferde tek özellik; bittinin açık tanımı |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Özellik listeleri neden harness'ın temel yapı taşı? | Ajanın görmezden gelemeyeceği, makine okur kapsam sınırları |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Ajanlar neden zaferi çok erken ilan eder? | Doğrulama boşlukları: güven ≠ doğruluk |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Uçtan uca test sonuçları neden değiştirir? | Yalnızca tam hat koşusu gerçek doğrulama sayılır |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Gözlemlenebilirlik neden harness'ın içinde olmalı? | Ajanın ne yaptığını göremiyorsanız, bozduğunu da düzeltemezsiniz |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Her oturum neden temiz bir durumla bitmeli? | Sonraki oturumun başarısı bu oturumun temizliğine bağlıdır |
+| [L01](../../docs/tr/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Güçlü modeller gerçek görevlerde neden hâlâ başarısız olur? | Benchmark'lar ile gerçek mühendislik arasındaki yetenek boşluğu |
+| [L02](../../docs/tr/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" aslında ne demek? | Beş alt sistem: talimatlar, durum, doğrulama, kapsam, yaşam döngüsü |
+| [L03](../../docs/tr/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Depo neden tek kayıt sistemi olmalı? | Ajan göremiyorsa, o şey yok demektir |
+| [L04](../../docs/tr/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Tek bir dev talimat dosyası neden yetmez? | Aşamalı açılım: bir harita verin, ansiklopedi değil |
+| [L05](../../docs/tr/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Uzun süren görevler neden sürekliliği kaybeder? | İlerlemeyi diske yaz; kaldığın yerden devam et |
+| [L06](../../docs/tr/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Başlatma neden kendine ait bir aşama olmalı? | Ajan işe başlamadan önce ortamın sağlıklı olduğunu doğrula |
+| [L07](../../docs/tr/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Ajanlar neden sınırı aşar ve yarım bırakır? | Bir seferde tek özellik; bittinin açık tanımı |
+| [L08](../../docs/tr/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Özellik listeleri neden harness'ın temel yapı taşı? | Ajanın görmezden gelemeyeceği, makine okur kapsam sınırları |
+| [L09](../../docs/tr/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Ajanlar neden zaferi çok erken ilan eder? | Doğrulama boşlukları: güven ≠ doğruluk |
+| [L10](../../docs/tr/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Uçtan uca test sonuçları neden değiştirir? | Yalnızca tam hat koşusu gerçek doğrulama sayılır |
+| [L11](../../docs/tr/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Gözlemlenebilirlik neden harness'ın içinde olmalı? | Ajanın ne yaptığını göremiyorsanız, bozduğunu da düzeltemezsiniz |
+| [L12](../../docs/tr/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Her oturum neden temiz bir durumla bitmeli? | Sonraki oturumun başarısı bu oturumun temizliğine bağlıdır |
+| [L13](../../docs/tr/lectures/lecture-13-loop-engineering/index.md) | Ajanınızı prompt etmeyi neden bırakmanız gerekir? | Manuel sürüşten otomatik loop'lara — hedef loop'u, zamanlanmış loop, maker-checker ayrımı |
+| [L14](../../docs/tr/lectures/lecture-14-graph-engineering/index.md) | Tek bir loop neden bir grafa evrilir? | Tek döngüden graf mühendisliğine — düğümler, kenarlar, paylaşılan durum, yönlendirme ve ne zaman gerçekten graf çizmeye değer olduğu |
 
-### Projeler — ders yöntemlerini aynı Electron uygulamasına uygulayan 6 uygulamalı proje
+### Projeler — ders yöntemlerini aynı Electron uygulamasına uygulayan 8 uygulamalı proje
 
 | Proje | Ne yaparsınız | Harness Mekanizması |
 |---------|---------------|----------------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | Aynı görevi iki kez çalıştırın: yalnızca prompt vs. önce kurallar | Minimal harness: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | Depoyu ajanın okuyabileceği şekilde yeniden yapılandırın | Ajanın okuyabildiği çalışma alanı + kalıcı durum dosyaları |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | Ajanın kaldığı yerden devam etmesini sağlayın | İlerleme günlüğü + oturum devri + çok oturumlu süreklilik |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | Ajanın çok fazla ya da çok az iş yapmasını engelleyin | Runtime geri bildirimi + kapsam kontrolü + artımlı dizinleme |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | Ajanın kendi işini doğrulamasını sağlayın | Öz-doğrulama + dayanaklı Soru-Cevap + kanıta dayalı tamamlama |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Eksiksiz bir harness'ı sıfırdan kurun (bitirme projesi) | Tam harness: tüm mekanizmalar + gözlemlenebilirlik + ablasyon çalışması |
+| [P01](../../docs/tr/projects/project-01-baseline-vs-minimal-harness/index.md) | Aynı görevi iki kez çalıştırın: yalnızca prompt vs. önce kurallar | Minimal harness: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/tr/projects/project-02-agent-readable-workspace/index.md) | Depoyu ajanın okuyabileceği şekilde yeniden yapılandırın | Ajanın okuyabildiği çalışma alanı + kalıcı durum dosyaları |
+| [P03](../../docs/tr/projects/project-03-multi-session-continuity/index.md) | Ajanın kaldığı yerden devam etmesini sağlayın | İlerleme günlüğü + oturum devri + çok oturumlu süreklilik |
+| [P04](../../docs/tr/projects/project-04-incremental-indexing/index.md) | Ajanın çok fazla ya da çok az iş yapmasını engelleyin | Runtime geri bildirimi + kapsam kontrolü + artımlı dizinleme |
+| [P05](../../docs/tr/projects/project-05-grounded-qa-verification/index.md) | Ajanın kendi işini doğrulamasını sağlayın | Öz-doğrulama + dayanaklı Soru-Cevap + kanıta dayalı tamamlama |
+| [P06](../../docs/tr/projects/project-06-runtime-observability-and-debugging/index.md) | Eksiksiz bir harness'ı sıfırdan kurun (bitirme projesi) | Tam harness: tüm mekanizmalar + gözlemlenebilirlik + ablasyon çalışması |
+| [P07](../../docs/tr/projects/project-07-loop-engineering-first-loop/index.md) | İlk otomatik loop'unuzu oluşturun | Hedef loop'u, zamanlanmış loop, maker-checker ayrımı, loop durum yönetimi |
+| [P08](../../docs/tr/projects/project-08-graph-engineering-first-graph/index.md) | İş akışınızı bir graf olarak çizin | Açık düğüm/kenar/durum/yönlendirme, paralel fan-out/fan-in, geri alma kenarı, insan-ortada onay |
 
 ```text
     PROJE EVRİMİ
@@ -361,6 +459,12 @@ Yarı zamanlı ilerliyorsanız her aşama yaklaşık bir hafta sürer. Daha hız
      |
      v
     P06  Eksiksiz harness (bitirme)          Tam sistemi inşa edersiniz
+     |
+     v
+    P07  İlk otomatik loop'unuz               Loop'un dışına çıkarsınız
+     |
+     v
+    P08  İş akışınızı bir graf olarak çizin   Sistemi graf olarak çizersiniz
 
     Her projenin solution'ı bir sonraki projenin starter'ı olur.
     Uygulama evrilir. Harness yetenekleriniz onunla birlikte büyür.
@@ -388,6 +492,18 @@ Yarı zamanlı ilerliyorsanız her aşama yaklaşık bir hafta sürer. Daha hız
 ## Ajan oturumunun yaşam döngüsü
 
 Bu kursun temel fikirlerinden biri: **ajanın oturumu serbest takılma değil, yapılandırılmış bir yaşam döngüsünü izlemelidir.** İşte bunun nasıl göründüğü:
+
+<p align="center">
+  <a href="../../assets/readme/tr-TR/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/tr-TR/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/tr-TR/harness-session-lifecycle.png" alt="Ajan oturumunun yaşam döngüsü" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Metin sürümü</summary>
 
 ```text
     AJAN OTURUMU YAŞAM DÖNGÜSÜ
@@ -429,6 +545,8 @@ Bu kursun temel fikirlerinden biri: **ajanın oturumu serbest takılma değil, y
     Harness olmadan 9. adım "ajan iyi görünüyor diyor" olur.
     Harness ile 9. adım "testler geçiyor, lint temiz, tipler kontrol edildi" olur.
 ```
+
+</details>
 
 ---
 
@@ -514,7 +632,7 @@ Birincil:
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-Tam katmanlı referans listesini [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md) içinde bulabilirsiniz.
+Tam katmanlı referans listesini [`docs/tr/resources/reference/`](../../docs/tr/resources/reference/index.md) içinde bulabilirsiniz.
 
 ---
 
@@ -523,13 +641,13 @@ Tam katmanlı referans listesini [`docs/en/resources/reference/`](../../docs/en/
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress dokümantasyon sitesi
-│   ├── lectures/                  # 12 ders (index.md + code/ örnekleri)
+│   ├── lectures/                  # 14 ders (index.md + code/ örnekleri)
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (toplam 12)
-│   ├── projects/                  # 6 proje açıklaması
+│   │   └── ... (toplam 14)
+│   ├── projects/                  # 8 proje açıklaması
 │   │   ├── project-01-*/
-│   │   └── ... (toplam 6)
+│   │   └── ... (toplam 8)
 │   └── resources/                 # Çok dilli şablonlar ve referanslar
 │       ├── en/                    # İngilizce şablonlar, kontrol listeleri, rehberler
 │       ├── zh/                    # Çince şablonlar, kontrol listeleri, rehberler
@@ -549,7 +667,7 @@ learn-harness-engineering/
 ## Kurs nasıl organize edilmiş
 
 - Her ders tek bir soruya odaklanır
-- Kurs 6 proje içerir
+- Kurs 8 proje içerir
 - Her proje ajanın gerçek iş yapmasını gerektirir
 - Her proje zayıf vs. güçlü harness sonuçlarını karşılaştırır
 - Önemli olan, kaç doküman yazıldığı değil, ölçülen farktır
@@ -571,12 +689,6 @@ Ekibimiz başka kurslar da hazırladı! Göz atın:
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**: Temel RL kavramlarından LLM hizalamasına, RLVR'ye ve ileri ajansal sistemlere uzanan boşluğu kapatan, açık kaynaklı, uygulamalı bir müfredat.
-
----
-
-## Yıldız Geçmişi
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

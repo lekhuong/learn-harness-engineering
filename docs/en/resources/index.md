@@ -23,6 +23,10 @@ For a minimal setup, begin with:
 - root instructions: [`templates/AGENTS.md`](./templates/AGENTS.md) or [`templates/CLAUDE.md`](./templates/CLAUDE.md)
 - feature state: [`templates/feature_list.json`](./templates/feature_list.json)
 - progress log: [`templates/claude-progress.md`](./templates/claude-progress.md)
+
+The filename is a historical course convention. This is a generic,
+repository-local session progress log: any coding agent can use it, but agents
+only read or update it when their instructions explicitly tell them to do so.
 - bootstrap script reference: `docs/en/resources/templates/init.sh`
 
 Then add:
@@ -47,7 +51,7 @@ If you want the fuller OpenAI-style repository structure from the
 
 - `AGENTS.md` or `CLAUDE.md`
 - `feature_list.json`
-- `claude-progress.md`
+- `claude-progress.md` (generic session progress log; historical filename)
 - `init.sh`
 
 Those four files are enough to make most agent workflows noticeably more stable.

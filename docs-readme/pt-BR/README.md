@@ -1,28 +1,35 @@
-<p align="center">
-  <a href="README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
-  <a href="docs-readme/zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
-  <a href="docs-readme/zh-TW/README.md"><img alt="繁體中文" src="https://img.shields.io/badge/ZH--TW-繁體中文-orange?style=flat-square"></a>
-  <a href="docs-readme/ja-JP/README.md"><img alt="日本語" src="https://img.shields.io/badge/JA-日本語-green?style=flat-square"></a>
-  <a href="docs-readme/ko-KR/README.md"><img alt="한국어" src="https://img.shields.io/badge/KO-한국어-blueviolet?style=flat-square"></a>
-  <a href="docs-readme/es-ES/README.md"><img alt="Español" src="https://img.shields.io/badge/ES-Español-yellow?style=flat-square"></a>
-  <a href="docs-readme/fr-FR/README.md"><img alt="Français" src="https://img.shields.io/badge/FR-Français-007EC6?style=flat-square"></a>
-  <a href="docs-readme/ru-RU/README.md"><img alt="Русский" src="https://img.shields.io/badge/RU-Русский-informational?style=flat-square"></a>
-  <a href="docs-readme/de-DE/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/DE-Deutsch-2EA043?style=flat-square"></a>
-  <a href="docs-readme/ar-SA/README.md"><img alt="العربية" src="https://img.shields.io/badge/AR-العربية-success?style=flat-square"></a>
-  <a href="docs-readme/vi-VN/README.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/VI-Tiếng_Việt-cc6699?style=flat-square"></a>
-  <a href="docs-readme/uz-UZ/README.md"><img alt="Oʻzbekcha" src="https://img.shields.io/badge/UZ-Oʻzbekcha-1A8BBA?style=flat-square"></a>
-  <a href="docs-readme/tr-TR/README.md"><img alt="Türkçe" src="https://img.shields.io/badge/TR-Türkçe-E30A17?style=flat-square"></a>
-  <a href="docs-readme/pt-BR/README.md"><img alt="Português-BR" src="https://img.shields.io/badge/PT--BR-Português-1A8BBA?style=flat-square"></a>
-  <a href="docs-readme/uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
-</p>
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/pt-BR/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/pt-BR/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/pt-BR/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/pt-BR/harness-wordmark.svg" alt="Aprenda Engenharia de Harness" width="880">
+  </picture>
+</h1>
 
-<h1 align="center">Aprenda Engenharia de Harness</h1>
+<p align="center">
+  <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
+  <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
+  <a href="../zh-TW/README.md"><img alt="繁體中文" src="https://img.shields.io/badge/ZH--TW-繁體中文-orange?style=flat-square"></a>
+  <a href="../ja-JP/README.md"><img alt="日本語" src="https://img.shields.io/badge/JA-日本語-green?style=flat-square"></a>
+  <a href="../ko-KR/README.md"><img alt="한국어" src="https://img.shields.io/badge/KO-한국어-blueviolet?style=flat-square"></a>
+  <a href="../es-ES/README.md"><img alt="Español" src="https://img.shields.io/badge/ES-Español-yellow?style=flat-square"></a>
+  <a href="../fr-FR/README.md"><img alt="Français" src="https://img.shields.io/badge/FR-Français-007EC6?style=flat-square"></a>
+  <a href="../ru-RU/README.md"><img alt="Русский" src="https://img.shields.io/badge/RU-Русский-informational?style=flat-square"></a>
+  <a href="../de-DE/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/DE-Deutsch-2EA043?style=flat-square"></a>
+  <a href="../ar-SA/README.md"><img alt="العربية" src="https://img.shields.io/badge/AR-العربية-success?style=flat-square"></a>
+  <a href="../vi-VN/README.md"><img alt="Tiếng Việt" src="https://img.shields.io/badge/VI-Tiếng_Việt-cc6699?style=flat-square"></a>
+  <a href="../uz-UZ/README.md"><img alt="Oʻzbekcha" src="https://img.shields.io/badge/UZ-Oʻzbekcha-1A8BBA?style=flat-square"></a>
+  <a href="../tr-TR/README.md"><img alt="Türkçe" src="https://img.shields.io/badge/TR-Türkçe-E30A17?style=flat-square"></a>
+  <a href="../pt-BR/README.md"><img alt="Português-BR" src="https://img.shields.io/badge/PT--BR-Português-1A8BBA?style=flat-square"></a>
+  <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
+</p>
 
 <p align="center"><strong>Um curso baseado em projetos sobre a construção do ambiente, gerenciamento de estado, verificação e mecanismos de controle que fazem os agentes de codificação de IA funcionarem de forma confiável.</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Aulas-12-blue?style=flat-square" alt="12 Aulas">
-  <img src="https://img.shields.io/badge/Projetos-6-green?style=flat-square" alt="6 Projetos">
+  <img src="https://img.shields.io/badge/Aulas-14-blue?style=flat-square" alt="14 Aulas">
+  <img src="https://img.shields.io/badge/Projetos-8-green?style=flat-square" alt="8 Projetos">
   <img src="https://img.shields.io/badge/Idiomas-15-yellow?style=flat-square" alt="15 Idiomas">
   <img src="https://img.shields.io/badge/Licença-MIT-lightgrey?style=flat-square" alt="Licença MIT">
 </p>
@@ -30,6 +37,32 @@
 > 🌍 Este curso está disponível em **15 idiomas**: Inglês, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Русский, Deutsch, العربية, Tiếng Việt, Oʻzbekcha, Türkçe, Português (BR) e Українська. Escolha seu idioma nos emblemas acima.
 
 Aprenda Engenharia de Harness é um curso dedicado à engenharia de agentes de codificação de IA. Estudamos profundamente e sintetizamos as teorias e práticas mais avançadas de Engenharia de Harness na indústria. Nossas referências principais incluem:
+
+> **🆕 Atualização de agosto de 2026: Análises de Design de Harness de Fronteira** — nova seção com 4 análises:
+>
+> - **Nova seção** [Análises de Design de Harness de Fronteira](../../docs/pt-BR/harness-designs/index.md) — aplique o framework de cinco subsistemas do curso (instruções, ferramentas, ambiente, estado e feedback) para fazer engenharia reversa de como quatro produtos de fronteira constroem harnesses reais.
+> - **Pi** [Como o Pi constrói seu harness](../../docs/pt-BR/harness-designs/pi/index.md) — um kernel mínimo, expansão programável e a engenharia de contexto por trás de “peça ao Pi para construir o que você quiser”.
+> - **Claude Code** [Como o Claude Code constrói seu harness](../../docs/pt-BR/harness-designs/claude-code/index.md) — memória em quatro camadas, compactação em cinco níveis, hooks e isolamento de subagentes.
+> - **Codex** [Como o Codex constrói seu harness](../../docs/pt-BR/harness-designs/codex/index.md) — o repositório como fonte da verdade, AGENTS.md como página de diretório e isolamento por worktree.
+> - **DeepSeek** [Como o DeepSeek constrói seu harness](../../docs/pt-BR/harness-designs/deepseek/index.md) — “tudo é um plugin”, pontos de separação entre capacidades e um pipeline de eventos.
+> - **Todos os 15 idiomas** — cobertura completa de tradução em todos os idiomas suportados.
+>
+> **Ideia central:** o curso oferece um framework; estas análises mostram como os mesmos princípios realmente se manifestam em harnesses de produção.
+>
+> **🆕 Atualização de agosto de 2026: Engenharia de Grafos (Graph Engineering)** — adicionados 1 aula + 1 projeto:
+>
+> - **Aula 14** [Do Loop Único à Engenharia de Grafos](../../docs/pt-BR/lectures/lecture-14-graph-engineering/index.md): por que um único loop inevitavelmente vira um grafo — as quatro camadas empilhadas (prompt → context → loop → graph) e onde o harness se encaixa, as quatro peças do grafo (nós, arestas, estado compartilhado, roteamento), por que os checkpoints dentro de um loop não resolvem os três modos de falha estrutural em escala (Goodhart, cegueira para cima, conflito), os seis passos independentes de framework para construir seu primeiro grafo, a diferença entre Grafo e Workflow, as âncoras, o cenário dos projetos open source antes vs. depois do lançamento, o imposto de orquestração e quando realmente vale a pena desenhar um grafo.
+> - **Projeto 08** [Desenhe Seu Fluxo de Trabalho como um Grafo](../../docs/pt-BR/projects/project-08-graph-engineering-first-graph/index.md): três experimentos progressivos — desenhar o maker-checker loop como um grafo explícito, adicionar um nó de fan-out/fan-in paralelo e adicionar uma aresta de rollback condicional e um nó de aprovação humana.
+>
+> **Ideia central:** um loop é um grafo com um único nó. Quando a tarefa exige divisão de trabalho, paralelismo, estado compartilhado, verificação e recuperação — ela não é mais um loop, é um grafo.
+>
+> **🆕 Atualização de julho de 2026: Engenharia de Loops (Loop Engineering)** — adicionados 1 aula + 1 projeto + modelos de código:
+>
+> - **Aula 13** [Por Que Você Precisa Parar de Dar Prompt ao Seu Agente](../../docs/pt-BR/lectures/lecture-13-loop-engineering/index.md): de `/goal` aos seis primitivos da engenharia de loops (automations, worktrees, skills, connectors, sub-agents, external state), a separação gerador/avaliador, os quatro custos silenciosos e a construção passo a passo do seu primeiro loop.
+> - **Projeto 07** [Construa Seu Primeiro Loop Automatizado](../../docs/pt-BR/projects/project-07-loop-engineering-first-loop/index.md): três experimentos progressivos — loop baseado em objetivo, loop baseado em tempo e loop maker-checker. Compare manual vs. automatizado, meça a redução de intervenção e aprenda a sair do loop.
+> - **Modelos de código**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — modelos prontos para construir loops.
+>
+> **Ideia central:** a Engenharia de Harness constrói o carro. A Engenharia de Loops projeta a estrada por onde ele roda — e você projeta essa estrada de fora do carro.
 
 - [OpenAI: Engenharia de Harness: aproveitando o Codex em um mundo focado em agentes](https://openai.com/index/harness-engineering/)
 - [Anthropic: Harnesses eficazes para agentes de longa duração](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -95,6 +128,18 @@ A OpenAI relatou a mesma coisa com o Codex: em um repositório bem estruturado c
 
 **Este curso ensina como construir esse ambiente.**
 
+<p align="center">
+  <a href="../../assets/readme/pt-BR/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/pt-BR/harness-pattern-dark.svg">
+      <img src="../../assets/readme/pt-BR/harness-pattern.png" alt="O Modelo é Inteligente, o Harness o Torna Confiável" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Versão em texto</summary>
+
 ```text
                     O PADRÃO DO HARNESS
                     ====================
@@ -114,6 +159,8 @@ A OpenAI relatou a mesma coisa com o Codex: em um repositório bem estruturado c
                                          verificação é aprovada
 ```
 
+</details>
+
 ---
 
 ## O que Realmente Significa Engenharia de Harness
@@ -121,6 +168,18 @@ A OpenAI relatou a mesma coisa com o Codex: em um repositório bem estruturado c
 Engenharia de harness trata de construir um ambiente de trabalho completo ao redor do modelo para que ele produza resultados confiáveis. Não se trata de escrever prompts melhores. Trata-se de projetar o sistema dentro do qual o modelo opera.
 
 Um harness possui cinco subsistemas:
+
+<p align="center">
+  <a href="../../assets/readme/pt-BR/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/pt-BR/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/pt-BR/harness-subsystems.png" alt="O que Realmente Significa Engenharia de Harness" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Versão em texto</summary>
 
 ```text
     ┌────────────────────────────────────────────────────────────────┐
@@ -151,6 +210,8 @@ Um harness possui cinco subsistemas:
     O harness não torna o modelo mais inteligente.
     Ele torna a saída do modelo confiável.
 ```
+
+</details>
 
 Cada subsistema tem uma função:
 
@@ -204,15 +265,15 @@ Para os materiais completos do curso, visite o **[Site de Documentação](https:
 
 O currículo está dividido em três partes:
 
-1. **Aulas**: 12 unidades conceituais explicando a teoria por trás da engenharia de harness.
-2. **Projetos**: 6 projetos práticos onde você constrói um espaço de trabalho agentic do zero.
+1. **Aulas**: 14 unidades conceituais explicando a teoria por trás da engenharia de harness.
+2. **Projetos**: 8 projetos práticos onde você constrói um espaço de trabalho agentic do zero.
 3. **Biblioteca de Recursos**: Modelos prontos para copiar (`AGENTS.md`, `feature_list.json`, `init.sh`, etc.) para usar em seus próprios repositórios hoje.
 
 ---
 
 ## Início Rápido: Melhore Seu Agente Hoje
 
-Você não precisa ler todas as 12 aulas antes de começar a obter valor. Se você já está usando um agente de codificação em um projeto real, veja como melhorá-lo agora mesmo.
+Você não precisa ler todas as 14 aulas antes de começar a obter valor. Se você já está usando um agente de codificação em um projeto real, veja como melhorá-lo agora mesmo.
 
 A ideia é simples: em vez de apenas escrever prompts, dê ao seu agente um conjunto de arquivos estruturados que definem o que fazer, o que foi feito e como verificar o trabalho. Esses arquivos vivem dentro do seu repositório, para que cada sessão comece do mesmo estado.
 
@@ -232,7 +293,7 @@ Pegue os modelos iniciais da [Biblioteca de Recursos](https://walkinglabs.github
 
 ## Projeto Final: Um Aplicativo Real
 
-Todos os seis projetos do curso giram em torno do mesmo produto: **um aplicativo de desktop de base de conhecimento pessoal baseado em Electron**.
+Todos os oito projetos do curso giram em torno do mesmo produto: **um aplicativo de desktop de base de conhecimento pessoal baseado em Electron**.
 
 ```text
     ┌──────────────────────────────────────────────────────┐
@@ -269,6 +330,18 @@ O ponto de partida/solução de cada projeto do curso é uma cópia completa des
 ## Trilha de Aprendizado
 
 O curso foi projetado para ser realizado em ordem. Cada fase se baseia na anterior.
+
+<p align="center">
+  <a href="../../assets/readme/pt-BR/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/pt-BR/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/pt-BR/harness-learning-path.png" alt="Trilha de Aprendizado" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Versão em texto</summary>
 
 ```text
     Fase 1: ENTENDA O PROBLEMA            Fase 2: ESTRUTURE O REPOSITÓRIO
@@ -316,7 +389,29 @@ O curso foi projetado para ser realizado em ordem. Cada fase se baseia na anteri
          v                               P06  Construir um harness
     P05  O agente verifica o próprio          completo (projeto final)
          trabalho
+
+    Fase 7: AUTOMATIZE O LOOP
+    ==========================
+    L13  Pare de dar prompt ao seu agente —
+         projete loops em vez disso
+         |
+         v
+    P07  Construa seu primeiro loop automatizado
+         (loop baseado em objetivo, baseado em tempo,
+         maker-checker)
+
+    Fase 8: ESTRUTURE O SISTEMA
+    =============================
+    L14  Desenhe o sistema como um grafo —
+         nós, arestas, estado compartilhado, roteamento
+         |
+         v
+    P08  Desenhe seu fluxo de trabalho como um grafo
+         (grafo explícito, fan-out/fan-in paralelo,
+          aresta de rollback, humano no loop)
 ```
+
+</details>
 
 Cada fase leva cerca de uma semana se você estiver estudando em meio período. Se quiser avançar mais rápido, as fases 1–3 podem ser concluídas em um fim de semana prolongado.
 
@@ -324,7 +419,7 @@ Cada fase leva cerca de uma semana se você estiver estudando em meio período. 
 
 ## Ementa
 
-### Aulas — 12 unidades conceituais, cada uma respondendo a uma pergunta central
+### Aulas — 14 unidades conceituais, cada uma respondendo a uma pergunta central
 
 *Leia o texto completo de cada aula no [Site de Documentação](https://walkinglabs.github.io/learn-harness-engineering/).*
 
@@ -342,8 +437,10 @@ Cada fase leva cerca de uma semana se você estiver estudando em meio período. 
 | [L10](../../docs/pt-BR/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Por que o teste de ponta a ponta muda os resultados? | Apenas uma execução de pipeline completa conta como verificação real |
 | [L11](../../docs/pt-BR/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Por que a observabilidade pertence ao harness? | Se você não pode ver o que o agente fez, não pode consertar o que ele quebrou |
 | [L12](../../docs/pt-BR/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Por que cada sessão deve deixar um estado limpo? | O sucesso da próxima sessão depende da limpeza desta sessão |
+| [L13](../../docs/pt-BR/lectures/lecture-13-loop-engineering/index.md) | Por que você precisa parar de dar prompt ao seu agente? | Do prompting manual aos loops autônomos — loop baseado em objetivo, loop baseado em tempo, separação maker-checker |
+| [L14](../../docs/pt-BR/lectures/lecture-14-graph-engineering/index.md) | Por que um único loop evolui para um grafo? | Do loop único à engenharia de grafos — nós, arestas, estado compartilhado, roteamento e quando realmente vale a pena desenhar
 
-### Projetos — 6 projetos práticos aplicando os métodos das aulas ao mesmo aplicativo Electron
+### Projetos — 8 projetos práticos aplicando os métodos das aulas ao mesmo aplicativo Electron
 
 | Projeto | O Que Você Faz | Mecanismo de Harness |
 |---------|------------|-------------------|
@@ -353,6 +450,8 @@ Cada fase leva cerca de uma semana se você estiver estudando em meio período. 
 | [P04](../../docs/pt-BR/projects/project-04-incremental-indexing/index.md) | Impeça o agente de fazer demais ou de menos | Feedback de tempo de execução + controle de escopo + indexação incremental |
 | [P05](../../docs/pt-BR/projects/project-05-grounded-qa-verification/index.md) | Faça o agente verificar seu próprio trabalho | Autoverificação + Q&A fundamentado + conclusão baseada em evidências |
 | [P06](../../docs/pt-BR/projects/project-06-runtime-observability-and-debugging/index.md) | Construa um harness completo do zero (projeto final) | Harness completo: todos os mecanismos + observabilidade + estudo de ablação |
+| [P07](../../docs/pt-BR/projects/project-07-loop-engineering-first-loop/index.md) | Construa seu primeiro loop automatizado | Loop baseado em objetivo, loop baseado em tempo, separação maker-checker, gerenciamento de estado do loop |
+| [P08](../../docs/pt-BR/projects/project-08-graph-engineering-first-graph/index.md) | Desenhe seu fluxo de trabalho como um grafo | Nós/arestas/estado/roteamento explícitos, fan-out/fan-in paralelo, aresta de rollback, aprovação humana |
 
 ```text
     EVOLUÇÃO DO PROJETO
@@ -374,6 +473,13 @@ Cada fase leva cerca de uma semana se você estiver estudando em meio período. 
      |
      v
     P06  Harness completo (projeto final)      Você constrói o sistema completo
+     |
+     v
+    P07  Seu primeiro loop automatizado        Você sai do loop
+     |
+     v
+    P08  Desenhe seu fluxo de trabalho         Você desenha o sistema
+         como um grafo
 
     A solução de cada projeto torna-se o ponto de partida do próximo projeto.
     O aplicativo evolui. Suas habilidades de harness crescem com ele.
@@ -401,6 +507,18 @@ Cada fase leva cerca de uma semana se você estiver estudando em meio período. 
 ## O Ciclo de Vida de uma Sessão de Agente
 
 Uma das ideias centrais deste curso: **a sessão do agente deve seguir um ciclo de vida estruturado, e não funcionar sem regras ou organização.** Veja como isso funciona:
+
+<p align="center">
+  <a href="../../assets/readme/pt-BR/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/pt-BR/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/pt-BR/harness-session-lifecycle.png" alt="O Ciclo de Vida de uma Sessão de Agente" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Versão em texto</summary>
 
 ```text
     CICLO DE VIDA DE UMA SESSÃO DE AGENTE
@@ -443,6 +561,8 @@ Uma das ideias centrais deste curso: **a sessão do agente deve seguir um ciclo 
     │                                                                  │
     └──────────────────────────────────────────────────────────────────┘
 ```
+
+</details>
 
     O harness governa cada transição desse ciclo de vida.
     O modelo decide qual código escrever em cada etapa.
@@ -542,12 +662,12 @@ Veja a lista completa de referências em camadas em [`docs/pt-BR/resources/refer
 ```text
 learn-harness-engineering/
 ├── docs/                          # Site de documentação VitePress
-│   ├── lectures/                  # 12 aulas (index.md + exemplos de código)
+│   ├── lectures/                  # 14 aulas (index.md + exemplos de código)
 │   │   ├── lecture-01-*/
-│   │   └── ... (12 no total)
-│   ├── projects/                  # Descrições de 6 projetos
+│   │   └── ... (14 no total)
+│   ├── projects/                  # Descrições de 8 projetos
 │   │   ├── project-01-*/
-│   │   └── ... (6 no total)
+│   │   └── ... (8 no total)
 │   └── resources/                 # Modelos e referências multilíngues (14 idiomas)
 │       ├── en/
 │       └── ... (14 no total)
@@ -565,7 +685,7 @@ learn-harness-engineering/
 ## Como o Curso está Organizado
 
 - Cada aula foca em uma pergunta.
-- O curso inclui 6 projetos.
+- O curso inclui 8 projetos.
 - Cada projeto exige que o agente faça um trabalho real.
 - Cada projeto compara os resultados de um harness fraco vs. forte.
 - O que importa é a diferença medida, não quantos documentos foram escritos.
@@ -591,12 +711,6 @@ Nossa equipe também criou outros cursos! Confira-os:
 [![Modern LLM Notebook](https://img.shields.io/badge/MODERN_LLM_NOTEBOOK-0052cc?style=for-the-badge)](https://github.com/walkinglabs/modern-llm-notebook)
 
 **Modern LLM Notebook**: Um curso prático para construir LLMs modernos do zero em PyTorch, com 23 Jupyter Notebooks executáveis cobrindo tokenizadores, atenção, MoE, RLHF, inferência, avaliação e destilação.
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/uz-UZ/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/uz-UZ/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uz-UZ/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/uz-UZ/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,11 +25,35 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-# Learn Harness Engineering
-
 > **Muhitlar, holat boshqaruvi, tekshiruv va nazorat mexanizmlarini qurishga bagʻishlangan, KI kod yozuvchi agentlarini ishonchli qiladigan loyihaga asoslangan kurs.**
 
 Learn Harness Engineering — KI kod yozuvchi agentlarini ishlab chiqishga bagʻishlangan kurs. Biz sanoatdagi Harness Engineering sohasining eng ilgʻor nazariya va amaliyotlarini chuqur oʻrganib, sintez qildik. Asosiy manbalarimiz:
+
+> **🆕 2026-yil avgust yangilanishi: Frontier Harness Design Breakdowns (Ilgʻor harness dizayni tahlillari)** — 4 ta tahlildan iborat yangi boʻlim:
+>
+> - **Yangi boʻlim** [Frontier Harness Design Breakdowns](../../docs/uz/harness-designs/index.md) — kursning besh quyi tizimli freymvorkini (koʻrsatmalar, vositalar, muhit, holat, fikr-mulohaza) qoʻllab, toʻrtta ilgʻor mahsulot haqiqiy harnessʼlarni qanday qurishini teskari muhandislik orqali tahlil qiling.
+> - **Pi** [Pi oʻz harnessʼini qanday quradi](../../docs/uz/harness-designs/pi/index.md) — minimal yadro, dasturlashtiriladigan kengaytirish va «Piʼdan xohlagan narsangizni qurishni soʻrang» tamoyili ortidagi kontekst muhandisligi.
+> - **Claude Code** [Claude Code oʻz harnessʼini qanday quradi](../../docs/uz/harness-designs/claude-code/index.md) — toʻrt qatlamli xotira, besh darajali siqish, hookʼlar va sub-agent izolyatsiyasi.
+> - **Codex** [Codex oʻz harnessʼini qanday quradi](../../docs/uz/harness-designs/codex/index.md) — repozitoriy haqiqat manbai sifatida, AGENTS.md katalog sahifasi sifatida va worktree izolyatsiyasi.
+> - **DeepSeek** [DeepSeek oʻz harnessʼini qanday quradi](../../docs/uz/harness-designs/deepseek/index.md) — «hamma narsa — plugin», imkoniyatlar chegaralari va hodisalar konveyeri.
+> - **Barcha 15 ta til** — qoʻllab-quvvatlanadigan barcha tillar uchun toʻliq tarjima qamrovi.
+>
+> **Asosiy fikr:** Kurs sizga freymvork beradi; bu tahlillar ayni tamoyillar amaldagi harnessʼlarda qanday roʻyobga chiqishini koʻrsatadi.
+>
+> **🆕 2026-yil avgust yangilanishi: Graph Engineering (Graf muhandisligi)** — 1 ta yangi maʼruza + 1 ta loyiha qoʻshildi:
+>
+> - **14-maʼruza** [Yakka loopʼdan grafik muhandisligigacha](../../docs/uz/lectures/lecture-14-graph-engineering/index.md): nima uchun yakka loop muqarrar ravishda grafikka aylanadi — toʻrt qatlamli qoʻshilish (prompt → context → loop → graph) va harnessʼning undagi oʻrni, grafikning toʻrt qismi (tugunlar, chekkalar, umumiy holat, marshrutlash), nima uchun loop ichidagi checkpointʼlar miqyosdagi uchta strukturaviy muvaffaqiyatsizlikni (Goodhart, yuqoriga qarab koʻrlilik, konflikt) qutqara olmaydi, freymvorkdan mustaqil olti qadamli birinchi grafikni qurish, Graph va Workflow oʻrtasidagi farq, anchorʼlar, eʼlondan oldingi va keyingi ochiq manbali loyihalar holati, orkestratsiya soligʼi va qachon haqiqatan grafik chizishga arzir.
+> - **Loyiha 08** [Ish oqimingizni grafik qilib chizing](../../docs/uz/projects/project-08-graph-engineering-first-graph/index.md): uchta progressiv eksperiment — maker-checker loopʼni eksplisit grafik qilib chizish, parallel fan-out/fan-in tugunlarini qoʻshish, shartli qaytish chekkasi va inson tasdiqlash tugunini qoʻshish.
+>
+> **Asosiy fikr:** Loop — faqat bitta tugunli grafik. Vazifa mehnat taqsimoti, parallellik, umumiy holat, tekshiruv va tiklashni talab qilganda — u endi loop emas, grafikdir.
+>
+> **🆕 2026-yil iyul yangilanishi: Loop Engineering (Loop muhandisligi)** — 1 ta yangi maʼruza + 1 ta loyiha + kod andozalari qoʻshildi:
+>
+> - **13-maʼruza** [Nega agentingizga prompt yozishni bas qilishingiz kerak](../../docs/uz/lectures/lecture-13-loop-engineering/index.md): `/goal` dan loop muhandisligining olti primitivigacha (automations, worktrees, skills, connectors, sub-agents, external state), generator/evaluator boʻlinishi, toʻrtta jim xarajat va birinchi loopʼingizni bosqichma-bosqich qurish.
+> - **Loyiha 07** [Birinchi avtomatlashtirilgan loopʼingizni qurish](../../docs/uz/projects/project-07-loop-engineering-first-loop/index.md): uchta progressiv eksperiment — maqsadli loop, taymer loop, maker-checker loop. Qoʻlda vs avtomatik taqqoslash, aralashuv kamayishini oʻlchash, loopʼdan tashqariga chiqishni oʻrganish.
+> - **Kod andozalari**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — qutidan chiqib ishlatiladigan loop qurish andozalari.
+>
+> **Asosiy fikr:** Harness muhandisligi mashina qurdi. Loop muhandisligi u harakatlanadigan yoʻlni loyihalaydi — va siz bu yoʻlni mashina tashqarisidan loyihalaysiz.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -86,6 +119,18 @@ OpenAI Codex bilan xuddi shu haqida xabar berdi: yaxshi harnesslangan repozitori
 
 **Ushbu kurs sizga shu muhitni qanday qurishni oʻrgatadi.**
 
+<p align="center">
+  <a href="../../assets/readme/uz-UZ/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uz-UZ/harness-pattern-dark.svg">
+      <img src="../../assets/readme/uz-UZ/harness-pattern.png" alt="Model aqlli, harness uni ishonchli qiladi" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Matnli versiya</summary>
+
 ```text
                     HARNESS NAMUNASI
                     ================
@@ -105,6 +150,8 @@ OpenAI Codex bilan xuddi shu haqida xabar berdi: yaxshi harnesslangan repozitori
                                                    oʻtganda toʻxtaydi
 ```
 
+</details>
+
 ---
 
 ## Harness Engineering nima degani
@@ -112,6 +159,18 @@ OpenAI Codex bilan xuddi shu haqida xabar berdi: yaxshi harnesslangan repozitori
 Harness Engineering — model atrofida toʻliq ish muhiti qurishdir, shunda u ishonchli natijalar beradi. Bu yaxshi promptʼlar yozish haqida emas. Bu model ishlaydigan tizimni loyihalash haqida.
 
 Harnessʼning beshta quyi tizimi bor:
+
+<p align="center">
+  <a href="../../assets/readme/uz-UZ/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uz-UZ/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/uz-UZ/harness-subsystems.png" alt="Harness Engineering nima degani" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Matnli versiya</summary>
 
 ```text
     ┌─────────────────────────────────────────────────────────────────┐
@@ -142,6 +201,8 @@ Harnessʼning beshta quyi tizimi bor:
     Harness modelni aqlliroq qilmaydi.
     U model natijasini ishonchli qiladi.
 ```
+
+</details>
 
 Har bir quyi tizimning oʻz vazifasi bor:
 
@@ -195,15 +256,15 @@ Toʻliq kurs materiallarini **[hujjatlar saytida](https://walkinglabs.github.io/
 
 Oʻquv dasturi uch qismdan iborat:
 
-1. **Maʼruzalar**: Harness Engineering ortidagi nazariyani tushuntiruvchi 12 konseptual blok.
-2. **Loyihalar**: Agent asosidagi ish muhitini noldan quradigan 6 ta amaliy loyiha.
+1. **Maʼruzalar**: Harness Engineering ortidagi nazariyani tushuntiruvchi 14 konseptual blok.
+2. **Loyihalar**: Agent asosidagi ish muhitini noldan quradigan 8 ta amaliy loyiha.
 3. **Andozalar kutubxonasi**: Bugunoq oʻz repozitoriyalaringizda ishlatish uchun nusxalashga tayyor andozalar (`AGENTS.md`, `feature_list.json`, `init.sh` va h.k.).
 
 ---
 
 ## Tezkor boshlash: Agentingizni bugunoq yaxshilang
 
-Foyda olish uchun 12 ta maʼruzani ham oʻqish shart emas. Agar siz allaqachon haqiqiy loyihada kod yozuvchi agentdan foydalansangiz, uni hoziryoq yaxshilashingiz mumkin.
+Foyda olish uchun 14 ta maʼruzani ham oʻqish shart emas. Agar siz allaqachon haqiqiy loyihada kod yozuvchi agentdan foydalansangiz, uni hoziryoq yaxshilashingiz mumkin.
 
 Gʻoya oddiy: faqat promptʼlar yozish oʻrniga, agentingizga nima qilish kerak, nima allaqachon qilingan va ish qanday tekshirilishini belgilovchi strukturaviy fayllar toʻplamini bering. Bu fayllar repozitoriyangizda joylashgan, shunda har bir sessiya bir xil holatdan boshlanadi.
 
@@ -223,7 +284,7 @@ Boshlangʻich andozalarni [andozalar kutubxonasidan](https://walkinglabs.github.
 
 ## Yakuniy loyiha: Haqiqiy ilova
 
-Oltita kurs loyihasi bir xil mahsulot atrofida qurilgan: **Electron asosidagi shaxsiy bilim bazasi uchun desktop ilova**.
+Sakkizta kurs loyihasi bir xil mahsulot atrofida qurilgan: **Electron asosidagi shaxsiy bilim bazasi uchun desktop ilova**.
 
 ```text
     ┌─────────────────────────────────────────────────────┐
@@ -261,6 +322,18 @@ Har bir kurs loyihasi (boshlangʻich/yechim) ushbu Electron ilovasining mos rivo
 ## Oʻqish yoʻli
 
 Kurs xronologik tartibda bajarish uchun moʻljallangan. Har bir bosqich oldingisiga asoslanadi.
+
+<p align="center">
+  <a href="../../assets/readme/uz-UZ/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uz-UZ/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/uz-UZ/harness-learning-path.png" alt="Oʻqish yoʻli" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Matnli versiya</summary>
 
 ```text
     1-bosqich: MUAMMONI KOʻRISH             2-bosqich: REPONI TUZISH
@@ -304,7 +377,30 @@ Kurs xronologik tartibda bajarish uchun moʻljallangan. Har bir bosqich oldingis
          |                                     v
          v                                     P06  Toʻliq harness qurish
     P05  Agent oʻz ishini mustaqil tekshiradi       (yakuniy loyiha)
+
+
+    7-bosqich: LOOPNI AVTOMATLASHTIRISH
+    ===================================
+    L13  Agentingizga prompt yozishni
+         to'xtating — o'rniga loop loyihalang
+         |
+         v
+    P07  Birinchi avtomatlashtirilgan loop'ingizni quring
+         (maqsadli loop, taymer loop, maker-checker)
+
+    8-bosqich: TIZIMNI TUZILMALASH
+    ==============================
+    L14  Tizimni grafik qilib chizing —
+         tugunlar, chekkalar, umumiy holat,
+         marshrutlash
+         |
+         v
+    P08  Ish oqimingizni grafik qilib chizing
+         (eksplisit grafik, parallel fan-out/fan-in,
+          qaytish chekkalari, inson ishtiroki)
 ```
+
+</details>
 
 Agar parallel oʻqisangiz, har bir bosqich taxminan bir hafta davom etadi. Agar tezroq borishni xohlasangiz, 1–3 bosqichlarni bitta uzun dam olish kunlarida tugatishingiz mumkin.
 
@@ -312,35 +408,39 @@ Agar parallel oʻqisangiz, har bir bosqich taxminan bir hafta davom etadi. Agar 
 
 ## Oʻquv dasturi
 
-### Maʼruzalar — har biri muhim savolga javob beruvchi 12 ta konseptual blok
+### Maʼruzalar — har biri muhim savolga javob beruvchi 14 ta konseptual blok
 
 *Har bir maʼruza matnini toʻliq oʻqish uchun [hujjatlar sayti](https://walkinglabs.github.io/learn-harness-engineering/)ga murojaat qiling.*
 
 | Sessiya | Savol | Asosiy gʻoya |
 |---------|-------|--------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Kuchli modellar nega haqiqiy vazifalarda muvaffaqiyatsiz boʻladi? | Benchmarkʼlar va haqiqiy muhandislik oʻrtasidagi farq |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" nima degani? | Besh quyi tizim: Koʻrsatmalar, Holat, Tekshiruv, Doira, Hayot sikli |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Nega repozitoriy yagona haqiqat manbai boʻlishi kerak? | Agar agent koʻrolmasa, u mavjud emas |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Nega bitta ulkan koʻrsatma fayli muvaffaqiyatsiz boʻladi? | Progressiv ochilish: xarita berish, ensiklopediya emas |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Nega uzoq davom etuvchi vazifalar uzluksizlikni yoʻqotadi? | Taraqqiyotni diskda saqlash; toʻxtagan joydan davom ettirish |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Nega ishga tushirish alohida bosqichga muhtoj? | Agent ishni boshlashdan oldin muhit ishlashini tekshirish |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Nega agentlar haddan oshadi va yarim-yorti tugatadi? | Bir vaqtda bitta funksiya; "Tugadi" ning aniq taʼrifi |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Nega funksiya roʻyxatlari harness primitivlari hisoblanadi? | Agent eʼtiborsiz qoldirolmaydigan, mashina oʻqiyoladigan doira chegaralari |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Nega agentlar juda erta muvaffaqiyat haqida xabar beradi? | Tekshiruv boʻshliqlari: ishonch = toʻgʻrilik emas |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Nega uchdan-uchgacha testlash natijalarni oʻzgartiradi? | Faqat toʻliq pipeline ishga tushirish haqiqiy tekshiruv hisoblanadi |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Nega kuzatuvchanlik harness ichida boʻlishi kerak? | Agent nima qilganini koʻrolmasangiz, u buzgan narsani tuzata olmaysiz |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Nega har bir sessiya toiza holat qoldirishi kerak? | Keyingi sessiyaning muvaffaqiyati shu sessiyaning tozalanishiga bogʻliq |
+| [L01](../../docs/uz/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Kuchli modellar nega haqiqiy vazifalarda muvaffaqiyatsiz boʻladi? | Benchmarkʼlar va haqiqiy muhandislik oʻrtasidagi farq |
+| [L02](../../docs/uz/lectures/lecture-02-what-a-harness-actually-is/index.md) | "Harness" nima degani? | Besh quyi tizim: Koʻrsatmalar, Holat, Tekshiruv, Doira, Hayot sikli |
+| [L03](../../docs/uz/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Nega repozitoriy yagona haqiqat manbai boʻlishi kerak? | Agar agent koʻrolmasa, u mavjud emas |
+| [L04](../../docs/uz/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Nega bitta ulkan koʻrsatma fayli muvaffaqiyatsiz boʻladi? | Progressiv ochilish: xarita berish, ensiklopediya emas |
+| [L05](../../docs/uz/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Nega uzoq davom etuvchi vazifalar uzluksizlikni yoʻqotadi? | Taraqqiyotni diskda saqlash; toʻxtagan joydan davom ettirish |
+| [L06](../../docs/uz/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Nega ishga tushirish alohida bosqichga muhtoj? | Agent ishni boshlashdan oldin muhit ishlashini tekshirish |
+| [L07](../../docs/uz/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Nega agentlar haddan oshadi va yarim-yorti tugatadi? | Bir vaqtda bitta funksiya; "Tugadi" ning aniq taʼrifi |
+| [L08](../../docs/uz/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Nega funksiya roʻyxatlari harness primitivlari hisoblanadi? | Agent eʼtiborsiz qoldirolmaydigan, mashina oʻqiyoladigan doira chegaralari |
+| [L09](../../docs/uz/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Nega agentlar juda erta muvaffaqiyat haqida xabar beradi? | Tekshiruv boʻshliqlari: ishonch = toʻgʻrilik emas |
+| [L10](../../docs/uz/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Nega uchdan-uchgacha testlash natijalarni oʻzgartiradi? | Faqat toʻliq pipeline ishga tushirish haqiqiy tekshiruv hisoblanadi |
+| [L11](../../docs/uz/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Nega kuzatuvchanlik harness ichida boʻlishi kerak? | Agent nima qilganini koʻrolmasangiz, u buzgan narsani tuzata olmaysiz |
+| [L12](../../docs/uz/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Nega har bir sessiya toiza holat qoldirishi kerak? | Keyingi sessiyaning muvaffaqiyati shu sessiyaning tozalanishiga bogʻliq |
+| [L13](../../docs/uz/lectures/lecture-13-loop-engineering/index.md) | Nega agentingizga prompt yozishni bas qilishingiz kerak? | Qoʻlda prompt yozishdan avtonom loopʼlargacha — maqsadli loop, taymer loop, maker-checker boʻlinishi |
+| [L14](../../docs/uz/lectures/lecture-14-graph-engineering/index.md) | Nega yakka loop grafikka aylanadi? | Yakka loopʼdan grafik muhandisligigacha — tugunlar, chekkalar, umumiy holat, marshrutlash va qachon haqiqatan grafik chizishga arzir |
 
-### Loyihalar — maʼruza usullarini bir xil Electron ilovasiga qoʻllaydigan 6 ta amaliy loyiha
+### Loyihalar — maʼruza usullarini bir xil Electron ilovasiga qoʻllaydigan 8 ta amaliy loyiha
 
 | Loyiha | Nima qilasiz | Harness mexanizmi |
 |---------|--------------|-------------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | Bir xil vazifani ikki marta bajarish: faqat prompt vs. qoidalarga asoslangan | Minimal harness: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | Repoʼni agent oʻqiy oladigan qayta tuzish | Agent oʻqiy oladigan ish muhiti + doimiy holat fayllari |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | Agentni toʻxtagan joyidan davom ettirish | Taraqqiyot jurnali + sessiya uzatish + koʻp sessiyali uzluksizlik |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | Agentning koʻp yoki oz ishlashining oldini olish | Runtime fikr-mulohaza + doira nazorati + inkremental indekslash |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | Agentni oʻz ishini tekshirishga majburlash | Oʻz-oʻzini tekshirish + asoslangan S&S + dalillarga asoslangan tugatish |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Toʻliq harnessʼni noldan qurish (yakuniy loyiha) | Toʻliq harness: barcha mexanizmlar + kuzatuvchanlik + ablyatsiya tadqiqoti |
+| [P01](../../docs/uz/projects/project-01-baseline-vs-minimal-harness/index.md) | Bir xil vazifani ikki marta bajarish: faqat prompt vs. qoidalarga asoslangan | Minimal harness: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/uz/projects/project-02-agent-readable-workspace/index.md) | Repoʼni agent oʻqiy oladigan qayta tuzish | Agent oʻqiy oladigan ish muhiti + doimiy holat fayllari |
+| [P03](../../docs/uz/projects/project-03-multi-session-continuity/index.md) | Agentni toʻxtagan joyidan davom ettirish | Taraqqiyot jurnali + sessiya uzatish + koʻp sessiyali uzluksizlik |
+| [P04](../../docs/uz/projects/project-04-incremental-indexing/index.md) | Agentning koʻp yoki oz ishlashining oldini olish | Runtime fikr-mulohaza + doira nazorati + inkremental indekslash |
+| [P05](../../docs/uz/projects/project-05-grounded-qa-verification/index.md) | Agentni oʻz ishini tekshirishga majburlash | Oʻz-oʻzini tekshirish + asoslangan S&S + dalillarga asoslangan tugatish |
+| [P06](../../docs/uz/projects/project-06-runtime-observability-and-debugging/index.md) | Toʻliq harnessʼni noldan qurish (yakuniy loyiha) | Toʻliq harness: barcha mexanizmlar + kuzatuvchanlik + ablyatsiya tadqiqoti |
+| [P07](../../docs/uz/projects/project-07-loop-engineering-first-loop/index.md) | Birinchi avtomatlashtirilgan loopʼingizni qurish | Maqsadli loop, taymer loop, maker-checker boʻlinishi, loop holat boshqaruvi |
+| [P08](../../docs/uz/projects/project-08-graph-engineering-first-graph/index.md) | Ish oqimingizni grafik qilib chizing | Eksplisit tugun/chekka/holat/marshrutlash, parallel fan-out/fan-in, qaytish chekkalari, inson ishtiroki tasdiqlash |
 
 ```text
     LOYIHA RIVOJLANISHI
@@ -362,6 +462,12 @@ Agar parallel oʻqisangiz, har bir bosqich taxminan bir hafta davom etadi. Agar 
      |
      v
     P06  Toʻliq harness (yakuniy loyiha)            Siz toʻliq tizimni qurasiz
+     |
+     v
+    P07  Birinchi avtomatlashtirilgan loopʼingiz        Siz loopʼdan tashqariga chiqasiz
+     |
+     v
+    P08  Ish oqimingizni grafik qilib chizing            Siz tizimni grafik qilib chizasiz
 
     Har bir loyihaning yechimi keyingi loyihaning boshlangʻichiga aylanadi.
     Ilova rivojlanadi. Harness koʻnikmalaringiz unga qarab oʻsadi.
@@ -389,6 +495,18 @@ Agar parallel oʻqisangiz, har bir bosqich taxminan bir hafta davom etadi. Agar 
 ## Agent sessiyasi hayot sikli
 
 Ushbu kursning asosiy gʻoyalaridan biri: **Agent sessiyasi tuzilgan hayot sikliga amal qilishi kerak, emas xohlagancha ishlashiga.** Bu quyidagicha koʻrinadi:
+
+<p align="center">
+  <a href="../../assets/readme/uz-UZ/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uz-UZ/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/uz-UZ/harness-session-lifecycle.png" alt="Agent sessiyasi hayot sikli" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Matnli versiya</summary>
 
 ```text
     AGENT SESSIYA HAYOT SIKLI
@@ -430,6 +548,8 @@ Ushbu kursning asosiy gʻoyalaridan biri: **Agent sessiyasi tuzilgan hayot sikli
     Harnessʼsiz 9-qadam "agent yaxshi koʻrinadi deydi" ga aylanadi.
     Harness bilan 9-qadam "testlar oʻtdi, lint toza, turlar tekshirildi" boʻladi.
 ```
+
+</details>
 
 ---
 
@@ -515,7 +635,7 @@ Birlamchi:
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-Toʻliq qatlamli manbalar roʻyxatini [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md) da topishingiz mumkin.
+Toʻliq qatlamli manbalar roʻyxatini [`docs/uz/resources/reference/`](../../docs/uz/resources/reference/index.md) da topishingiz mumkin.
 
 ---
 
@@ -524,13 +644,13 @@ Toʻliq qatlamli manbalar roʻyxatini [`docs/en/resources/reference/`](../../doc
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress hujjatlar sayti
-│   ├── lectures/                  # 12 ta maʼruza (index.md + code/ misollar)
+│   ├── lectures/                  # 14 ta maʼruza (index.md + code/ misollar)
 │   │   ├── lecture-01-*/
 │   │   ├── lecture-02-*/
-│   │   └── ... (jami 12 ta)
-│   ├── projects/                  # 6 ta loyiha tavsifi
+│   │   └── ... (jami 14 ta)
+│   ├── projects/                  # 8 ta loyiha tavsifi
 │   │   ├── project-01-*/
-│   │   └── ... (jami 6 ta)
+│   │   └── ... (jami 8 ta)
 │   └── resources/                 # Koʻp tilli andozalar va maʼlumotnomalar
 │       ├── en/                    # Ingliz andozalari, tekshiruv roʻyxatlari, qoʻllanmalar
 │       ├── zh/                    # Xitoy andozalari, tekshiruv roʻyxatlari, qoʻllanmalar
@@ -550,7 +670,7 @@ learn-harness-engineering/
 ## Kurs qanday tuzilgan
 
 - Har bir maʼruza bitta savolga qaratilgan
-- Kurs 6 ta loyihani oʻz ichiga oladi
+- Kurs 8 ta loyihani oʻz ichiga oladi
 - Har bir loyiha agentdan haqiqiy ish bajarishni talab qiladi
 - Har bir loyiha kuchsiz vs. kuchli harness natijalarini solishtiradi
 - Muhim boʻlgan narsa — oʻlchangan farq, nechta hujjat yozilgani emas
@@ -572,12 +692,6 @@ Bizning jamoamiz yana boshqa kurslar ham yaratdi! Ularni koʻrib chiqing:
 [![Hands-on Modern RL](https://img.shields.io/badge/HANDS--ON_MODERN_RL-0052cc?style=for-the-badge)](https://github.com/walkinglabs/hands-on-modern-rl)
 
 **Hands-on Modern RL**: Asosiy RL konsepsiyalaridan LLM alignment, RLVR va ilgʻor agent tizimlarigacha boʻlgan masofani bridjlash uchun ochiq manbali amaliy oʻquv dasturi.
-
----
-
-## Yulduzlar tarixi
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

@@ -1,3 +1,12 @@
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="../../assets/readme/uk-UA/harness-wordmark-compact-dark.svg">
+    <source media="(max-width: 600px)" srcset="../../assets/readme/uk-UA/harness-wordmark-compact.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uk-UA/harness-wordmark-dark.svg">
+    <img src="../../assets/readme/uk-UA/harness-wordmark.svg" alt="Learn Harness Engineering" width="880">
+  </picture>
+</h1>
+
 <p align="center">
   <a href="../../README.md"><img alt="English" src="https://img.shields.io/badge/EN-English-blue?style=flat-square"></a>
   <a href="../zh-CN/README.md"><img alt="简体中文" src="https://img.shields.io/badge/ZH-简体中文-red?style=flat-square"></a>
@@ -16,21 +25,45 @@
   <a href="../uk-UA/README.md"><img alt="Українська" src="https://img.shields.io/badge/UK-Українська-0057B7?style=flat-square"></a>
 </p>
 
-<h1 align="center">Learn Harness Engineering</h1>
-
 <p align="center"><strong>Практичний курс із побудови середовища, управління станом, верифікації та механізмів контролю, які забезпечують надійну роботу AI-агентів для написання коду.</strong></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Lectures-12-blue?style=flat-square" alt="12 лекцій">
-  <img src="https://img.shields.io/badge/Projects-6-green?style=flat-square" alt="6 проєктів">
+  <img src="https://img.shields.io/badge/Lectures-14-blue?style=flat-square" alt="14 лекцій">
+  <img src="https://img.shields.io/badge/Projects-8-green?style=flat-square" alt="8 проєктів">
   <img src="https://img.shields.io/badge/Languages-15-yellow?style=flat-square" alt="15 мов">
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square" alt="Ліцензія MIT">
-  <a href="https://discord.gg/XU7DQmpqk"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Приєднатися до спільноти в Discord"></a>
+  <a href="https://github.com/walkinglabs"><img src="https://img.shields.io/badge/Discord-Join_Community-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Приєднатися до спільноти в Discord"></a>
 </p>
 
 > 🌍 Цей курс доступний **15 мовами**: English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Русский, Deutsch, العربية, Tiếng Việt, Oʻzbekcha, Türkçe, Portuguese (BR), Українська. Оберіть свою мову за допомогою значків вище.
 
 Learn Harness Engineering — курс, присвячений інженерії AI-агентів для написання коду. Ми ретельно вивчили та синтезували найбільш передові теорії та практики Harness Engineering в індустрії. Основні джерела:
+
+> **🆕 Оновлення за серпень 2026 р.: Розбір передових harness** — новий розділ із 4 розборами:
+>
+> - **Новий розділ** [Розбір передових harness](../../docs/uk/harness-designs/index.md) — застосуйте п'ятипідсистемний фреймворк курсу (інструкції, інструменти, середовище, стан, зворотний зв'язок), щоб методом зворотного проєктування з'ясувати, як чотири передові продукти будують справжні harness.
+> - **Pi** [Як Pi будує свій harness](../../docs/uk/harness-designs/pi/index.md) — мінімальне ядро, програмоване розширення та контекстна інженерія, що стоять за принципом «попросіть Pi створити те, що вам потрібно».
+> - **Claude Code** [Як Claude Code будує свій harness](../../docs/uk/harness-designs/claude-code/index.md) — чотирирівнева пам'ять, п'ятирівневе стиснення, hooks та ізоляція sub-agent.
+> - **Codex** [Як Codex будує свій harness](../../docs/uk/harness-designs/codex/index.md) — репозиторій як джерело істини, AGENTS.md як сторінка-каталог та ізоляція worktree.
+> - **DeepSeek** [Як DeepSeek будує свій harness](../../docs/uk/harness-designs/deepseek/index.md) — «усе є плагіном», межі можливостей та конвеєр подій.
+> - **Усі 15 мов** — повне охоплення перекладами всіма підтримуваними мовами.
+>
+> **Ключова ідея:** Курс дає вам фреймворк; ці розбори показують, як ті самі принципи насправді втілюються у виробничих harness.
+>
+> **🆕 Оновлення серпня 2026: Графова інженерія (Graph Engineering)** — додано 1 лекцію + 1 проєкт:
+>
+> - **Лекція 14** [Від одиночних циклів до графової інженерії](../../docs/uk/lectures/lecture-14-graph-engineering/index.md): чому одиночний цикл неминуче виростає в граф — чотири рівні, накладені один на одного (prompt → context → loop → graph) та місце harness у них, чотири складові графа (вузли, ребра, спільний стан, маршрутизація), чому контрольні точки всередині циклу не рятують від трьох структурних відмов у масштабі (Гудгарт, сліпота догори, конфлікт), фреймворк-незалежні шість кроків побудови вашого першого графа, різниця між Graph і Workflow, якорі, стан відкритих проєктів до та після публікації, податок на оркестрацію та коли справді варто малювати граф.
+> - **Проєкт 08** [Намалюйте ваш робочий процес як граф](../../docs/uk/projects/project-08-graph-engineering-first-graph/index.md): три експерименти, що нарощують складність — намалювати maker-checker loop як явний граф, додати паралельні вузли fan-out/fan-in, додати умовне ребро відкату та вузол ручного затвердження.
+>
+> **Ключова ідея:** Loop — це граф з одним вузлом. Коли завданню потрібні розподіл праці, паралелізм, спільний стан, верифікація та відновлення — воно вже не loop, а граф.
+>
+> **🆕 Оновлення липня 2026: Інженерія циклів (Loop Engineering)** — додано 1 лекцію + 1 проєкт + шаблони коду:
+>
+> - **Лекція 13** [Чому ви маєте припинити писати промпти для агента самі](../../docs/uk/lectures/lecture-13-loop-engineering/index.md): від `/goal` до шести примітивів інженерії циклів (automations, worktrees, skills, connectors, sub-agents, external state), розділення генератора/оцінювача, чотири тихих вартості та покрокова побудова вашого першого циклу.
+> - **Проєкт 07** [Побудова вашого першого автоматизованого циклу](../../docs/uk/projects/project-07-loop-engineering-first-loop/index.md): три експерименти, що нарощують складність — цикл на основі мети, цикл за таймером, цикл maker-checker. Порівняйте ручний vs. автоматизований, виміряйте зменшення втручання, навчіться виходити з циклу.
+> - **Шаблони коду**: `goal-template.md`, `loop-state-template.md`, `maker-prompt.md`, `checker-prompt.md` — шаблони побудови циклів «підключи і працюй».
+>
+> **Ключова ідея:** Harness engineering будує машину. Інженерія циклів проєктує дорогу, якою вона їде — і ви проєктуєте дорогу з-поза машини.
 
 - [OpenAI: Harness engineering: leveraging Codex in an agent-first world](https://openai.com/index/harness-engineering/)
 - [Anthropic: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
@@ -96,6 +129,18 @@ OpenAI повідомив про те саме з Codex: у добре осна�
 
 **Цей курс вчить вас будувати таке середовище.**
 
+<p align="center">
+  <a href="../../assets/readme/uk-UA/harness-pattern.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uk-UA/harness-pattern-dark.svg">
+      <img src="../../assets/readme/uk-UA/harness-pattern.png" alt="Модель розумна — harness робить її надійною" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстова версія</summary>
+
 ```text
                     THE HARNESS PATTERN
                     ====================
@@ -115,6 +160,8 @@ OpenAI повідомив про те саме з Codex: у добре осна�
                                          verification passes
 ```
 
+</details>
+
 ---
 
 ## Що насправді означає Harness Engineering
@@ -122,6 +169,18 @@ OpenAI повідомив про те саме з Codex: у добре осна�
 Harness Engineering — це побудова повноцінного робочого середовища навколо моделі, щоб вона давала надійні результати. Мова йде не про написання кращих промптів. Мова йде про проєктування системи, всередині якої функціонує модель.
 
 Harness складається з п'яти підсистем:
+
+<p align="center">
+  <a href="../../assets/readme/uk-UA/harness-subsystems.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uk-UA/harness-subsystems-dark.svg">
+      <img src="../../assets/readme/uk-UA/harness-subsystems.png" alt="Що насправді означає Harness Engineering" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстова версія</summary>
 
 ```text
     ┌────────────────────────────────────────────────────────────────┐
@@ -152,6 +211,8 @@ Harness складається з п'яти підсистем:
     The harness doesn't make the model smarter.
     It makes the model's output reliable.
 ```
+
+</details>
 
 Кожна підсистема виконує одне завдання:
 
@@ -205,15 +266,15 @@ Harness складається з п'яти підсистем:
 
 Навчальна програма розділена на три частини:
 
-1. **Лекції**: 12 концептуальних модулів, що пояснюють теорію Harness Engineering.
-2. **Проєкти**: 6 практичних проєктів, у яких ви будуєте агентне робоче середовище з нуля.
+1. **Лекції**: 14 концептуальних модулів, що пояснюють теорію Harness Engineering.
+2. **Проєкти**: 8 практичних проєктів, у яких ви будуєте агентне робоче середовище з нуля.
 3. **Бібліотека ресурсів**: Готові до копіювання шаблони (`AGENTS.md`, `feature_list.json`, `init.sh` тощо) для використання у ваших репозиторіях вже сьогодні.
 
 ---
 
 ## Швидкий старт: покращте свого агента вже сьогодні
 
-Не потрібно прочитати всі 12 лекцій, перш ніж отримати користь. Якщо ви вже використовуєте агент для написання коду у реальному проєкті, ось як покращити його прямо зараз.
+Не потрібно прочитати всі 14 лекцій, перш ніж отримати користь. Якщо ви вже використовуєте агент для написання коду у реальному проєкті, ось як покращити його прямо зараз.
 
 Ідея проста: замість того щоб просто писати промпти, надайте своєму агенту набір структурованих файлів, які визначають що робити, що вже зроблено та як верифікувати роботу. Ці файли зберігаються у вашому репозиторії, тому кожна сесія починається з одного й того самого стану.
 
@@ -233,7 +294,7 @@ Harness складається з п'яти підсистем:
 
 ## Підсумковий проєкт: реальний застосунок
 
-Усі шість проєктів курсу обертаються навколо одного продукту: **настільного застосунку персональної бази знань на основі Electron**.
+Усі вісім проєктів курсу обертаються навколо одного продукту: **настільного застосунку персональної бази знань на основі Electron**.
 
 ```text
     ┌──────────────────────────────────────────────────────┐
@@ -270,6 +331,18 @@ Harness складається з п'яти підсистем:
 ## Навчальний маршрут
 
 Курс спроєктовано для проходження по порядку. Кожна фаза спирається на попередню.
+
+<p align="center">
+  <a href="../../assets/readme/uk-UA/harness-learning-path.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uk-UA/harness-learning-path-dark.svg">
+      <img src="../../assets/readme/uk-UA/harness-learning-path.png" alt="Навчальний маршрут" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстова версія</summary>
 
 ```text
     Phase 1: SEE THE PROBLEM              Phase 2: STRUCTURE THE REPO
@@ -313,7 +386,28 @@ Harness складається з п'яти підсистем:
          v                                     v
     P05  Agent verifies its own work      P06  Build a complete harness
                                                (capstone project)
+
+    Phase 7: AUTOMATE THE LOOP
+    ==========================
+    L13  Stop prompting your agent —
+         design loops instead
+         |
+         v
+    P07  Build your first automated loop
+         (goal loop, timer loop, maker-checker)
+
+    Phase 8: STRUCTURE THE SYSTEM
+    =============================
+    L14  Draw the system as a graph —
+         nodes, edges, shared state, routing
+         |
+         v
+    P08  Draw your workflow as a graph
+         (explicit graph, parallel fan-out/fan-in,
+          fallback edge, human-in-the-loop)
 ```
+
+</details>
 
 Кожна фаза займає приблизно тиждень при навчанні неповний робочий день. Якщо ви хочете просуватися швидше, фази 1–3 можна пройти за довгий вихідний.
 
@@ -321,35 +415,39 @@ Harness складається з п'яти підсистем:
 
 ## Навчальна програма
 
-### Лекції — 12 концептуальних модулів, кожен відповідає на одне ключове питання
+### Лекції — 14 концептуальних модулів, кожен відповідає на одне ключове питання
 
 *Повний текст кожної лекції читайте на [вебсайті документації](https://walkinglabs.github.io/learn-harness-engineering/).*
 
 | Сесія | Питання | Основна ідея |
 |-------|---------|--------------|
-| [L01](../../docs/en/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Чому потужні моделі все одно провалюються на реальних завданнях? | Розрив між можливостями на бенчмарках і реальною інженерією |
-| [L02](../../docs/en/lectures/lecture-02-what-a-harness-actually-is/index.md) | Що насправді означає «harness»? | П'ять підсистем: інструкції, стан, верифікація, обсяг, життєвий цикл |
-| [L03](../../docs/en/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Чому репозиторій має бути єдиним джерелом правди? | Якщо агент не може це побачити — цього не існує |
-| [L04](../../docs/en/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Чому один гігантський файл інструкцій не працює? | Прогресивне розкриття: дайте карту, а не енциклопедію |
-| [L05](../../docs/en/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Чому тривалі завдання втрачають безперервність? | Зберігайте прогрес на диску; продовжуйте з того місця, де зупинились |
-| [L06](../../docs/en/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Чому ініціалізація потребує окремої фази? | Перевіряйте справність середовища перед початком роботи агента |
-| [L07](../../docs/en/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Чому агенти виходять за рамки та не доводять справу до кінця? | Одна функція за раз; явне визначення критерію завершення |
-| [L08](../../docs/en/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Чому списки функцій є примітивами harness? | Машиночитабельні межі обсягу, які агент не може ігнорувати |
-| [L09](../../docs/en/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Чому агенти передчасно оголошують перемогу? | Прогалини у верифікації: впевненість ≠ коректність |
-| [L10](../../docs/en/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Чому наскрізне тестування змінює результати? | Лише повний запуск конвеєру вважається реальною верифікацією |
-| [L11](../../docs/en/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Чому спостережуваність має бути всередині harness? | Якщо ви не бачите, що зробив агент, ви не можете виправити те, що він зламав |
-| [L12](../../docs/en/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Чому кожна сесія має залишати чистий стан? | Успіх наступної сесії залежить від прибирання в поточній |
+| [L01](../../docs/uk/lectures/lecture-01-why-capable-agents-still-fail/index.md) | Чому потужні моделі все одно провалюються на реальних завданнях? | Розрив між можливостями на бенчмарках і реальною інженерією |
+| [L02](../../docs/uk/lectures/lecture-02-what-a-harness-actually-is/index.md) | Що насправді означає «harness»? | П'ять підсистем: інструкції, стан, верифікація, обсяг, життєвий цикл |
+| [L03](../../docs/uk/lectures/lecture-03-why-the-repository-must-become-the-system-of-record/index.md) | Чому репозиторій має бути єдиним джерелом правди? | Якщо агент не може це побачити — цього не існує |
+| [L04](../../docs/uk/lectures/lecture-04-why-one-giant-instruction-file-fails/index.md) | Чому один гігантський файл інструкцій не працює? | Прогресивне розкриття: дайте карту, а не енциклопедію |
+| [L05](../../docs/uk/lectures/lecture-05-why-long-running-tasks-lose-continuity/index.md) | Чому тривалі завдання втрачають безперервність? | Зберігайте прогрес на диску; продовжуйте з того місця, де зупинились |
+| [L06](../../docs/uk/lectures/lecture-06-why-initialization-needs-its-own-phase/index.md) | Чому ініціалізація потребує окремої фази? | Перевіряйте справність середовища перед початком роботи агента |
+| [L07](../../docs/uk/lectures/lecture-07-why-agents-overreach-and-under-finish/index.md) | Чому агенти виходять за рамки та не доводять справу до кінця? | Одна функція за раз; явне визначення критерію завершення |
+| [L08](../../docs/uk/lectures/lecture-08-why-feature-lists-are-harness-primitives/index.md) | Чому списки функцій є примітивами harness? | Машиночитабельні межі обсягу, які агент не може ігнорувати |
+| [L09](../../docs/uk/lectures/lecture-09-why-agents-declare-victory-too-early/index.md) | Чому агенти передчасно оголошують перемогу? | Прогалини у верифікації: впевненість ≠ коректність |
+| [L10](../../docs/uk/lectures/lecture-10-why-end-to-end-testing-changes-results/index.md) | Чому наскрізне тестування змінює результати? | Лише повний запуск конвеєру вважається реальною верифікацією |
+| [L11](../../docs/uk/lectures/lecture-11-why-observability-belongs-inside-the-harness/index.md) | Чому спостережуваність має бути всередині harness? | Якщо ви не бачите, що зробив агент, ви не можете виправити те, що він зламав |
+| [L12](../../docs/uk/lectures/lecture-12-why-every-session-must-leave-a-clean-state/index.md) | Чому кожна сесія має залишати чистий стан? | Успіх наступної сесії залежить від прибирання в поточній |
+| [L13](../../docs/uk/lectures/lecture-13-loop-engineering/index.md) | Чому вам варто припинити писати промпти для агента самому? | Від ручного керування до автономних циклів — цільовий цикл, цикл за таймером, розділення maker-checker |
+| [L14](../../docs/uk/lectures/lecture-14-graph-engineering/index.md) | Чому одиночний цикл еволюціонує в граф? | Від одиночних циклів до графової інженерії — вузли, ребра, спільний стан, маршрутизація та коли справді варто малювати граф |
 
-### Проєкти — 6 практичних проєктів із застосуванням методів лекцій на тому самому Electron-застосунку
+### Проєкти — 8 практичних проєктів із застосуванням методів лекцій на тому самому Electron-застосунку
 
 | Проєкт | Що ви робите | Механізм harness |
 |--------|-------------|-----------------|
-| [P01](../../docs/en/projects/project-01-baseline-vs-minimal-harness/index.md) | Виконайте одне й те саме завдання двічі: лише промпт vs. правила на першому місці | Мінімальний harness: AGENTS.md + init.sh + feature_list.json |
-| [P02](../../docs/en/projects/project-02-agent-readable-workspace/index.md) | Реструктуруйте репозиторій так, щоб агент міг його читати | Агентне робоче середовище + постійні файли стану |
-| [P03](../../docs/en/projects/project-03-multi-session-continuity/index.md) | Змусьте агента продовжувати з того місця, де він зупинився | Журнал прогресу + передача між сесіями + безперервність кількох сесій |
-| [P04](../../docs/en/projects/project-04-incremental-indexing/index.md) | Зупиніть агента від надмірної або недостатньої роботи | Runtime-зворотний зв'язок + контроль обсягу + інкрементальна індексація |
-| [P05](../../docs/en/projects/project-05-grounded-qa-verification/index.md) | Змусьте агента верифікувати власну роботу | Самоверифікація + обґрунтований Q&A + завершення на основі доказів |
-| [P06](../../docs/en/projects/project-06-runtime-observability-and-debugging/index.md) | Побудуйте повноцінний harness з нуля (підсумковий проєкт) | Повний harness: усі механізми + спостережуваність + дослідження абляції |
+| [P01](../../docs/uk/projects/project-01-baseline-vs-minimal-harness/index.md) | Виконайте одне й те саме завдання двічі: лише промпт vs. правила на першому місці | Мінімальний harness: AGENTS.md + init.sh + feature_list.json |
+| [P02](../../docs/uk/projects/project-02-agent-readable-workspace/index.md) | Реструктуруйте репозиторій так, щоб агент міг його читати | Агентне робоче середовище + постійні файли стану |
+| [P03](../../docs/uk/projects/project-03-multi-session-continuity/index.md) | Змусьте агента продовжувати з того місця, де він зупинився | Журнал прогресу + передача між сесіями + безперервність кількох сесій |
+| [P04](../../docs/uk/projects/project-04-incremental-indexing/index.md) | Зупиніть агента від надмірної або недостатньої роботи | Runtime-зворотний зв'язок + контроль обсягу + інкрементальна індексація |
+| [P05](../../docs/uk/projects/project-05-grounded-qa-verification/index.md) | Змусьте агента верифікувати власну роботу | Самоверифікація + обґрунтований Q&A + завершення на основі доказів |
+| [P06](../../docs/uk/projects/project-06-runtime-observability-and-debugging/index.md) | Побудуйте повноцінний harness з нуля (підсумковий проєкт) | Повний harness: усі механізми + спостережуваність + дослідження абляції |
+| [P07](../../docs/uk/projects/project-07-loop-engineering-first-loop/index.md) | Побудуйте свій перший автоматизований цикл | Цільовий цикл, цикл за таймером, розділення maker-checker, управління станом циклу |
+| [P08](../../docs/uk/projects/project-08-graph-engineering-first-graph/index.md) | Намалюйте ваш робочий процес як граф | Явні вузли/ребра/стан/маршрутизація, паралельний fan-out/fan-in, ребро відкату, затвердження людиною в циклі |
 
 ```text
     PROJECT EVOLUTION
@@ -371,6 +469,12 @@ Harness складається з п'яти підсистем:
      |
      v
     P06  Complete harness (capstone)       You build the full system
+     |
+     v
+    P07  Your first automated loop         You step out of the loop
+     |
+     v
+    P08  Draw your workflow as a graph     You draw the system as a graph
 
     Each project's solution becomes the next project's starter.
     The app evolves. Your harness skills grow with it.
@@ -398,6 +502,18 @@ Harness складається з п'яти підсистем:
 ## Життєвий цикл агентної сесії
 
 Одна з ключових ідей курсу: **сесія агента має дотримуватися структурованого життєвого циклу, а не відбуватися хаотично.** Ось як це виглядає:
+
+<p align="center">
+  <a href="../../assets/readme/uk-UA/harness-session-lifecycle.svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="../../assets/readme/uk-UA/harness-session-lifecycle-dark.svg">
+      <img src="../../assets/readme/uk-UA/harness-session-lifecycle.png" alt="Життєвий цикл агентної сесії" width="920">
+    </picture>
+  </a>
+</p>
+
+<details>
+<summary>Текстова версія</summary>
 
 ```text
     AGENT SESSION LIFECYCLE
@@ -439,6 +555,8 @@ Harness складається з п'яти підсистем:
     Without the harness, step 9 becomes "agent says it looks fine."
     With the harness, step 9 is "tests pass, lint is clean, types check."
 ```
+
+</details>
 
 ---
 
@@ -524,7 +642,7 @@ npm run docs:preview    # Preview built site
 - [Thoughtworks / Martin Fowler: Harness engineering for coding agent users](https://martinfowler.com/articles/harness-engineering.html)
 - [Cursor: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
-Повний багаторівневий список джерел дивіться у [`docs/en/resources/reference/`](../../docs/en/resources/reference/index.md).
+Повний багаторівневий список джерел дивіться у [`docs/uk/resources/reference/`](../../docs/uk/resources/reference/index.md).
 
 ---
 
@@ -533,12 +651,12 @@ npm run docs:preview    # Preview built site
 ```text
 learn-harness-engineering/
 ├── docs/                          # VitePress documentation site
-│   ├── lectures/                  # 12 lectures (index.md + code/ examples)
+│   ├── lectures/                  # 14 lectures (index.md + code/ examples)
 │   │   ├── lecture-01-*/
-│   │   └── ... (12 total)
-│   ├── projects/                  # 6 project descriptions
+│   │   └── ... (14 total)
+│   ├── projects/                  # 8 project descriptions
 │   │   ├── project-01-*/
-│   │   └── ... (6 total)
+│   │   └── ... (8 total)
 │   └── resources/                 # Multilingual templates & references (14 languages)
 │       ├── en/
 │       └── ... (14 total)
@@ -556,7 +674,7 @@ learn-harness-engineering/
 ## Як організований курс
 
 - Кожна лекція зосереджена на одному питанні
-- Курс включає 6 проєктів
+- Курс включає 8 проєктів
 - Кожен проєкт вимагає від агента виконання реальної роботи
 - Кожен проєкт порівнює результати слабкого та сильного harness
 - Важлива вимірювана різниця, а не кількість написаної документації
@@ -582,12 +700,6 @@ learn-harness-engineering/
 [![Modern LLM Notebook](https://img.shields.io/badge/MODERN_LLM_NOTEBOOK-0052cc?style=for-the-badge)](https://github.com/walkinglabs/modern-llm-notebook)
 
 **Modern LLM Notebook**: Практичний курс із побудови сучасних LLM з нуля на PyTorch, включаючи 23 запускабельних Jupyter Notebooks з темами токенізаторів, уваги, MoE, RLHF, висновку, оцінювання та дистиляції.
-
----
-
-## Історія зірок
-
-[![Star History Chart](https://api.star-history.com/svg?repos=walkinglabs/learn-harness-engineering&type=date&legend=top-left)](https://www.star-history.com/#walkinglabs/learn-harness-engineering&type=date&legend=top-left)
 
 ---
 

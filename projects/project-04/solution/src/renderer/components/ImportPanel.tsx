@@ -1,7 +1,6 @@
-import React from 'react';
 
 interface Props {
-  onImport: (filePath: string) => void;
+  onImport: (file: File) => void;
 }
 
 export function ImportPanel({ onImport }: Props) {
@@ -25,7 +24,7 @@ export function ImportPanel({ onImport }: Props) {
         accept=".txt,.md"
         onChange={e => {
           const file = e.target.files?.[0];
-          if (file) onImport(file.path);
+          if (file) onImport(file);
         }}
         style={{ marginTop: '10px' }}
       />

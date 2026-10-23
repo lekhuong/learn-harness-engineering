@@ -1,5 +1,18 @@
 # Progress Log
 
+<!--
+This filename is kept for compatibility with the course examples. The file is
+agent-agnostic: Codex, Claude Code, OpenHands, and other coding agents can use
+it. Read it at session startup and update it before handoff through the
+repository's agent instructions; no agent updates it automatically.
+-->
+
+This is a generic repository-local session progress log. The
+`claude-progress.md` filename is a historical course convention, not a
+Claude Code requirement. Any coding agent can use it when the repository's
+instructions tell it to read the file at startup and update it before handoff;
+agents do not update it automatically.
+
 ## Current Verified State
 
 - Repository root:

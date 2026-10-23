@@ -30,6 +30,12 @@ npm install
 ./scripts/cleanup-scanner.sh
 ```
 
+`npm run dev` 必须在 `projects/project-06/solution` 目录中先执行
+`npm install` 后运行。该命令会先编译主进程和渲染进程，再启动 Electron；
+如果编译失败，应先根据终端中的 TypeScript/Vite 错误处理。没有编译错误但
+窗口空白或无法打开时，通常是 Electron 运行环境没有桌面会话导致的。反馈
+启动问题时，请同时提供终端完整输出、操作系统和 Node.js 版本。
+
 ## 具体任务对应关系
 
 Project 06 是完整产品 + 弱 harness 表面，与完整产品 + 强 harness 表面的对比。和前几个项目不同，starter 已经包含大部分产品功能，差距主要在代码周围的操作系统。
