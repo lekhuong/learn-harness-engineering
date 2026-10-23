@@ -11,7 +11,20 @@
     }
   },
   "redirects": [
-    { "source": "/", "destination": "/harness-engineering/vi/", "permanent": false },
-    { "source": "/harness-engineering", "destination": "/harness-engineering/vi/", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/harness-engineering/vi/",
+      "permanent": false
+    },
+    {
+      "source": "/harness-engineering",
+      "destination": "/harness-engineering/vi/",
+      "permanent": false
+    },
+    {
+      "source": "/:path((?!harness-engineering).+)",
+      "destination": "/harness-engineering/:path",
+      "permanent": false
+    }
   ]
 }
